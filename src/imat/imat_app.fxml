@@ -15,9 +15,133 @@
 
 <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
-      <AnchorPane prefHeight="88.0" prefWidth="1007.0" AnchorPane.bottomAnchor="493.33333333333337" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-7.333333333333371" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="700.0" prefWidth="1003.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
          <children>
-            <FlowPane hgap="60.0" prefHeight="88.0" prefWidth="1007.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane layoutX="681.0" prefHeight="702.0" prefWidth="321.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Label layoutX="109.0" layoutY="54.0" text="Varukorgen">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="9.0" layoutY="13.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" text="Tillbaka">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@resources/left_arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="192.0" layoutY="12.0" mnemonicParsing="false" text="Töm Korgen">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/trashcan.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="14.0" layoutY="83.0" prefHeight="11.0" prefWidth="293.0" />
+                  <ScrollPane layoutX="2.0" layoutY="94.0" prefHeight="427.0" prefWidth="319.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="426.0" prefWidth="322.0">
+                           <children>
+                              <FlowPane layoutX="1.0" prefHeight="427.0" prefWidth="322.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <Label layoutX="14.0" layoutY="529.0" text="Antal Varor: 7 styck">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="559.0" text="Total Pris: 245 kr">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="91.0" layoutY="612.0" mnemonicParsing="false" text="Till Kassan">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="680.0" layoutY="84.0" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="319.0" style="-fx-background-color: RED;">
+         <children>
+            <Label layoutX="27.0" layoutY="14.0" text="Hur använder jag iMat?">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/question_mark.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Separator layoutX="15.0" layoutY="56.0" prefHeight="19.0" prefWidth="277.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="123.0" layoutY="292.0" prefHeight="27.0" prefWidth="63.0" text="Bönor">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="155.0" fitWidth="208.0" layoutX="47.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/beans.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="139.0" layoutY="261.0" text="1 st">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="215.0" layoutY="259.0" text="+">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="258.0" text="-">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="345.0" text="Pris: 25 kr">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="370.0" text="Jfr. pris: 144 kr/kg">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="124.0" layoutY="315.0" prefHeight="23.0" prefWidth="63.0" text="Zeta">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextArea layoutX="17.0" layoutY="409.0" prefHeight="184.0" prefWidth="267.0" text="Ingredienser:&#10;LAX* (Salmo salar), salt. *Odlad i Norge&#10;&#10;Näringsvärde per 100 g:&#10;Energi (kcal) 173 kcal, Energi (kJ) 724 kJ, Fett 9.8 g, Varav mättat fett 1.4 g, Kolhydrat 1.3 g, Varav socker 0 g, Protein 20 g, Salt 3 g" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextArea>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="92.0" prefWidth="1007.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="608.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <FlowPane hgap="60.0" prefHeight="92.0" prefWidth="1007.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <ImageView fitHeight="89.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -65,7 +189,7 @@
             </FlowPane>
          </children>
       </AnchorPane>
-      <SplitPane dividerPositions="0.6851604278074868, 0.5" layoutX="-1.0" layoutY="85.0" prefHeight="616.0" prefWidth="999.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+      <SplitPane dividerPositions="0.6851604278074868" layoutX="-1.0" layoutY="85.0" prefHeight="616.0" prefWidth="999.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
@@ -172,68 +296,6 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="543.0" prefWidth="155.0">
-               <children>
-                  <Label layoutX="27.0" layoutY="14.0" text="Hur använder jag iMat?">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/question_mark.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Label>
-                  <Separator layoutX="15.0" layoutY="56.0" prefHeight="19.0" prefWidth="277.0" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="123.0" layoutY="292.0" prefHeight="27.0" prefWidth="63.0" text="Bönor">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="155.0" fitWidth="208.0" layoutX="47.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@resources/beans.jpg" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="139.0" layoutY="261.0" text="1 st">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="215.0" layoutY="259.0" text="+">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="81.0" layoutY="258.0" text="-">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="21.0" layoutY="345.0" text="Pris: 25 kr">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="19.0" layoutY="370.0" text="Jfr. pris: 144 kr/kg">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="124.0" layoutY="315.0" prefHeight="23.0" prefWidth="63.0" text="Zeta">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextArea layoutX="17.0" layoutY="409.0" prefHeight="184.0" prefWidth="267.0" text="Ingredienser:&#10;LAX* (Salmo salar), salt. *Odlad i Norge&#10;&#10;Näringsvärde per 100 g:&#10;Energi (kcal) 173 kcal, Energi (kJ) 724 kJ, Fett 9.8 g, Varav mättat fett 1.4 g, Kolhydrat 1.3 g, Varav socker 0 g, Protein 20 g, Salt 3 g" wrapText="true">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </TextArea>
                </children>
             </AnchorPane>
         </items>
