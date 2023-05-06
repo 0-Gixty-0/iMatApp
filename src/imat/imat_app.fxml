@@ -9,57 +9,62 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
-      <AnchorPane id="navigationBarAnchorPane" layoutX="-3.0" prefHeight="88.0" prefWidth="1007.0">
+      <AnchorPane prefHeight="88.0" prefWidth="1007.0" AnchorPane.bottomAnchor="493.33333333333337" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-7.333333333333371" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="89.0" fitWidth="113.0" layoutX="-1.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="-3.0">
-               <image>
-                  <Image url="@resources/logo.png" />
-               </image>
-            </ImageView>
-            <TextField fx:id="SearchTextField" layoutX="99.0" layoutY="29.0" prefHeight="25.0" prefWidth="257.0" promptText="Sök efter en produkt..." AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="29.0" />
-            <Label fx:id="previousPurchasesLabel" layoutX="403.0" layoutY="21.0" text="Tidigare Köp">
-               <graphic>
-                  <ImageView fitHeight="42.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+            <FlowPane hgap="60.0" prefHeight="88.0" prefWidth="1007.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="89.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@resources/notepad.png" />
+                        <Image url="@resources/logo.png" />
                      </image>
                   </ImageView>
-               </graphic>
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label fx:id="profileLabel" layoutX="626.0" layoutY="20.0" text="Profil">
-               <graphic>
-                  <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@resources/person.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label fx:id="shoppingCartLabel" layoutX="783.0" layoutY="18.0" text="Varukorg">
-               <graphic>
-                  <ImageView fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@resources/shopping_cart.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
+                  <TextField fx:id="SearchTextField" prefHeight="25.0" prefWidth="262.0" promptText="Sök efter en produkt..." />
+                  <Label fx:id="previousPurchasesLabel" text="Tidigare Köp">
+                     <graphic>
+                        <ImageView fitHeight="42.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/notepad.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="profileLabel" text="Profil">
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/person.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="shoppingCartLabel" text="Varukorg">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/shopping_cart.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </FlowPane>
          </children>
       </AnchorPane>
-      <SplitPane dividerPositions="0.6795986622073579" layoutX="-1.0" layoutY="85.0" prefHeight="616.0" prefWidth="999.0">
+      <SplitPane dividerPositions="0.6795986622073579" layoutX="-1.0" layoutY="85.0" prefHeight="616.0" prefWidth="999.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
@@ -97,8 +102,32 @@
                   <Separator layoutX="403.0" layoutY="156.0" prefHeight="11.0" prefWidth="57.0" />
                   <Separator layoutX="611.0" layoutY="156.0" prefHeight="11.0" prefWidth="57.0" />
                   <Separator layoutX="395.0" layoutY="162.0" orientation="VERTICAL" prefHeight="427.0" prefWidth="8.0" />
-                  <ScrollPane layoutX="5.0" layoutY="177.0" prefHeight="434.0" prefWidth="385.0" />
-                  <ScrollPane layoutX="407.0" layoutY="177.0" prefHeight="434.0" prefWidth="264.0" />
+                  <AnchorPane layoutX="5.0" layoutY="176.0" prefHeight="433.0" prefWidth="385.0" AnchorPane.bottomAnchor="3.3333333333333144" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="283.6666666666667" AnchorPane.topAnchor="176.0">
+                     <children>
+                        <ScrollPane layoutY="1.0" prefHeight="434.0" prefWidth="385.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <AnchorPane prefHeight="436.0" prefWidth="384.0">
+                                 <children>
+                                    <FlowPane layoutX="10.0" layoutY="9.0" prefHeight="420.0" prefWidth="374.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="407.0" layoutY="176.0" prefHeight="431.0" prefWidth="264.0">
+                     <children>
+                        <ScrollPane prefHeight="434.0" prefWidth="264.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <AnchorPane prefHeight="432.0" prefWidth="261.0">
+                                 <children>
+                                    <FlowPane prefHeight="433.0" prefWidth="260.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="543.0" prefWidth="285.0" />
