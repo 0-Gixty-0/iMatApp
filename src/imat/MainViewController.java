@@ -20,7 +20,7 @@ public class MainViewController implements Initializable {
 
         String iMatDirectory = iMatDataHandler.imatDirectory();
 
-        pathLabel.setText(iMatDirectory);
+        // pathLabel.setText(iMatDirectory);
     }
 
 }
