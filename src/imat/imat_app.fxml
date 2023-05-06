@@ -1,18 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
-      <Label layoutX="392.0" layoutY="126.0" text="Programmet hämtar och sparar data här" />
-      <Label fx:id="pathLabel" alignment="CENTER" layoutX="115.0" layoutY="190.0" prefHeight="17.0" prefWidth="771.0" styleClass="text-sample" text="Label" />
-      <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="14.0">
-         <image>
-            <Image url="@resources/logo.png" />
-         </image>
-      </ImageView>
+      <Label layoutX="398.0" layoutY="630.0" text="Programmet hämtar och sparar data här" />
+      <Label fx:id="pathLabel" alignment="CENTER" layoutX="110.0" layoutY="657.0" prefHeight="17.0" prefWidth="771.0" styleClass="text-sample" text="Label" />
+      <AnchorPane id="navigationBarAnchorPane" layoutX="-3.0" prefHeight="88.0" prefWidth="1007.0">
+         <children>
+            <ImageView fitHeight="89.0" fitWidth="113.0" layoutX="-1.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="-3.0">
+               <image>
+                  <Image url="@resources/logo.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="SearchTextField" layoutX="99.0" layoutY="29.0" prefHeight="25.0" prefWidth="257.0" promptText="Sök efter en produkt..." AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="29.0" />
+            <Label fx:id="previousPurchasesLabel" layoutX="403.0" layoutY="21.0" text="Tidigare Köp">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/notepad.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="profileLabel" layoutX="626.0" layoutY="20.0" text="Profil">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/person.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="shoppingCartLabel" layoutX="783.0" layoutY="18.0" text="Varukorg">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/shopping_cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
