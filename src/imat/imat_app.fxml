@@ -130,7 +130,49 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="543.0" prefWidth="155.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="543.0" prefWidth="155.0">
+               <children>
+                  <Label layoutX="27.0" layoutY="14.0" text="Hur använder jag iMat?">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/question_mark.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label layoutX="107.0" layoutY="69.0" text="Instruktioner">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="14.0" layoutY="76.0" prefHeight="11.0" prefWidth="84.0" />
+                  <Separator layoutX="211.0" layoutY="76.0" prefHeight="11.0" prefWidth="84.0" />
+                  <Label layoutX="23.0" layoutY="110.0" prefHeight="78.0" prefWidth="262.0" text="1. Lägg till en produkt genom att klicka på + tecknet" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="202.0" prefHeight="78.0" prefWidth="262.0" text="2. Ta bort en produkt genom att trycka på - tecknet" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="292.0" prefHeight="78.0" prefWidth="262.0" text="3. Klicka på produktens bild för att visa mer information" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="378.0" prefHeight="78.0" prefWidth="262.0" text="4. Klicka på varukorgen för att klargöra din beställning" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
         </items>
       </SplitPane>
    </children>
