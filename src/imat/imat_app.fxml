@@ -410,5 +410,69 @@
             </AnchorPane>
          </children>
       </AnchorPane>
+      <AnchorPane layoutX="3.0" layoutY="2.0" prefHeight="701.0" prefWidth="999.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+         <children>
+            <AnchorPane layoutX="185.0" layoutY="57.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Button layoutX="417.0" layoutY="14.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" text="Fortsätt Handla">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/grocery_bag.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="252.0" layoutY="48.0" text="Uppgifter">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="357.0" layoutY="63.0" prefHeight="14.0" prefWidth="214.0" />
+                  <Label layoutX="115.0" layoutY="154.0" text="Förnamn">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="275.0" layoutY="154.0" text="Efternamn">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="113.0" layoutY="220.0" text="Address">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="105.0" layoutY="145.0" />
+                  <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="222.0" />
+                  <TextField layoutX="113.0" layoutY="184.0" />
+                  <TextField layoutX="275.0" layoutY="184.0" prefHeight="26.0" prefWidth="198.0" />
+                  <TextField layoutX="114.0" layoutY="250.0" prefHeight="26.0" prefWidth="361.0" />
+                  <Label layoutX="114.0" layoutY="287.0" text="Postnummer">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="274.0" layoutY="287.0" text="Ort">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="112.0" layoutY="317.0" />
+                  <TextField layoutX="274.0" layoutY="317.0" prefHeight="26.0" prefWidth="198.0" />
+                  <Label layoutX="113.0" layoutY="352.0" text="Epost">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="114.0" layoutY="382.0" prefHeight="26.0" prefWidth="361.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
