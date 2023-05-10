@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Separator layoutX="6.0" layoutY="90.0" prefHeight="15.0" prefWidth="557.0" />
+      <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="81.0" prefWidth="163.0" style="-fx-background-color: LIGHTGRAY;">
+         <children>
+            <ImageView fitHeight="68.0" fitWidth="91.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/beans.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="101.0" layoutY="-1.0" text="Beans">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="50.0" prefHeight="30.0" prefWidth="41.0" text="xx kr">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="233.0" layoutY="31.0" prefHeight="38.0" prefWidth="118.0" style="-fx-background-color: LIGHTGRAY;">
+         <children>
+            <Label layoutX="44.0" layoutY="3.0" text="x st">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="438.0" layoutY="31.0" prefHeight="38.0" prefWidth="118.0" style="-fx-background-color: LIGHTGRAY;">
+         <children>
+            <Label layoutX="39.0" layoutY="3.0" text="xx kr">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
