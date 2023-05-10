@@ -15,6 +15,130 @@
 
 <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
+      <AnchorPane layoutX="4.0" layoutY="3.0" prefHeight="701.0" prefWidth="999.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+         <children>
+            <AnchorPane layoutX="185.0" layoutY="57.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Button layoutX="417.0" layoutY="14.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" text="Fortsätt Handla">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/grocery_bag.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="234.0" layoutY="55.0" text="Välj Betalning">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="364.0" layoutY="63.0" prefHeight="14.0" prefWidth="207.0" />
+                  <Label layoutX="113.0" layoutY="117.0" text="Kortnummer">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="105.0" layoutY="145.0" />
+                  <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="214.0" />
+                  <TextField layoutX="114.0" layoutY="147.0" prefHeight="26.0" prefWidth="361.0" />
+                  <Label layoutX="114.0" layoutY="184.0" text="Utgångsdatum">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="314.0" layoutY="184.0" text="CVC">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="112.0" layoutY="214.0" prefHeight="26.0" prefWidth="190.0" />
+                  <TextField layoutX="314.0" layoutY="214.0" prefHeight="26.0" prefWidth="158.0" />
+                  <Label layoutX="113.0" layoutY="249.0" text="Kommentar">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextArea layoutX="109.0" layoutY="279.0" prefHeight="166.0" prefWidth="369.0" />
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="183.0" text="Tillbaka Till Leverans">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/left_arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="250.0" layoutY="505.0" mnemonicParsing="false" text="Betala">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="2.0" layoutY="1.0" prefHeight="701.0" prefWidth="999.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+         <children>
+            <AnchorPane layoutX="185.0" layoutY="57.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" text="Tillbaka">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@resources/left_arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="220.0" layoutY="51.0" text="Sammanfattning">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="373.0" layoutY="63.0" prefHeight="14.0" prefWidth="198.0" />
+                  <Label layoutX="103.0" layoutY="86.0" text="Vara">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="270.0" layoutY="86.0" text="Antal">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="449.0" layoutY="86.0" text="Pris">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="45.0" layoutY="113.0" prefHeight="14.0" prefWidth="155.0" />
+                  <Separator layoutX="387.0" layoutY="110.0" prefHeight="20.0" prefWidth="155.0" />
+                  <Separator layoutX="231.0" layoutY="113.0" prefHeight="14.0" prefWidth="127.0" />
+                  <Label layoutX="105.0" layoutY="145.0" />
+                  <ScrollPane layoutY="127.0" prefHeight="436.0" prefWidth="580.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="434.0" prefWidth="580.0">
+                           <children>
+                              <FlowPane layoutX="-2.0" prefHeight="436.0" prefWidth="582.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="198.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
       <AnchorPane layoutX="680.0" layoutY="84.0" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="319.0" style="-fx-background-color: RED;">
          <children>
             <Label layoutX="27.0" layoutY="14.0" text="Hur använder jag iMat?">
@@ -355,61 +479,6 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="2.0" layoutY="1.0" prefHeight="701.0" prefWidth="999.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
-         <children>
-            <AnchorPane layoutX="185.0" layoutY="57.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
-               <children>
-                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" text="Tillbaka">
-                     <graphic>
-                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@resources/left_arrow.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Button>
-                  <Label layoutX="220.0" layoutY="51.0" text="Sammanfattning">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="373.0" layoutY="63.0" prefHeight="14.0" prefWidth="198.0" />
-                  <Label layoutX="103.0" layoutY="86.0" text="Vara">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="270.0" layoutY="86.0" text="Antal">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="449.0" layoutY="86.0" text="Pris">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="45.0" layoutY="113.0" prefHeight="14.0" prefWidth="155.0" />
-                  <Separator layoutX="387.0" layoutY="110.0" prefHeight="20.0" prefWidth="155.0" />
-                  <Separator layoutX="231.0" layoutY="113.0" prefHeight="14.0" prefWidth="127.0" />
-                  <Label layoutX="105.0" layoutY="145.0" />
-                  <ScrollPane layoutY="127.0" prefHeight="436.0" prefWidth="580.0">
-                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="434.0" prefWidth="580.0">
-                           <children>
-                              <FlowPane layoutX="-2.0" prefHeight="436.0" prefWidth="582.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                           </children>
-                        </AnchorPane>
-                     </content>
-                  </ScrollPane>
-                  <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="198.0" />
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
       <AnchorPane layoutX="3.0" layoutY="2.0" prefHeight="701.0" prefWidth="999.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
          <children>
             <AnchorPane layoutX="185.0" layoutY="57.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
@@ -470,6 +539,47 @@
                      </font>
                   </Label>
                   <TextField layoutX="114.0" layoutY="382.0" prefHeight="26.0" prefWidth="361.0" />
+                  <Button layoutX="248.0" layoutY="505.0" mnemonicParsing="false" text="Nästa">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="701.0" prefWidth="999.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+         <children>
+            <AnchorPane layoutX="185.0" layoutY="57.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Button layoutX="183.0" layoutY="430.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="214.0" text="Fortsätt Handla">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/grocery_bag.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="105.0" layoutY="145.0" />
+                  <Label layoutX="195.0" layoutY="118.0" text="Tack För Ditt Köp!">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="104.0" fitWidth="112.0" layoutX="238.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/checkmark.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="129.0" layoutY="267.0" prefHeight="92.0" prefWidth="322.0" text="Ditt kvitto har skickats till Hjördis@gmail.com " textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </children>
