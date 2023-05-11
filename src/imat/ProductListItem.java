@@ -3,11 +3,13 @@ package imat;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 public class ProductListItem extends AnchorPane {
 
@@ -18,8 +20,6 @@ public class ProductListItem extends AnchorPane {
     ImageView productImageImageView;
     @FXML
     Label productNameLabel;
-    @FXML
-    Label productCategory;
     @FXML
     Label productPrice;
 
@@ -36,6 +36,11 @@ public class ProductListItem extends AnchorPane {
 
         this.product = product;
         this.mainViewController = mainViewController;
+        this.productNameLabel.setText(product.getName());
+        DecimalFormat df = new DecimalFormat("#.##");
+        this.productPrice.setText(String.format("%s %s",df.format(product.getPrice()),product.getUnit()));
+        String image_path = "file:" + "\\" + mainViewController.dataHandler.imatDirectory() + "\\" + "images" + "\\" + product.getImageName();
+        this.productImageImageView.setImage(new Image(image_path));
 
 
     }

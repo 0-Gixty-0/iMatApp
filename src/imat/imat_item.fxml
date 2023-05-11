@@ -14,7 +14,6 @@
          </image>
       </ImageView>
       <Label fx:id="productNameLabel" layoutX="8.0" layoutY="69.0" text="Bönor" />
-      <Label fx:id="productCategory" layoutX="8.0" layoutY="83.0" text="Zeta" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="120.0" prefHeight="13.0" prefWidth="10.0" text="-">
          <font>
             <Font size="15.0" />
