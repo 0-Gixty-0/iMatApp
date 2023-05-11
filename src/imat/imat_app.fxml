@@ -618,7 +618,7 @@
                            <content>
                               <AnchorPane prefHeight="436.0" prefWidth="384.0">
                                  <children>
-                                    <FlowPane layoutX="3.0" layoutY="2.0" prefHeight="420.0" prefWidth="374.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="2.0" />
+                                    <FlowPane fx:id="generalItemsFlowPane" layoutX="3.0" layoutY="2.0" prefHeight="420.0" prefWidth="374.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="2.0" />
                                  </children>
                               </AnchorPane>
                            </content>

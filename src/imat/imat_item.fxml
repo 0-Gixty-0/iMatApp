@@ -6,15 +6,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="productListItemPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="100.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="61.0" fitWidth="83.0" layoutX="9.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="79.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="5.0">
+      <ImageView fx:id="productImageImageView" fitHeight="61.0" fitWidth="83.0" layoutX="9.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="79.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="5.0">
          <image>
             <Image url="@resources/beans.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="8.0" layoutY="71.0" text="Bönor" />
-      <Label layoutX="8.0" layoutY="83.0" text="Zeta" />
+      <Label fx:id="productNameLabel" layoutX="8.0" layoutY="69.0" text="Bönor" />
+      <Label fx:id="productCategory" layoutX="8.0" layoutY="83.0" text="Zeta" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="120.0" prefHeight="13.0" prefWidth="10.0" text="-">
          <font>
             <Font size="15.0" />
@@ -26,5 +26,6 @@
          </font>
       </Label>
       <Label layoutX="41.0" layoutY="119.0" text="1 st" />
+      <Label fx:id="productPrice" layoutX="7.0" layoutY="98.0" text="15 kr / burk" />
    </children>
-</AnchorPane>
+</fx:root>

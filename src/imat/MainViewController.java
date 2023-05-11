@@ -2,18 +2,31 @@
 package imat;
 
 import java.net.URL;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ProductCategory;
 
 public class MainViewController implements Initializable {
 
+    IMatDataHandler dataHandler = IMatDataHandler.getInstance();
+    private Map<String, ProductListItem> productListItemMap = new HashMap<String, ProductListItem>();
+
+
     @FXML
     Label pathLabel;
+
+    @FXML
+    FlowPane generalItemsFlowPane;
 
     @FXML
     AnchorPane previousPurchasesOverlay;
@@ -34,8 +47,25 @@ public class MainViewController implements Initializable {
         String iMatDirectory = iMatDataHandler.imatDirectory();
 
         // pathLabel.setText(iMatDirectory);
+
+        // Initialize product list item map
+        for (Product item : dataHandler.getProducts()) {
+            ProductListItem productListItem = new ProductListItem(item, this);
+            productListItemMap.put(item.getName(), productListItem);
+        }
+
+        updateProductListAll();
+
     }
 
+    private void updateProductListAll(){
+        generalItemsFlowPane.getChildren().clear();
+        for (Product item : dataHandler.getProducts())
+            generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
+    }
+
+
+    // Open / Close Overlays
     public void openPreviousPurchasesOverlay(){
         previousPurchasesOverlay.toFront();
     }
