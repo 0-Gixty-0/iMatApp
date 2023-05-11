@@ -462,9 +462,9 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="680.0" layoutY="84.0" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="319.0" style="-fx-background-color: RED;">
+      <AnchorPane fx:id="detailViewAnchorPane" layoutX="680.0" layoutY="84.0" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="319.0" style="-fx-background-color: RED;">
          <children>
-            <Label layoutX="27.0" layoutY="14.0" text="Hur använder jag iMat?">
+            <Label layoutX="27.0" layoutY="14.0" onMouseClicked="#closeDetailView" text="Hur använder jag iMat?">
                <font>
                   <Font size="20.0" />
                </font>

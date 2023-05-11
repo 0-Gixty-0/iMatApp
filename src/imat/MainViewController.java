@@ -24,6 +24,9 @@ public class MainViewController implements Initializable {
     @FXML
     AnchorPane shoppingCartOverlay;
 
+    @FXML
+    AnchorPane detailViewAnchorPane;
+
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     public void initialize(URL url, ResourceBundle rb) {
@@ -55,6 +58,10 @@ public class MainViewController implements Initializable {
 
     public void closeShoppingCartOverlay(){
         shoppingCartOverlay.toBack();
+    }
+
+    public void closeDetailView(){
+        detailViewAnchorPane.toBack();
     }
 
 }
