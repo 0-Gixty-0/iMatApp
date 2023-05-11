@@ -84,7 +84,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="700.0" prefWidth="657.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+      <AnchorPane fx:id="shoppingCartOverlay" onMouseClicked="#closeShoppingCartOverlay" prefHeight="700.0" prefWidth="657.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
          <children>
             <AnchorPane layoutX="681.0" prefHeight="702.0" prefWidth="321.0" style="-fx-background-color: WHITE;">
                <children>
@@ -93,7 +93,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Button layoutX="9.0" layoutY="13.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" text="Tillbaka">
+                  <Button layoutX="9.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#closeShoppingCartOverlay" prefHeight="31.0" prefWidth="123.0" text="Tillbaka">
                      <graphic>
                         <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
                            <image>
@@ -146,11 +146,11 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="701.0" prefWidth="999.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+      <AnchorPane fx:id="previousPurchasesOverlay" onMouseClicked="#closePreviousPurchasesOverlay" prefHeight="701.0" prefWidth="999.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
          <children>
             <AnchorPane layoutX="185.0" layoutY="57.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
                <children>
-                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" text="Tillbaka">
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closePreviousPurchasesOverlay" prefHeight="31.0" prefWidth="123.0" text="Tillbaka">
                      <graphic>
                         <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
                            <image>
@@ -534,7 +534,7 @@
                      </image>
                   </ImageView>
                   <TextField fx:id="SearchTextField" prefHeight="25.0" prefWidth="262.0" promptText="Sök efter en produkt..." />
-                  <Label id="text-bold" fx:id="previousPurchasesLabel" styleClass="text-header" text="Tidigare Köp">
+                  <Label id="text-bold" fx:id="previousPurchasesLabel" onMouseClicked="#openPreviousPurchasesOverlay" styleClass="text-header" text="Tidigare Köp">
                      <graphic>
                         <ImageView fitHeight="42.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -546,7 +546,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label id="text-bold" fx:id="profileLabel" styleClass="text-header" text="Profil">
+                  <Label id="text-bold" fx:id="profileLabel" onMouseClicked="#openProfileOverlay" styleClass="text-header" text="Profil">
                      <graphic>
                         <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -558,7 +558,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label id="text-bold" fx:id="shoppingCartLabel" styleClass="text-header" text="Varukorg">
+                  <Label id="text-bold" fx:id="shoppingCartLabel" onMouseClicked="#openShoppingCartOverlay" styleClass="text-header" text="Varukorg">
                      <graphic>
                         <ImageView fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
