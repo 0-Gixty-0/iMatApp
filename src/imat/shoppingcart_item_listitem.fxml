@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="322.0" style="-fx-background-color: LIGHTGRAY;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="119.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/beans.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="134.0" layoutY="6.0" text="Bönor">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="134.0" layoutY="69.0" text="20kr">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="231.0" layoutY="54.0" text="1 st">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="203.0" layoutY="47.0" text="-">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="279.0" layoutY="47.0" text="+">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
