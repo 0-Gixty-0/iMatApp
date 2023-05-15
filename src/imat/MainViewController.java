@@ -21,8 +21,8 @@ public class MainViewController implements Initializable {
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
     private Map<String, ProductListItem> productListItemMap = new HashMap<String, ProductListItem>();
-    // private Map<String, ShoppingCartListItem> shoppingCartListItemMap = new HashMap();
     private List<ShoppingCartListItem> shoppingCartListItems = new ArrayList<ShoppingCartListItem>();
+    private Map<Integer, Integer> shoppingCartNumItemsMap = new HashMap<>();
 
     @FXML
     Label pathLabel;
@@ -77,8 +77,10 @@ public class MainViewController implements Initializable {
 
     private void updateShoppingCart(){
         shoppingCartFlowPane.getChildren().clear();
-        for (ShoppingCartListItem item : shoppingCartListItems)
+        for (ShoppingCartListItem item : shoppingCartListItems) {
+            item.updateNumItems(shoppingCartNumItemsMap.get(item.getProductId()));
             shoppingCartFlowPane.getChildren().add(item);
+        }
     }
 
     //Populators
@@ -170,8 +172,13 @@ public class MainViewController implements Initializable {
     }
 
     public void addItemToCart(Product product){
-        ShoppingCartListItem listItem = new ShoppingCartListItem(product, this);
-        shoppingCartListItems.add(listItem);
+        if (shoppingCartNumItemsMap.containsKey(product.getProductId())){
+            shoppingCartNumItemsMap.replace(product.getProductId(), shoppingCartNumItemsMap.get(product.getProductId()) + 1);
+        } else {
+            ShoppingCartListItem listItem = new ShoppingCartListItem(product, this);
+            shoppingCartNumItemsMap.put(product.getProductId(), 1);
+            shoppingCartListItems.add(listItem);
+        }
     }
 
 }
