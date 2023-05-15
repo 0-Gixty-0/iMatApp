@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
+<AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1100.0" prefHeight="700.0" prefWidth="1100.0" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
       <AnchorPane layoutX="3.0" layoutY="2.0" prefHeight="701.0" prefWidth="999.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
          <children>
@@ -574,64 +574,43 @@
             </FlowPane>
          </children>
       </AnchorPane>
-      <SplitPane dividerPositions="0.6851604278074868" layoutX="-1.0" layoutY="85.0" prefHeight="616.0" prefWidth="999.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+      <SplitPane dividerPositions="0.705753823743627" layoutX="-1.0" layoutY="85.0" prefHeight="616.0" prefWidth="999.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="100.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Label id="text-categories_larger" layoutX="260.0" layoutY="-1.0" styleClass="text-categories" text="Kategorier">
+                  <Label id="text-categories_larger" layoutX="300.0" styleClass="text-categories" text="Kategorier">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Separator layoutX="9.0" layoutY="8.0" prefHeight="8.0" prefWidth="241.0" AnchorPane.bottomAnchor="597.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="422.0" AnchorPane.topAnchor="8.0" />
-                  <Separator layoutX="410.0" layoutY="9.0" prefHeight="11.0" prefWidth="256.0" />
-                  <Button fx:id="fruitButton" layoutX="450.0" layoutY="37.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: F65266;" styleClass="text-categories" text="Frukt" />
-                  <Button fx:id="vegetablesButton" layoutX="346.0" layoutY="37.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: LIMEGREEN;" styleClass="text-categories" text="Grönt" />
-                  <Button fx:id="meatButton" layoutX="144.0" layoutY="37.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: FE5674;" styleClass="text-categories" text="Kött" />
-                  <Button fx:id="dairyButton" layoutX="42.0" layoutY="37.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: E0DDDC;" styleClass="text-categories" text="Mejeri" />
-                  <Button fx:id="fishButton" layoutX="242.0" layoutY="37.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: PINK;" styleClass="text-categories" text="Fisk" />
-                  <Button fx:id="favoritesButton" layoutX="552.0" layoutY="37.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: F93B00;" styleClass="text-categories" text="Favoriter" />
-                  <Button fx:id="beveragesButton" layoutX="450.0" layoutY="92.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: #8B8FF5;" styleClass="text-categories" text="Dryck" />
-                  <Button fx:id="snacksButton" layoutX="346.0" layoutY="92.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: #6DE0BE;" styleClass="text-categories" text="Snacks" />
-                  <Button fx:id="spicesButton" layoutX="144.0" layoutY="92.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: E38D3D;" styleClass="text-categories" text="Krydda" />
-                  <Button fx:id="bakedButton" layoutX="42.0" layoutY="92.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: A17263;" styleClass="text-categories" text="Bakat" />
-                  <Button fx:id="pastaButton" layoutX="242.0" layoutY="92.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: E5D64A;" styleClass="text-categories" text="Pasta" />
-                  <Button fx:id="freezedButton" layoutX="552.0" layoutY="92.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: #7DC7C2;" styleClass="text-categories" text="Fryst" />
-                  <Label id="text-categories_larger" layoutX="146.0" layoutY="143.0" styleClass="text-categories" text="Varor">
+                  <Separator layoutX="9.0" layoutY="8.0" prefHeight="18.0" prefWidth="278.0" AnchorPane.bottomAnchor="588.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="8.0" />
+                  <Separator layoutX="454.0" layoutY="11.0" prefHeight="11.0" prefWidth="307.0" />
+                  <Button fx:id="fruitButton" layoutX="480.0" layoutY="40.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: F65266;" styleClass="text-categories" text="Frukt" />
+                  <Button fx:id="vegetablesButton" layoutX="376.0" layoutY="40.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: LIMEGREEN;" styleClass="text-categories" text="Grönt" />
+                  <Button fx:id="meatButton" layoutX="174.0" layoutY="40.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: FE5674;" styleClass="text-categories" text="Kött" />
+                  <Button fx:id="dairyButton" layoutX="72.0" layoutY="40.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: E0DDDC;" styleClass="text-categories" text="Mejeri" />
+                  <Button fx:id="fishButton" layoutX="272.0" layoutY="40.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: PINK;" styleClass="text-categories" text="Fisk" />
+                  <Button fx:id="favoritesButton" layoutX="582.0" layoutY="40.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: F93B00;" styleClass="text-categories" text="Favoriter" />
+                  <Button fx:id="beveragesButton" layoutX="480.0" layoutY="95.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: #8B8FF5;" styleClass="text-categories" text="Dryck" />
+                  <Button fx:id="snacksButton" layoutX="376.0" layoutY="95.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: #6DE0BE;" styleClass="text-categories" text="Snacks" />
+                  <Button fx:id="spicesButton" layoutX="174.0" layoutY="95.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: E38D3D;" styleClass="text-categories" text="Krydda" />
+                  <Button fx:id="bakedButton" layoutX="74.0" layoutY="94.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: A17263;" styleClass="text-categories" text="Bakat" />
+                  <Button fx:id="pastaButton" layoutX="272.0" layoutY="95.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: E5D64A;" styleClass="text-categories" text="Pasta" />
+                  <Button fx:id="freezedButton" layoutX="582.0" layoutY="95.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="84.0" style="-fx-background-color: #7DC7C2;" styleClass="text-categories" text="Fryst" />
+                  <Label id="text-categories_larger" layoutX="337.0" layoutY="143.0" styleClass="text-categories" text="Varor">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Separator layoutX="7.0" layoutY="158.0" prefHeight="8.0" prefWidth="130.0" />
-                  <Separator layoutX="235.0" layoutY="159.0" prefHeight="6.0" prefWidth="167.0" />
-                  <Label id="text-categories_larger" layoutX="432.0" layoutY="143.0" styleClass="text-categories" text="Rekommenderat">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="403.0" layoutY="156.0" prefHeight="11.0" prefWidth="28.0" />
-                  <Separator layoutX="647.0" layoutY="156.0" prefHeight="14.0" prefWidth="21.0" />
-                  <Separator layoutX="395.0" layoutY="162.0" orientation="VERTICAL" prefHeight="427.0" prefWidth="8.0" />
-                  <AnchorPane layoutX="5.0" layoutY="176.0" prefHeight="433.0" prefWidth="385.0" style="-fx-background-color: RED;">
+                  <Separator layoutX="5.0" layoutY="154.0" prefHeight="14.0" prefWidth="319.0" />
+                  <Separator layoutX="438.0" layoutY="155.0" prefHeight="11.0" prefWidth="319.0" />
+                  <AnchorPane layoutX="5.0" layoutY="176.0" prefHeight="434.0" prefWidth="759.0" style="-fx-background-color: RED;">
                      <children>
                         <ScrollPane layoutY="1.0" prefHeight="434.0" prefWidth="385.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
-                              <AnchorPane prefHeight="436.0" prefWidth="384.0">
+                              <AnchorPane prefHeight="436.0" prefWidth="750.0">
                                  <children>
                                     <FlowPane fx:id="generalItemsFlowPane" layoutX="3.0" layoutY="2.0" prefHeight="420.0" prefWidth="374.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="2.0" />
-                                 </children>
-                              </AnchorPane>
-                           </content>
-                        </ScrollPane>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="407.0" layoutY="176.0" prefHeight="431.0" prefWidth="264.0" style="-fx-background-color: RED;">
-                     <children>
-                        <ScrollPane prefHeight="434.0" prefWidth="264.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <content>
-                              <AnchorPane prefHeight="432.0" prefWidth="261.0">
-                                 <children>
-                                    <FlowPane prefHeight="433.0" prefWidth="260.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0" />
                                  </children>
                               </AnchorPane>
                            </content>
