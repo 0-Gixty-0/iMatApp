@@ -6,25 +6,34 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="productListItemPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="100.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="productListItemPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="244.0" style="-fx-background-color: LIGHTGRAY;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="productImageImageView" fitHeight="61.0" fitWidth="83.0" layoutX="9.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="79.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="5.0">
+      <ImageView fx:id="productImageImageView" fitHeight="159.0" fitWidth="221.0" layoutX="16.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="14.0">
          <image>
             <Image url="@resources/beans.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="productNameLabel" layoutX="8.0" layoutY="69.0" text="Bönor" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="120.0" prefHeight="13.0" prefWidth="10.0" text="-">
+      <Label fx:id="productNameLabel" layoutX="16.0" layoutY="180.0" text="Bönor">
          <font>
-            <Font size="15.0" />
+            <Font size="22.0" />
+         </font></Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="245.0" prefHeight="13.0" prefWidth="10.0" text="-">
+         <font>
+            <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="119.0" prefHeight="21.0" prefWidth="13.0" text="+">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="172.0" layoutY="244.0" prefHeight="54.0" prefWidth="32.0" text="+">
          <font>
-            <Font size="15.0" />
+            <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="41.0" layoutY="119.0" text="1 st" />
-      <Label fx:id="productPrice" layoutX="7.0" layoutY="98.0" text="15 kr / burk" />
+      <Label layoutX="100.0" layoutY="254.0" text="1 st">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="productPrice" layoutX="14.0" layoutY="212.0" text="15 kr / burk">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
    </children>
 </fx:root>
