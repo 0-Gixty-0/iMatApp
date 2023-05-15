@@ -27,7 +27,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="100.0" layoutY="254.0" text="1 st">
+      <Label fx:id="numItemsLabel" layoutX="100.0" layoutY="254.0" text="0 st">
          <font>
             <Font size="24.0" />
          </font></Label>

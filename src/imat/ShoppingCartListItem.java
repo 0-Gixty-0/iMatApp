@@ -57,8 +57,7 @@ public class ShoppingCartListItem extends AnchorPane{
         return this.product.getProductId();
     }
 
-    protected void updateNumItems(Integer numItems){
-        this.numItems += 1;
+    public void updateNumItemsLabel(Integer numItems){
         this.numItemsLabel.setText(String.format("%d st", numItems));
     }
 
@@ -69,10 +68,13 @@ public class ShoppingCartListItem extends AnchorPane{
 
     @FXML
     public void onAdd(Event event) {
+        this.numItems += 1;
         mainViewController.addItemToCart(this.product);}
 
     @FXML
     public void onRemove(Event event){
+        if (this.numItems > 0)
+            this.numItems -= 1;
         mainViewController.removeItemFromCart(this.product);
     }
 

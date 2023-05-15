@@ -16,6 +16,7 @@ public class ProductListItem extends AnchorPane {
 
     private Product product;
     private MainViewController mainViewController;
+    private Integer numItems;
 
     @FXML
     ImageView productImageImageView;
@@ -23,6 +24,8 @@ public class ProductListItem extends AnchorPane {
     Label productNameLabel;
     @FXML
     Label productPrice;
+    @FXML
+    Label numItemsLabel;
 
     public ProductListItem(Product product, MainViewController mainViewController){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("imat_item.fxml"));
@@ -37,6 +40,8 @@ public class ProductListItem extends AnchorPane {
 
         this.product = product;
         this.mainViewController = mainViewController;
+        this.numItems = 0;
+        this.numItemsLabel.setText(String.format("%d st",this.numItems));
         this.productNameLabel.setText(product.getName());
         DecimalFormat df = new DecimalFormat("#.##");
         this.productPrice.setText(String.format("%s %s",df.format(product.getPrice()),product.getUnit()));
@@ -44,6 +49,14 @@ public class ProductListItem extends AnchorPane {
         this.productImageImageView.setImage(new Image(image_path));
 
     }
+    public Integer getProductId(){
+        return this.product.getProductId();
+    }
+
+    public void updateNumItemsLabel(Integer numItems){
+        this.numItemsLabel.setText(String.format("%d st", numItems));
+    }
+
     @FXML
     public void onClick(Event event){
         mainViewController.openDetailView(this.product);
@@ -51,10 +64,13 @@ public class ProductListItem extends AnchorPane {
 
     @FXML
     public void onAdd(Event event) {
+        this.numItems += 1;
         mainViewController.addItemToCart(this.product);}
 
     @FXML
     public void onRemove(Event event){
+        if (this.numItems > 0)
+            this.numItems -= 1;
         mainViewController.removeItemFromCart(this.product);
     }
 }

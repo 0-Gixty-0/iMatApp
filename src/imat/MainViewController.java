@@ -47,6 +47,9 @@ public class MainViewController implements Initializable {
     @FXML
     FlowPane shoppingCartFlowPane;
 
+    @FXML
+    Label detailNumItemsLabel;
+
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     public void initialize(URL url, ResourceBundle rb) {
@@ -80,7 +83,6 @@ public class MainViewController implements Initializable {
     private void updateShoppingCart(){
         shoppingCartFlowPane.getChildren().clear();
         for (ShoppingCartListItem item : shoppingCartListItems) {
-            item.updateNumItems(shoppingCartNumItemsMap.get(item.getProductId()));
             shoppingCartFlowPane.getChildren().add(item);
         }
     }
@@ -92,6 +94,13 @@ public class MainViewController implements Initializable {
         detailItemNameLabel.setText(product.getName());
         DecimalFormat df = new DecimalFormat("#.##");
         detailItemPriceLabel.setText(String.format("%s %s",df.format(product.getPrice()),product.getUnit()));
+
+        if (shoppingCartNumItemsMap.containsKey(product.getProductId())) {
+            detailNumItemsLabel.setText(String.format("%d st", shoppingCartNumItemsMap.get(product.getProductId())));
+        } else {
+            detailNumItemsLabel.setText("0 st");
+        }
+
     }
 
     // Category Button Methods
@@ -174,6 +183,21 @@ public class MainViewController implements Initializable {
         detailViewAnchorPane.toFront();
     }
 
+    private void updateNumItemsLabels(){
+        for (ProductListItem listItem : productListItemMap.values()){
+            listItem.updateNumItemsLabel(shoppingCartNumItemsMap.getOrDefault(listItem.getProductId(), 0));
+        }
+        for (ShoppingCartListItem listItem : shoppingCartListItems){
+            listItem.updateNumItemsLabel(shoppingCartNumItemsMap.getOrDefault(listItem.getProductId(), 0));
+        }
+        if (shoppingCartNumItemsMap.containsKey(this.currentProduct.getProductId())) {
+            detailNumItemsLabel.setText(String.format("%d st", shoppingCartNumItemsMap.get(this.currentProduct.getProductId())));
+        } else {
+            detailNumItemsLabel.setText("0 st");
+        }
+
+    }
+
     public void addItemToCart(Product product){
         if (shoppingCartNumItemsMap.containsKey(product.getProductId())){
             shoppingCartNumItemsMap.replace(product.getProductId(), shoppingCartNumItemsMap.get(product.getProductId()) + 1);
@@ -182,6 +206,7 @@ public class MainViewController implements Initializable {
             shoppingCartNumItemsMap.put(product.getProductId(), 1);
             shoppingCartListItems.add(listItem);
         }
+        updateNumItemsLabels();
     }
 
     public void removeItemFromCart(Product product){
@@ -194,6 +219,7 @@ public class MainViewController implements Initializable {
                 shoppingCartListItems.removeIf(item -> item.getProductId() == product.getProductId());
             }
         }
+        updateNumItemsLabels();
     }
 
     @FXML

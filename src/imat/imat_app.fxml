@@ -627,7 +627,7 @@
                   <Image url="@resources/beans.jpg" />
                </image>
             </ImageView>
-            <Label layoutX="139.0" layoutY="261.0" text="1 st">
+            <Label fx:id="detailNumItemsLabel" layoutX="139.0" layoutY="261.0" text="1 st">
                <font>
                   <Font size="24.0" />
                </font>
