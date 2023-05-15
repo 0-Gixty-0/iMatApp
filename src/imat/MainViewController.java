@@ -139,5 +139,8 @@ public class MainViewController implements Initializable {
     public void closeDetailView(){
         detailViewAnchorPane.toBack();
     }
+    public void openDetailView(){
+        detailViewAnchorPane.toFront();
+    }
 
 }

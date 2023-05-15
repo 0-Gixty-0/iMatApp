@@ -1,5 +1,6 @@
 package imat;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -42,6 +43,9 @@ public class ProductListItem extends AnchorPane {
         String image_path = "file:" + "\\" + mainViewController.dataHandler.imatDirectory() + "\\" + "images" + "\\" + product.getImageName();
         this.productImageImageView.setImage(new Image(image_path));
 
-
+    }
+    @FXML
+    public void onClick(Event event){
+        mainViewController.openDetailView();
     }
 }
