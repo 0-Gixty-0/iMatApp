@@ -24,6 +24,7 @@ public class MainViewController implements Initializable {
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
     private Map<String, ProductListItem> productListItemMap = new HashMap<String, ProductListItem>();
+    private Map<Integer, ShoppingCartListItem> shoppingCartListItemMap = new HashMap();
 
 
     @FXML
@@ -44,6 +45,8 @@ public class MainViewController implements Initializable {
     Label detailItemNameLabel;
     @FXML
     Label detailItemPriceLabel;
+    @FXML
+    FlowPane shoppingCartFlowPane;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
