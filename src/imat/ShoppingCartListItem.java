@@ -3,6 +3,8 @@ package imat;
 import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
+
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,6 +22,15 @@ public class ShoppingCartListItem extends AnchorPane{
     @FXML
     Label numItemsLabel;
 
+    @FXML
+    ImageView shoppingCartImageView;
+
+    @FXML
+    Label shoppingCartItemNameLabel;
+
+    @FXML
+    Label shoppingCartPriceLabel;
+
     public ShoppingCartListItem(Product product, MainViewController mainViewController){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("shoppingcart_item_listitem.fxml"));
         fxmlLoader.setRoot(this);
@@ -35,6 +46,11 @@ public class ShoppingCartListItem extends AnchorPane{
         this.mainViewController = mainViewController;
         this.numItems = 1;
         this.numItemsLabel.setText("1 st");
+        this.shoppingCartItemNameLabel.setText(product.getName());
+        DecimalFormat df = new DecimalFormat("#.##");
+        this.shoppingCartPriceLabel.setText(String.format("%s %s",df.format(product.getPrice()),product.getUnit()));
+        String image_path = "file:" + "\\" + mainViewController.dataHandler.imatDirectory() + "\\" + "images" + "\\" + product.getImageName();
+        this.shoppingCartImageView.setImage(new Image(image_path));
     }
 
     protected Integer getProductId(){
