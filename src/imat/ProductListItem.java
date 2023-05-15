@@ -52,4 +52,9 @@ public class ProductListItem extends AnchorPane {
     @FXML
     public void onAdd(Event event) {
         mainViewController.addItemToCart(this.product);}
+
+    @FXML
+    public void onRemove(Event event){
+        mainViewController.removeItemFromCart(this.product);
+    }
 }

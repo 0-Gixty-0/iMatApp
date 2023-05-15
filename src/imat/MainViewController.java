@@ -181,4 +181,16 @@ public class MainViewController implements Initializable {
         }
     }
 
+    public void removeItemFromCart(Product product){
+        if (shoppingCartNumItemsMap.containsKey(product.getProductId())){
+            if (shoppingCartNumItemsMap.get(product.getProductId()) > 1) {
+                shoppingCartNumItemsMap.replace(product.getProductId(), shoppingCartNumItemsMap.get(product.getProductId()) - 1);
+            }
+            else {
+                shoppingCartNumItemsMap.remove(product.getProductId());
+                shoppingCartListItems.removeIf(item -> item.getProductId() == product.getProductId());
+            }
+        }
+    }
+
 }
