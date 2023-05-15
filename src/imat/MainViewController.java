@@ -5,6 +5,7 @@ import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.*;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -23,6 +24,7 @@ public class MainViewController implements Initializable {
     private Map<String, ProductListItem> productListItemMap = new HashMap<String, ProductListItem>();
     private List<ShoppingCartListItem> shoppingCartListItems = new ArrayList<ShoppingCartListItem>();
     private Map<Integer, Integer> shoppingCartNumItemsMap = new HashMap<>();
+    private Product currentProduct;
 
     @FXML
     Label pathLabel;
@@ -167,6 +169,7 @@ public class MainViewController implements Initializable {
         detailViewAnchorPane.toBack();
     }
     public void openDetailView(Product product){
+        this.currentProduct = product;
         populateItemDetailView(product);
         detailViewAnchorPane.toFront();
     }
@@ -191,6 +194,16 @@ public class MainViewController implements Initializable {
                 shoppingCartListItems.removeIf(item -> item.getProductId() == product.getProductId());
             }
         }
+    }
+
+    @FXML
+    public void removeDetailView(Event event){
+        removeItemFromCart(this.currentProduct);
+    }
+
+    @FXML
+    public void addDetailView(Event event){
+        addItemToCart(this.currentProduct);
     }
 
 }

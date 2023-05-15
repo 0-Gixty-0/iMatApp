@@ -8,7 +8,7 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="322.0" style="-fx-background-color: LIGHTGRAY;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="shoppingCartImageView" fitHeight="119.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="shoppingCartImageView" fitHeight="119.0" fitWidth="134.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@resources/beans.jpg" />
          </image>
@@ -28,12 +28,12 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="203.0" layoutY="47.0" text="-">
+      <Label layoutX="203.0" layoutY="47.0" onMouseClicked="#onRemove" text="-">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label layoutX="279.0" layoutY="47.0" text="+">
+      <Label layoutX="279.0" layoutY="47.0" onMouseClicked="#onAdd" text="+">
          <font>
             <Font size="30.0" />
          </font>
