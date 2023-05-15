@@ -12,7 +12,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 
-public class ShoppingCartListItem {
+public class ShoppingCartListItem extends AnchorPane{
     private Product product;
     private MainViewController mainViewController;
 

@@ -3,10 +3,7 @@ package imat;
 
 import java.net.URL;
 import java.text.DecimalFormat;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -24,8 +21,8 @@ public class MainViewController implements Initializable {
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
     private Map<String, ProductListItem> productListItemMap = new HashMap<String, ProductListItem>();
-    private Map<Integer, ShoppingCartListItem> shoppingCartListItemMap = new HashMap();
-
+    // private Map<String, ShoppingCartListItem> shoppingCartListItemMap = new HashMap();
+    private List<ShoppingCartListItem> shoppingCartListItems = new ArrayList<ShoppingCartListItem>();
 
     @FXML
     Label pathLabel;
@@ -76,6 +73,12 @@ public class MainViewController implements Initializable {
         generalItemsFlowPane.getChildren().clear();
         for (Product item : dataHandler.getProducts(category))
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
+    }
+
+    private void updateShoppingCart(){
+        shoppingCartFlowPane.getChildren().clear();
+        for (ShoppingCartListItem item : shoppingCartListItems)
+            shoppingCartFlowPane.getChildren().add(item);
     }
 
     //Populators
@@ -150,6 +153,7 @@ public class MainViewController implements Initializable {
     }
 
     public void openShoppingCartOverlay(){
+        updateShoppingCart();
         shoppingCartOverlay.toFront();
     }
 
@@ -163,6 +167,11 @@ public class MainViewController implements Initializable {
     public void openDetailView(Product product){
         populateItemDetailView(product);
         detailViewAnchorPane.toFront();
+    }
+
+    public void addItemToCart(Product product){
+        ShoppingCartListItem listItem = new ShoppingCartListItem(product, this);
+        shoppingCartListItems.add(listItem);
     }
 
 }

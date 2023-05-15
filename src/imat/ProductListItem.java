@@ -48,4 +48,8 @@ public class ProductListItem extends AnchorPane {
     public void onClick(Event event){
         mainViewController.openDetailView(this.product);
     }
+
+    @FXML
+    public void onAdd(Event event) {
+        mainViewController.addItemToCart(this.product);}
 }
