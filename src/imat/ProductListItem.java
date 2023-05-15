@@ -46,6 +46,6 @@ public class ProductListItem extends AnchorPane {
     }
     @FXML
     public void onClick(Event event){
-        mainViewController.openDetailView();
+        mainViewController.openDetailView(this.product);
     }
 }

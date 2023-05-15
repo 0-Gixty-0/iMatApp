@@ -2,6 +2,7 @@
 package imat;
 
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,6 +12,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -35,6 +38,12 @@ public class MainViewController implements Initializable {
     AnchorPane shoppingCartOverlay;
     @FXML
     AnchorPane detailViewAnchorPane;
+    @FXML
+    ImageView detailItemImageView;
+    @FXML
+    Label detailItemNameLabel;
+    @FXML
+    Label detailItemPriceLabel;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -64,6 +73,15 @@ public class MainViewController implements Initializable {
         generalItemsFlowPane.getChildren().clear();
         for (Product item : dataHandler.getProducts(category))
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
+    }
+
+    //Populators
+    private void populateItemDetailView(Product product){
+        String image_path = "file:" + "\\" + dataHandler.imatDirectory() + "\\" + "images" + "\\" + product.getImageName();
+        detailItemImageView.setImage(new Image(image_path));
+        detailItemNameLabel.setText(product.getName());
+        DecimalFormat df = new DecimalFormat("#.##");
+        detailItemPriceLabel.setText(String.format("%s %s",df.format(product.getPrice()),product.getUnit()));
     }
 
     // Category Button Methods
@@ -139,7 +157,8 @@ public class MainViewController implements Initializable {
     public void closeDetailView(){
         detailViewAnchorPane.toBack();
     }
-    public void openDetailView(){
+    public void openDetailView(Product product){
+        populateItemDetailView(product);
         detailViewAnchorPane.toFront();
     }
 
