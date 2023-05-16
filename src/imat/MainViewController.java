@@ -5,11 +5,14 @@ import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.*;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -23,8 +26,9 @@ public class MainViewController implements Initializable {
     private List<ShoppingCartListItem> shoppingCartListItems = new ArrayList<ShoppingCartListItem>();
     private Map<Integer, Integer> shoppingCartNumItemsMap = new HashMap<>();
     private Product currentProduct = new Product();
-
     private ShoppingCart shoppingCart = dataHandler.getShoppingCart();
+    private Customer customer = dataHandler.getCustomer();
+
 
     @FXML
     Label pathLabel;
@@ -58,9 +62,20 @@ public class MainViewController implements Initializable {
     Label numItemsLabel;
     @FXML
     Label totalPriceLabel;
-
     @FXML
     Label detailNumItemsLabel;
+    @FXML
+    TextField customerFirstNameTextField;
+    @FXML
+    TextField customerLastNameTextField;
+    @FXML
+    TextField customerAddressTextField;
+    @FXML
+    TextField customerPostCodeTextField;
+    @FXML
+    TextField customerPhoneNumberTextField;
+    @FXML
+    TextField customerEmailTextField;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -75,6 +90,59 @@ public class MainViewController implements Initializable {
             ProductListItem productListItem = new ProductListItem(item, this);
             productListItemMap.put(item.getName(), productListItem);
         }
+
+        // Initialize change listeners
+        customerFirstNameTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (!containsInt(customerFirstNameTextField.getText())){
+                    customer.setFirstName(t1);
+                }
+            }
+        });
+
+        customerLastNameTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (!containsInt(customerLastNameTextField.getText())){
+                    customer.setLastName(t1);
+                }
+            }
+        });
+
+        customerAddressTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (customerAddressTextField.getText().contains("@"))
+                    customer.setAddress(customerAddressTextField.getText());
+            }
+        });
+
+        customerPostCodeTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (!containsChar(customerPostCodeTextField.getText())){
+                    customer.setPostCode(t1);
+                }
+            }
+        });
+
+        customerPhoneNumberTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (!containsChar(customerPhoneNumberTextField.getText())){
+                    customer.setPhoneNumber(t1);
+                }
+            }
+        });
+
+        customerEmailTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                customer.setEmail(customerEmailTextField.getText());
+            }
+        });
+
 
         updateShoppingCartLabels();
 
@@ -198,6 +266,7 @@ public class MainViewController implements Initializable {
     }
 
     public void openCheckoutStep1(){
+        populateCheckoutStepOne();
         checkOutStepOneAnchorPane.toFront();
     }
 
@@ -310,5 +379,37 @@ public class MainViewController implements Initializable {
     public void addDetailView(Event event){
         addItemToCart(this.currentProduct);
     }
+
+    //Customer Code
+    private void populateCheckoutStepOne(){
+        customerFirstNameTextField.setText(customer.getFirstName());
+        customerLastNameTextField.setText(customer.getLastName());
+        customerPostCodeTextField.setText(customer.getPostCode());
+        customerPhoneNumberTextField.setText(customer.getPhoneNumber());
+        customerEmailTextField.setText(customer.getEmail());
+        customerAddressTextField.setText(customer.getAddress());
+    }
+
+    private boolean containsInt(String text){
+        char[] chars = text.toCharArray();
+        for (char c : chars){
+            if (Character.isDigit(c)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean containsChar(String text) {
+        char[] chars = text.toCharArray();
+        StringBuilder stringBuilder = new StringBuilder();
+        for (char c : chars) {
+            if (Character.isDigit(c)) {
+                stringBuilder.append(c);
+            }
+        }
+        return stringBuilder.length() != chars.length;
+    }
+
 
 }
