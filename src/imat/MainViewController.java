@@ -10,9 +10,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -28,6 +26,7 @@ public class MainViewController implements Initializable {
     private Product currentProduct = new Product();
     private ShoppingCart shoppingCart = dataHandler.getShoppingCart();
     private Customer customer = dataHandler.getCustomer();
+    private CreditCard creditCard = dataHandler.getCreditCard();
 
 
     @FXML
@@ -76,6 +75,18 @@ public class MainViewController implements Initializable {
     TextField customerPhoneNumberTextField;
     @FXML
     TextField customerEmailTextField;
+    @FXML
+    TextField cardHolderNameTextField;
+    @FXML
+    TextField cardNumberTextField;
+    @FXML
+    Spinner cardExpirationMonthSpinner;
+    @FXML
+    Spinner cardExpirationYearSpinner;
+    @FXML
+    TextField cardVerificationCodeTextField;
+    @FXML
+    ComboBox cardTypeComboBox;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -143,6 +154,60 @@ public class MainViewController implements Initializable {
             }
         });
 
+        cardHolderNameTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (!containsInt(cardHolderNameTextField.getText())){
+                    creditCard.setHoldersName(cardHolderNameTextField.getText());
+                }
+            }
+        });
+
+        cardNumberTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (!containsChar(cardNumberTextField.getText())){
+                    creditCard.setCardNumber(cardNumberTextField.getText());
+                }
+            }
+        });
+
+        SpinnerValueFactory<Integer> valueFactoryMonthSpinner = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 1, 1);
+        cardExpirationMonthSpinner.setValueFactory(valueFactoryMonthSpinner);
+        cardExpirationMonthSpinner.valueProperty().addListener(new ChangeListener<Integer>() {
+            @Override
+            public void changed(ObservableValue<? extends Integer> observable, Integer oldValue, Integer newValue) {
+                creditCard.setValidMonth(newValue);
+            }
+        });
+
+        SpinnerValueFactory<Integer> valueFactoryYearSpinner = new SpinnerValueFactory.IntegerSpinnerValueFactory(23, 30, 23, 1);
+        cardExpirationYearSpinner.setValueFactory(valueFactoryYearSpinner);
+        cardExpirationYearSpinner.valueProperty().addListener(new ChangeListener<Integer>() {
+            @Override
+            public void changed(ObservableValue<? extends Integer> observable, Integer oldValue, Integer newValue) {
+                creditCard.setValidYear(newValue);
+            }
+        });
+
+        cardVerificationCodeTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (!containsChar(cardVerificationCodeTextField.getText())){
+                    creditCard.setVerificationCode(Integer.parseInt(cardVerificationCodeTextField.getText()));
+                }
+            }
+        });
+
+        cardTypeComboBox.getItems().addAll("Visa", "Mastercard", "American Express", "Discover");
+        cardTypeComboBox.getSelectionModel().select("Visa");
+        cardTypeComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String o, String t1) {
+                creditCard.setCardType(t1);
+            }
+        });
+
 
         updateShoppingCartLabels();
 
@@ -183,6 +248,24 @@ public class MainViewController implements Initializable {
             detailNumItemsLabel.setText("0 st");
         }
 
+    }
+
+    private void populateCheckoutStepOne(){
+        customerFirstNameTextField.setText(customer.getFirstName());
+        customerLastNameTextField.setText(customer.getLastName());
+        customerPostCodeTextField.setText(customer.getPostCode());
+        customerPhoneNumberTextField.setText(customer.getPhoneNumber());
+        customerEmailTextField.setText(customer.getEmail());
+        customerAddressTextField.setText(customer.getAddress());
+    }
+
+    private void populateCheckoutStepThree(){
+        cardHolderNameTextField.setText(creditCard.getHoldersName());
+        cardNumberTextField.setText(creditCard.getCardNumber());
+        cardExpirationMonthSpinner.getValueFactory().setValue(creditCard.getValidMonth());
+        cardExpirationYearSpinner.getValueFactory().setValue(creditCard.getValidYear());
+        cardVerificationCodeTextField.setText(String.valueOf(creditCard.getVerificationCode()));
+        cardTypeComboBox.setValue(creditCard.getCardType());
     }
 
     // Category Button Methods
@@ -283,6 +366,7 @@ public class MainViewController implements Initializable {
     }
 
     public void openCheckoutStep3(){
+        populateCheckoutStepThree();
         checkOutStepThreeAnchorPane.toFront();
     }
 
@@ -381,14 +465,6 @@ public class MainViewController implements Initializable {
     }
 
     //Customer Code
-    private void populateCheckoutStepOne(){
-        customerFirstNameTextField.setText(customer.getFirstName());
-        customerLastNameTextField.setText(customer.getLastName());
-        customerPostCodeTextField.setText(customer.getPostCode());
-        customerPhoneNumberTextField.setText(customer.getPhoneNumber());
-        customerEmailTextField.setText(customer.getEmail());
-        customerAddressTextField.setText(customer.getAddress());
-    }
 
     private boolean containsInt(String text){
         char[] chars = text.toCharArray();

@@ -801,7 +801,7 @@
                   </Label>
                   <Label layoutX="105.0" layoutY="145.0" />
                   <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="214.0" />
-                  <TextField layoutX="111.0" layoutY="193.0" prefHeight="26.0" prefWidth="361.0" />
+                  <TextField fx:id="cardNumberTextField" layoutX="111.0" layoutY="193.0" prefHeight="26.0" prefWidth="361.0" />
                   <Label layoutX="111.0" layoutY="230.0" text="Utgångsdatum Månad / År">
                      <font>
                         <Font size="20.0" />
@@ -812,8 +812,8 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="110.0" layoutY="337.0" prefHeight="26.0" prefWidth="158.0" />
-                  <Label layoutX="104.0" layoutY="364.0" text="Kommentar">
+                  <TextField fx:id="cardVerificationCodeTextField" layoutX="110.0" layoutY="337.0" prefHeight="26.0" prefWidth="158.0" />
+                  <Label layoutX="109.0" layoutY="366.0" text="Kommentar">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -841,15 +841,15 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="110.0" layoutY="136.0" prefHeight="26.0" prefWidth="361.0" />
-                  <Spinner layoutX="111.0" layoutY="269.0" prefHeight="26.0" prefWidth="173.0" />
-                  <Spinner layoutX="298.0" layoutY="269.0" prefHeight="26.0" prefWidth="174.0" />
+                  <TextField fx:id="cardHolderNameTextField" layoutX="110.0" layoutY="136.0" prefHeight="26.0" prefWidth="361.0" />
+                  <Spinner fx:id="cardExpirationMonthSpinner" editable="true" layoutX="111.0" layoutY="269.0" prefHeight="26.0" prefWidth="173.0" />
+                  <Spinner fx:id="cardExpirationYearSpinner" editable="true" layoutX="298.0" layoutY="269.0" prefHeight="26.0" prefWidth="174.0" />
                   <Label layoutX="280.0" layoutY="307.0" text="Korttyp">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <ComboBox layoutX="280.0" layoutY="338.0" prefHeight="26.0" prefWidth="198.0" />
+                  <ComboBox fx:id="cardTypeComboBox" layoutX="280.0" layoutY="338.0" prefHeight="26.0" prefWidth="198.0" />
                </children>
             </AnchorPane>
          </children>
