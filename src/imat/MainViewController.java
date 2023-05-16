@@ -17,6 +17,7 @@ import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
+import se.chalmers.cse.dat216.project.ShoppingCart;
 
 public class MainViewController implements Initializable {
 
@@ -25,6 +26,8 @@ public class MainViewController implements Initializable {
     private List<ShoppingCartListItem> shoppingCartListItems = new ArrayList<ShoppingCartListItem>();
     private Map<Integer, Integer> shoppingCartNumItemsMap = new HashMap<>();
     private Product currentProduct;
+
+    private ShoppingCart shoppingCart = dataHandler.getShoppingCart();
 
     @FXML
     Label pathLabel;
@@ -46,6 +49,14 @@ public class MainViewController implements Initializable {
     Label detailItemPriceLabel;
     @FXML
     FlowPane shoppingCartFlowPane;
+    @FXML
+    AnchorPane checkOutStepOneAnchorPane;
+    @FXML
+    AnchorPane checkOutStepTwoAnchorPane;
+    @FXML
+    AnchorPane checkOutStepThreeAnchorPane;
+    @FXML
+    AnchorPane checkOutThankYouAnchorPane;
 
     @FXML
     Label detailNumItemsLabel;
@@ -183,6 +194,38 @@ public class MainViewController implements Initializable {
         detailViewAnchorPane.toFront();
     }
 
+    public void openCheckoutStep1(){
+        checkOutStepOneAnchorPane.toFront();
+    }
+
+    public void closeCheckoutStep1(){
+        checkOutStepOneAnchorPane.toBack();
+    }
+
+    public void openCheckoutStep2(){
+        checkOutStepTwoAnchorPane.toFront();
+    }
+
+    public void closeCheckoutStep2(){
+        checkOutStepTwoAnchorPane.toBack();
+    }
+
+    public void openCheckoutStep3(){
+        checkOutStepThreeAnchorPane.toFront();
+    }
+
+    public void closeCheckoutStep3(){
+        checkOutStepThreeAnchorPane.toBack();
+    }
+
+    public void openCheckoutThankYou(){
+        checkOutThankYouAnchorPane.toFront();
+    }
+
+    public void closeCheckoutThankYou(){
+        checkOutThankYouAnchorPane.toBack();
+    }
+
     private void updateNumItemsLabels(){
         for (ProductListItem listItem : productListItemMap.values()){
             listItem.updateNumItemsLabel(shoppingCartNumItemsMap.getOrDefault(listItem.getProductId(), 0));
@@ -206,6 +249,7 @@ public class MainViewController implements Initializable {
             shoppingCartNumItemsMap.put(product.getProductId(), 1);
             shoppingCartListItems.add(listItem);
         }
+        shoppingCart.addProduct(product);
         updateNumItemsLabels();
     }
 
@@ -219,7 +263,15 @@ public class MainViewController implements Initializable {
                 shoppingCartListItems.removeIf(item -> item.getProductId() == product.getProductId());
             }
         }
+        shoppingCart.removeProduct(product);
         updateNumItemsLabels();
+    }
+
+    @FXML
+    public void emptyCart(){
+        shoppingCartListItems.clear();
+        shoppingCartNumItemsMap.clear();
+        shoppingCart.clear();
     }
 
     @FXML
