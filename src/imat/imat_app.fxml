@@ -575,18 +575,102 @@
                   </Label>
                   <Separator layoutX="9.0" layoutY="8.0" prefHeight="18.0" prefWidth="278.0" AnchorPane.bottomAnchor="588.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="8.0" />
                   <Separator layoutX="454.0" layoutY="11.0" prefHeight="11.0" prefWidth="307.0" />
-                  <Button fx:id="fruitButton" layoutX="519.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFruitItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: F65266;" styleClass="text-categories" text="Frukt" />
-                  <Button fx:id="vegetablesButton" layoutX="393.0" layoutY="36.0" mnemonicParsing="false" onAction="#showVegetableItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: LIMEGREEN;" styleClass="text-categories" text="Grönt" />
-                  <Button fx:id="meatButton" layoutX="142.0" layoutY="36.0" mnemonicParsing="false" onAction="#showMeatItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FE5674;" styleClass="text-categories" text="Kött" />
-                  <Button fx:id="dairyButton" layoutX="19.0" layoutY="36.0" mnemonicParsing="false" onAction="#showDairyItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: E0DDDC;" styleClass="text-categories" text="Mejeri" />
-                  <Button fx:id="fishButton" layoutX="263.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFishItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: PINK;" styleClass="text-categories" text="Fisk" />
-                  <Button fx:id="favoritesButton" layoutX="640.0" layoutY="36.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: F93B00;" styleClass="text-categories" text="Favoriter" />
-                  <Button fx:id="beveragesButton" layoutX="518.0" layoutY="97.0" mnemonicParsing="false" onAction="#showColdDrinksItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: #8B8FF5;" styleClass="text-categories" text="Kall Dryck" />
-                  <Button fx:id="snacksButton" layoutX="393.0" layoutY="97.0" mnemonicParsing="false" onAction="#showHotDrinksItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: #6DE0BE;" styleClass="text-categories" text="Varm Dryck" />
-                  <Button fx:id="spicesButton" layoutX="142.0" layoutY="97.0" mnemonicParsing="false" onAction="#showHerbItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: E38D3D;" styleClass="text-categories" text="Örter" />
-                  <Button fx:id="bakedButton" layoutX="19.0" layoutY="97.0" mnemonicParsing="false" onAction="#showBakingItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: A17263;" styleClass="text-categories" text="Baka" />
-                  <Button fx:id="pastaButton" layoutX="263.0" layoutY="97.0" mnemonicParsing="false" onAction="#showPastaItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: E5D64A;" styleClass="text-categories" text="Pasta" />
-                  <Button fx:id="freezedButton" layoutX="640.0" layoutY="97.0" mnemonicParsing="false" onAction="#showNutsItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: #7DC7C2;" styleClass="text-categories" text="Nötter" />
+                  <Button fx:id="fruitButton" layoutX="519.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFruitItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Frukt">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/fruit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="vegetablesButton" layoutX="393.0" layoutY="36.0" mnemonicParsing="false" onAction="#showVegetableItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Grönt">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/vedgetable.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="meatButton" layoutX="142.0" layoutY="36.0" mnemonicParsing="false" onAction="#showMeatItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Kött">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/meat.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="dairyButton" layoutX="19.0" layoutY="36.0" mnemonicParsing="false" onAction="#showDairyItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Mejeri">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/milk.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="fishButton" layoutX="263.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFishItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Fisk">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/fish.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="favoritesButton" layoutX="640.0" layoutY="36.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FCB8A6;" styleClass="text-categories" text="Favoriter">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/favourites.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="beveragesButton" layoutX="518.0" layoutY="97.0" mnemonicParsing="false" onAction="#showColdDrinksItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Läsk">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/colddrink.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="snacksButton" layoutX="393.0" layoutY="97.0" mnemonicParsing="false" onAction="#showHotDrinksItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Te">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/hotdrink.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="spicesButton" layoutX="142.0" layoutY="97.0" mnemonicParsing="false" onAction="#showHerbItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Örter">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/herbs.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="bakedButton" layoutX="19.0" layoutY="97.0" mnemonicParsing="false" onAction="#showBakingItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Bakat">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/baked.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="pastaButton" layoutX="263.0" layoutY="97.0" mnemonicParsing="false" onAction="#showPastaItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Pasta">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/pasta.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="freezedButton" layoutX="640.0" layoutY="97.0" mnemonicParsing="false" onAction="#showNutsItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Nötter">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/nuts.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
                   <Label id="text-categories_larger" layoutX="337.0" layoutY="143.0" styleClass="text-categories" text="Varor">
                      <font>
                         <Font size="20.0" />
