@@ -111,6 +111,8 @@ public class MainViewController implements Initializable {
     ComboBox profileCardTypeComboBox;
     @FXML
     TextField profileCardNumberTextField;
+    @FXML
+    FlowPane previousPurchasesFlowPane;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -363,6 +365,20 @@ public class MainViewController implements Initializable {
         }
     }
 
+    private void updatePreviousPurchases(){
+        previousPurchasesFlowPane.getChildren().clear();
+        for (Order order : dataHandler.getOrders()){
+            previousPurchasesFlowPane.getChildren().add(new PreviousPurchaseItem(order, this));
+        }
+    }
+
+    public void placeOrder(){
+        dataHandler.placeOrder();
+        emptyCart();
+        checkOutStepThreeAnchorPane.toBack();
+        checkOutThankYouAnchorPane.toFront();
+    }
+
     //Populators
     private void populateItemDetailView(Product product){
         String image_path = "file:" + "\\" + dataHandler.imatDirectory() + "\\" + "images" + "\\" + product.getImageName();
@@ -459,6 +475,7 @@ public class MainViewController implements Initializable {
 
     // Open / Close Overlays
     public void openPreviousPurchasesOverlay(){
+        updatePreviousPurchases();
         previousPurchasesOverlay.toFront();
     }
 
