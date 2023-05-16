@@ -17,6 +17,119 @@
 
 <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1100.0" prefHeight="700.0" prefWidth="1100.0" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
+      <AnchorPane fx:id="profileOverlay" layoutX="2.0" layoutY="2.0" onMouseClicked="#closeProfileOverlay" prefHeight="702.0" prefWidth="1096.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+         <children>
+            <AnchorPane layoutX="257.0" layoutY="69.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeProfileOverlay" prefHeight="31.0" prefWidth="123.0" text="Tillbaka">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../iMatApp/src/imat/resources/left_arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="244.0" layoutY="52.0" text="Leverans">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="355.0" layoutY="65.0" prefHeight="9.0" prefWidth="214.0" />
+                  <Separator layoutX="13.0" layoutY="66.0" prefHeight="9.0" prefWidth="214.0" />
+                  <Label layoutX="52.0" layoutY="87.0" text="Address">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="profileAddressTextField" layoutX="54.0" layoutY="117.0" prefHeight="26.0" prefWidth="276.0" />
+                  <Label layoutX="353.0" layoutY="91.0" text="Postnummer">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="profilePostCodeTextField" layoutX="353.0" layoutY="118.0" />
+                  <Separator layoutX="14.0" layoutY="162.0" prefHeight="14.0" prefWidth="190.0" />
+                  <Separator layoutX="377.0" layoutY="162.0" prefHeight="14.0" prefWidth="190.0" />
+                  <Label layoutX="219.0" layoutY="151.0" text="Kortuppgifter">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="51.0" layoutY="186.0" text="Kortnummer">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="profileCardNumberTextField" layoutX="51.0" layoutY="213.0" prefHeight="26.0" prefWidth="238.0" />
+                  <Label layoutX="54.0" layoutY="253.0" text="Utgångsdatum Månad / År">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="57.0" layoutY="314.0" text="CVC">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="profileCardVerificationCodeTextField" layoutX="54.0" layoutY="341.0" />
+                  <Label layoutX="240.0" layoutY="362.0" text="Uppgifter">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="15.0" layoutY="372.0" prefHeight="14.0" prefWidth="214.0" />
+                  <Separator layoutX="353.0" layoutY="372.0" prefHeight="14.0" prefWidth="214.0" />
+                  <Label layoutX="74.0" layoutY="397.0" text="Förnamn">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="317.0" layoutY="397.0" text="Efternamn">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="454.0" text="Email-Address">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="320.0" layoutY="454.0" text="Telefonnummer">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="profileFirstNameTextField" layoutX="75.0" layoutY="424.0" prefHeight="26.0" prefWidth="190.0" />
+                  <TextField fx:id="profileLastNameTextField" layoutX="317.0" layoutY="424.0" prefHeight="26.0" prefWidth="190.0" />
+                  <TextField fx:id="profileEmailTextField" layoutX="75.0" layoutY="487.0" prefHeight="26.0" prefWidth="190.0" />
+                  <TextField fx:id="profilePhoneNumberTextField" layoutX="317.0" layoutY="487.0" prefHeight="26.0" prefWidth="190.0" />
+                  <Label layoutX="311.0" layoutY="186.0" text="Namn">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="profileCardNameTextField" layoutX="311.0" layoutY="213.0" prefHeight="26.0" prefWidth="238.0" />
+                  <Spinner fx:id="profileCardExpirationMonthSpinner" layoutX="54.0" layoutY="282.0" />
+                  <Spinner fx:id="profileCardExpirationYearSpinner" layoutX="214.0" layoutY="280.0" />
+                  <Label layoutX="382.0" layoutY="253.0" text="Korttyp">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="profileCardTypeComboBox" layoutX="379.0" layoutY="281.0" prefWidth="150.0" />
+                  <Button layoutX="261.0" layoutY="521.0" mnemonicParsing="false" text="Spara">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
       <AnchorPane fx:id="checkOutStepThreeAnchorPane" layoutY="-1.0" onMouseClicked="#closeCheckoutStep3" prefHeight="702.0" prefWidth="1094.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
          <children>
             <AnchorPane layoutX="256.0" layoutY="69.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
@@ -753,118 +866,5 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <AnchorPane fx:id="profileOverlay" layoutX="2.0" layoutY="2.0" prefHeight="702.0" prefWidth="1096.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
-         <children>
-            <AnchorPane layoutX="257.0" layoutY="69.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
-               <children>
-                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeProfileOverlay" prefHeight="31.0" prefWidth="123.0" text="Tillbaka">
-                     <graphic>
-                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@../../../iMatApp/src/imat/resources/left_arrow.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Button>
-                  <Label layoutX="244.0" layoutY="52.0" text="Leverans">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="355.0" layoutY="65.0" prefHeight="9.0" prefWidth="214.0" />
-                  <Separator layoutX="13.0" layoutY="66.0" prefHeight="9.0" prefWidth="214.0" />
-                  <Label layoutX="52.0" layoutY="87.0" text="Address">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="54.0" layoutY="117.0" prefHeight="26.0" prefWidth="276.0" />
-                  <Label layoutX="353.0" layoutY="91.0" text="Postnummer">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="353.0" layoutY="118.0" />
-                  <Separator layoutX="14.0" layoutY="162.0" prefHeight="14.0" prefWidth="190.0" />
-                  <Separator layoutX="377.0" layoutY="162.0" prefHeight="14.0" prefWidth="190.0" />
-                  <Label layoutX="219.0" layoutY="151.0" text="Kortuppgifter">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="51.0" layoutY="186.0" text="Kortnummer">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="51.0" layoutY="213.0" prefHeight="26.0" prefWidth="238.0" />
-                  <Label layoutX="54.0" layoutY="253.0" text="Utgångsdatum Månad / År">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="57.0" layoutY="314.0" text="CVC">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="54.0" layoutY="341.0" />
-                  <Label layoutX="240.0" layoutY="362.0" text="Uppgifter">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="15.0" layoutY="372.0" prefHeight="14.0" prefWidth="214.0" />
-                  <Separator layoutX="353.0" layoutY="372.0" prefHeight="14.0" prefWidth="214.0" />
-                  <Label layoutX="74.0" layoutY="397.0" text="Förnamn">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="317.0" layoutY="397.0" text="Efternamn">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="77.0" layoutY="454.0" text="Email-Address">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="320.0" layoutY="454.0" text="Telefonnummer">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="75.0" layoutY="424.0" prefHeight="26.0" prefWidth="190.0" />
-                  <TextField layoutX="317.0" layoutY="424.0" prefHeight="26.0" prefWidth="190.0" />
-                  <TextField layoutX="75.0" layoutY="487.0" prefHeight="26.0" prefWidth="190.0" />
-                  <TextField layoutX="317.0" layoutY="487.0" prefHeight="26.0" prefWidth="190.0" />
-                  <Label layoutX="311.0" layoutY="186.0" text="Namn">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="311.0" layoutY="213.0" prefHeight="26.0" prefWidth="238.0" />
-                  <Spinner layoutX="54.0" layoutY="282.0" />
-                  <Spinner layoutX="214.0" layoutY="280.0" />
-                  <Label layoutX="382.0" layoutY="253.0" text="Korttyp">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <ComboBox layoutX="379.0" layoutY="281.0" prefWidth="150.0" />
-                  <Button layoutX="261.0" layoutY="521.0" mnemonicParsing="false" text="Spara">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Button>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
    </children>
 </AnchorPane>

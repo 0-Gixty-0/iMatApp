@@ -87,6 +87,30 @@ public class MainViewController implements Initializable {
     TextField cardVerificationCodeTextField;
     @FXML
     ComboBox cardTypeComboBox;
+    @FXML
+    TextField profileAddressTextField;
+    @FXML
+    TextField profilePostCodeTextField;
+    @FXML
+    TextField profileCardNameTextField;
+    @FXML
+    TextField profileFirstNameTextField;
+    @FXML
+    TextField profileLastNameTextField;
+    @FXML
+    TextField profileEmailTextField;
+    @FXML
+    TextField profilePhoneNumberTextField;
+    @FXML
+    TextField profileCardVerificationCodeTextField;
+    @FXML
+    Spinner profileCardExpirationMonthSpinner;
+    @FXML
+    Spinner profileCardExpirationYearSpinner;
+    @FXML
+    ComboBox profileCardTypeComboBox;
+    @FXML
+    TextField profileCardNumberTextField;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -124,8 +148,7 @@ public class MainViewController implements Initializable {
         customerAddressTextField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                if (customerAddressTextField.getText().contains("@"))
-                    customer.setAddress(customerAddressTextField.getText());
+                customer.setAddress(customerAddressTextField.getText());
             }
         });
 
@@ -150,7 +173,9 @@ public class MainViewController implements Initializable {
         customerEmailTextField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                customer.setEmail(customerEmailTextField.getText());
+                if (customerEmailTextField.getText().contains("@")) {
+                    customer.setEmail(customerEmailTextField.getText());
+                }
             }
         });
 
@@ -202,6 +227,110 @@ public class MainViewController implements Initializable {
         cardTypeComboBox.getItems().addAll("Visa", "Mastercard", "American Express", "Discover");
         cardTypeComboBox.getSelectionModel().select("Visa");
         cardTypeComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String o, String t1) {
+                creditCard.setCardType(t1);
+            }
+        });
+
+        // Profile Buttons Initialize
+        profileFirstNameTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (!containsInt(profileFirstNameTextField.getText())){
+                    customer.setFirstName(t1);
+                }
+            }
+        });
+
+        profileLastNameTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (!containsInt(profileLastNameTextField.getText())){
+                    customer.setLastName(t1);
+                }
+            }
+        });
+
+        profileAddressTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (profileAddressTextField.getText().contains("@"))
+                    customer.setAddress(profileAddressTextField.getText());
+            }
+        });
+
+        profilePostCodeTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (!containsChar(profilePostCodeTextField.getText())){
+                    customer.setPostCode(t1);
+                }
+            }
+        });
+
+        profilePhoneNumberTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (!containsChar(profilePhoneNumberTextField.getText())){
+                    customer.setPhoneNumber(t1);
+                }
+            }
+        });
+
+        profileEmailTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                customer.setEmail(profileEmailTextField.getText());
+            }
+        });
+
+        profileCardNameTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (!containsInt(profileCardNameTextField.getText())){
+                    creditCard.setHoldersName(profileCardNameTextField.getText());
+                }
+            }
+        });
+
+        profileCardNumberTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (!containsChar(profileCardNumberTextField.getText())){
+                    creditCard.setCardNumber(profileCardNumberTextField.getText());
+                }
+            }
+        });
+
+        profileCardExpirationMonthSpinner.setValueFactory(valueFactoryMonthSpinner);
+        profileCardExpirationMonthSpinner.valueProperty().addListener(new ChangeListener<Integer>() {
+            @Override
+            public void changed(ObservableValue<? extends Integer> observable, Integer oldValue, Integer newValue) {
+                creditCard.setValidMonth(newValue);
+            }
+        });
+
+        profileCardExpirationYearSpinner.setValueFactory(valueFactoryYearSpinner);
+        profileCardExpirationYearSpinner.valueProperty().addListener(new ChangeListener<Integer>() {
+            @Override
+            public void changed(ObservableValue<? extends Integer> observable, Integer oldValue, Integer newValue) {
+                creditCard.setValidYear(newValue);
+            }
+        });
+
+        profileCardVerificationCodeTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if (!containsChar(profileCardVerificationCodeTextField.getText())){
+                    creditCard.setVerificationCode(Integer.parseInt(profileCardVerificationCodeTextField.getText()));
+                }
+            }
+        });
+
+        profileCardTypeComboBox.getItems().addAll("Visa", "Mastercard", "American Express", "Discover");
+        profileCardTypeComboBox.getSelectionModel().select("Visa");
+        profileCardTypeComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String o, String t1) {
                 creditCard.setCardType(t1);
@@ -268,6 +397,21 @@ public class MainViewController implements Initializable {
         cardTypeComboBox.setValue(creditCard.getCardType());
     }
 
+    private void populateProfile(){
+        profileFirstNameTextField.setText(customer.getFirstName());
+        profileLastNameTextField.setText(customer.getLastName());
+        profilePostCodeTextField.setText(customer.getPostCode());
+        profilePhoneNumberTextField.setText(customer.getPhoneNumber());
+        profileEmailTextField.setText(customer.getEmail());
+        profileAddressTextField.setText(customer.getAddress());
+        profileCardNameTextField.setText(creditCard.getHoldersName());
+        profileCardNumberTextField.setText(creditCard.getCardNumber());
+        profileCardExpirationMonthSpinner.getValueFactory().setValue(creditCard.getValidMonth());
+        profileCardExpirationYearSpinner.getValueFactory().setValue(creditCard.getValidYear());
+        profileCardVerificationCodeTextField.setText(String.valueOf(creditCard.getVerificationCode()));
+        profileCardTypeComboBox.setValue(creditCard.getCardType());
+    }
+
     // Category Button Methods
     public void showDairyItems(){
         updateProductListCategory(ProductCategory.DAIRIES);
@@ -323,6 +467,7 @@ public class MainViewController implements Initializable {
     }
 
     public void openProfileOverlay(){
+        populateProfile();
         profileOverlay.toFront();
     }
 
