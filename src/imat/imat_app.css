@@ -28,9 +28,3 @@
 #text-categories_larger {
     -fx-font-size: 30px;
 }
-
-.text-buttons {
-    -fx-font-size: 15px;
-    -fx-font-family: "Times New Roman";
-    -fx-font-weight: bold;
-}
