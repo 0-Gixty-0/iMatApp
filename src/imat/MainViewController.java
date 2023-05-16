@@ -14,10 +14,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ProductCategory;
-import se.chalmers.cse.dat216.project.ShoppingCart;
+import se.chalmers.cse.dat216.project.*;
 
 public class MainViewController implements Initializable {
 
@@ -25,7 +22,7 @@ public class MainViewController implements Initializable {
     private Map<String, ProductListItem> productListItemMap = new HashMap<String, ProductListItem>();
     private List<ShoppingCartListItem> shoppingCartListItems = new ArrayList<ShoppingCartListItem>();
     private Map<Integer, Integer> shoppingCartNumItemsMap = new HashMap<>();
-    private Product currentProduct;
+    private Product currentProduct = new Product();
 
     private ShoppingCart shoppingCart = dataHandler.getShoppingCart();
 
@@ -57,6 +54,10 @@ public class MainViewController implements Initializable {
     AnchorPane checkOutStepThreeAnchorPane;
     @FXML
     AnchorPane checkOutThankYouAnchorPane;
+    @FXML
+    Label numItemsLabel;
+    @FXML
+    Label totalPriceLabel;
 
     @FXML
     Label detailNumItemsLabel;
@@ -74,6 +75,8 @@ public class MainViewController implements Initializable {
             ProductListItem productListItem = new ProductListItem(item, this);
             productListItemMap.put(item.getName(), productListItem);
         }
+
+        updateShoppingCartLabels();
 
         updateProductListAll();
 
@@ -241,6 +244,17 @@ public class MainViewController implements Initializable {
 
     }
 
+    private void updateShoppingCartLabels() {
+        double numItemsDouble = (double) 0;
+        for (ShoppingItem item : shoppingCart.getItems()){
+            numItemsDouble += item.getAmount();
+        }
+        int numItemsInt = (int) numItemsDouble;
+        numItemsLabel.setText(String.format("Antal Varor: %d", numItemsInt));
+        DecimalFormat df = new DecimalFormat("#.##");
+        totalPriceLabel.setText(String.format("Total Pris: %s kr", df.format(shoppingCart.getTotal())));
+    }
+
     public void addItemToCart(Product product){
         if (shoppingCartNumItemsMap.containsKey(product.getProductId())){
             shoppingCartNumItemsMap.replace(product.getProductId(), shoppingCartNumItemsMap.get(product.getProductId()) + 1);
@@ -251,6 +265,7 @@ public class MainViewController implements Initializable {
         }
         shoppingCart.addProduct(product);
         updateNumItemsLabels();
+        updateShoppingCartLabels();
     }
 
     public void removeItemFromCart(Product product){
@@ -263,8 +278,17 @@ public class MainViewController implements Initializable {
                 shoppingCartListItems.removeIf(item -> item.getProductId() == product.getProductId());
             }
         }
-        shoppingCart.removeProduct(product);
+        for (ShoppingItem currentItem : this.shoppingCart.getItems()) {
+            if (currentItem.getProduct().getProductId() == product.getProductId() && currentItem.getAmount() > 0) {
+                Double numInCart = currentItem.getAmount();
+                shoppingCart.removeProduct(product);
+                shoppingCart.addProduct(product, numInCart - 1);
+            } else {
+                shoppingCart.removeProduct(product);
+            }
+        }
         updateNumItemsLabels();
+        updateShoppingCartLabels();
     }
 
     @FXML
@@ -272,6 +296,9 @@ public class MainViewController implements Initializable {
         shoppingCartListItems.clear();
         shoppingCartNumItemsMap.clear();
         shoppingCart.clear();
+        updateNumItemsLabels();
+        updateShoppingCart();
+        updateShoppingCartLabels();
     }
 
     @FXML
