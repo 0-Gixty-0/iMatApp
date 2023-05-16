@@ -738,5 +738,106 @@
             </AnchorPane>
         </items>
       </SplitPane>
+      <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="701.0" prefWidth="999.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+         <children>
+            <AnchorPane layoutX="194.0" layoutY="67.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" text="Tillbaka">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../iMatApp/src/imat/resources/left_arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="244.0" layoutY="52.0" text="Leverans">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="355.0" layoutY="65.0" prefHeight="9.0" prefWidth="214.0" />
+                  <Separator layoutX="13.0" layoutY="66.0" prefHeight="9.0" prefWidth="214.0" />
+                  <Label layoutX="137.0" layoutY="73.0" text="Address">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="139.0" layoutY="103.0" prefHeight="26.0" prefWidth="276.0" />
+                  <Label layoutX="105.0" layoutY="134.0" text="Postnummer">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="300.0" layoutY="134.0" text="Ort">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="105.0" layoutY="161.0" />
+                  <TextField layoutX="302.0" layoutY="161.0" />
+                  <Separator layoutX="14.0" layoutY="207.0" prefHeight="14.0" prefWidth="190.0" />
+                  <Separator layoutX="377.0" layoutY="207.0" prefHeight="14.0" prefWidth="190.0" />
+                  <Label layoutX="219.0" layoutY="196.0" text="Kortuppgifter">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="139.0" layoutY="231.0" text="Kortnummer">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="139.0" layoutY="258.0" prefHeight="26.0" prefWidth="276.0" />
+                  <Label layoutX="110.0" layoutY="291.0" text="Utgångsdatum">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="303.0" layoutY="291.0" text="CVC">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="110.0" layoutY="320.0" />
+                  <TextField layoutX="302.0" layoutY="320.0" />
+                  <Label layoutX="240.0" layoutY="362.0" text="Uppgifter">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="15.0" layoutY="372.0" prefHeight="14.0" prefWidth="214.0" />
+                  <Separator layoutX="353.0" layoutY="372.0" prefHeight="14.0" prefWidth="214.0" />
+                  <Label layoutX="109.0" layoutY="399.0" text="Förnamn">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="352.0" layoutY="399.0" text="Efternamn">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="112.0" layoutY="459.0" text="Email-Address">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="355.0" layoutY="459.0" text="Telefonnummer">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="110.0" layoutY="426.0" prefHeight="26.0" prefWidth="190.0" />
+                  <TextField layoutX="352.0" layoutY="426.0" prefHeight="26.0" prefWidth="190.0" />
+                  <TextField layoutX="110.0" layoutY="492.0" prefHeight="26.0" prefWidth="190.0" />
+                  <TextField layoutX="352.0" layoutY="492.0" prefHeight="26.0" prefWidth="190.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
