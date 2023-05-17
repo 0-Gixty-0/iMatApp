@@ -7,16 +7,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="570.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Separator layoutX="7.0" layoutY="92.0" prefHeight="10.0" prefWidth="555.0" />
-      <Label layoutX="46.0" layoutY="37.0" text="04/05/2023">
+      <Label fx:id="dateLabel" layoutX="46.0" layoutY="37.0" text="04/05/2023">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="202.0" layoutY="8.0" prefHeight="78.0" prefWidth="166.0" style="-fx-background-color: LIGHTGRAY;">
+      <AnchorPane layoutX="202.0" layoutY="8.0" onMouseClicked="#onClick" prefHeight="78.0" prefWidth="166.0" style="-fx-background-color: LIGHTGRAY;">
          <children>
             <ImageView fitHeight="78.0" fitWidth="90.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -30,10 +29,10 @@
             </Label>
          </children>
       </AnchorPane>
-      <Label layoutX="435.0" layoutY="37.0" text="4 Styck">
+      <Label fx:id="numItemsLabel" layoutX="435.0" layoutY="37.0" text="4 Styck">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
    </children>
-</AnchorPane>
+</fx:root>

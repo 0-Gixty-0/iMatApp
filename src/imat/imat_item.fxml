@@ -6,23 +6,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="productListItemPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="244.0" style="-fx-background-color: LIGHTGRAY;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="productListItemPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="244.0" style="-fx-border-color: #4E4E4E; -fx-border-radius: 15px; -fx-background-color: WHITE; -fx-border-width: 2;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="productImageImageView" fitHeight="159.0" fitWidth="221.0" layoutX="16.0" layoutY="14.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="14.0">
          <image>
             <Image url="@resources/beans.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="productNameLabel" layoutX="16.0" layoutY="180.0" text="Bönor">
+      <Label fx:id="productNameLabel" layoutX="16.0" layoutY="180.0" styleClass="text-grocery-title" stylesheets="@imat_app.css" text="Bönor">
          <font>
             <Font size="22.0" />
          </font></Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="245.0" onMouseClicked="#onRemove" prefHeight="13.0" prefWidth="10.0" text="-">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="245.0" onMouseClicked="#onRemove" prefHeight="13.0" prefWidth="10.0" text="-" textFill="#c82525">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="172.0" layoutY="244.0" onMouseClicked="#onAdd" prefHeight="54.0" prefWidth="32.0" text="+">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="172.0" layoutY="244.0" onMouseClicked="#onAdd" prefHeight="54.0" prefWidth="32.0" text="+" textFill="#2ea91b">
          <font>
             <Font size="36.0" />
          </font>
@@ -31,9 +31,14 @@
          <font>
             <Font size="24.0" />
          </font></Label>
-      <Label fx:id="productPrice" layoutX="14.0" layoutY="212.0" text="15 kr / burk">
+      <Label fx:id="productPrice" layoutX="14.0" layoutY="212.0" styleClass="text-header" stylesheets="@imat_app.css" text="15 kr / burk">
          <font>
             <Font size="22.0" />
          </font></Label>
+      <ImageView fx:id="favoriteImageView" fitHeight="44.0" fitWidth="46.0" layoutX="176.0" layoutY="208.0" onMouseClicked="#onFavorite" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/empty_heart.png" />
+         </image>
+      </ImageView>
    </children>
 </fx:root>
