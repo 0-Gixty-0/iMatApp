@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -693,13 +694,13 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="100.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Label id="text-categories_larger" layoutX="300.0" styleClass="text-categories" text="Kategorier">
+                  <Label id="text-categories_larger" layoutX="339.0" layoutY="3.0" styleClass="text-categories" text="Kategorier">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Separator layoutX="9.0" layoutY="8.0" prefHeight="18.0" prefWidth="278.0" AnchorPane.bottomAnchor="588.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="8.0" />
-                  <Separator layoutX="454.0" layoutY="11.0" prefHeight="11.0" prefWidth="307.0" />
+                  <Separator layoutX="9.0" layoutY="11.0" prefHeight="17.0" prefWidth="321.0" AnchorPane.bottomAnchor="588.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="442.0" AnchorPane.topAnchor="8.0" />
+                  <Separator layoutX="439.0" layoutY="11.0" prefHeight="8.0" prefWidth="322.0" />
                   <Button fx:id="fruitButton" layoutX="519.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFruitItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Frukt">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
@@ -724,14 +725,18 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button fx:id="dairyButton" layoutX="19.0" layoutY="36.0" mnemonicParsing="false" onAction="#showDairyItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Mejeri">
+                  <Button fx:id="dairyButton" layoutX="19.0" layoutY="36.0" mnemonicParsing="false" onAction="#showDairyItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" text="Mejeri">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/milk.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="text-categories" />
+                        <String fx:value="border-grocery-card" />
+                     </styleClass></Button>
                   <Button fx:id="fishButton" layoutX="263.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFishItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Fisk">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
@@ -796,13 +801,13 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Label id="text-categories_larger" layoutX="337.0" layoutY="143.0" styleClass="text-categories" text="Varor">
+                  <Label id="text-categories_larger" layoutX="359.0" layoutY="150.0" styleClass="text-categories" text="Varor">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Separator layoutX="5.0" layoutY="154.0" prefHeight="14.0" prefWidth="319.0" />
-                  <Separator layoutX="438.0" layoutY="155.0" prefHeight="11.0" prefWidth="319.0" />
+                  <Separator layoutX="5.0" layoutY="154.0" prefHeight="14.0" prefWidth="348.0" />
+                  <Separator layoutX="421.0" layoutY="154.0" prefHeight="15.0" prefWidth="336.0" />
                   <AnchorPane layoutX="5.0" layoutY="176.0" prefHeight="434.0" prefWidth="759.0" style="-fx-background-color: RED;">
                      <children>
                         <ScrollPane layoutY="1.0" prefHeight="434.0" prefWidth="385.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
