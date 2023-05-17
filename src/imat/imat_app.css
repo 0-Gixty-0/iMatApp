@@ -19,6 +19,11 @@
     -fx-font-family: "Times New Roman";
 }
 
+.text-grocery-title{
+    -fx-font-size: 30px;
+    -fx-font-family: "Times New Roman";
+}
+
 .text-categories {
     -fx-font-size: 15px;
     -fx-font-family: "Times New Roman";
