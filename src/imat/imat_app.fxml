@@ -644,52 +644,49 @@
       </AnchorPane>
       <AnchorPane prefHeight="92.0" prefWidth="1007.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="608.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
          <children>
-            <FlowPane hgap="60.0" maxHeight="92.0" minHeight="92.0" prefHeight="92.0" prefWidth="1007.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="89.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="89.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/logo.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="searchCategoryComboBox" layoutX="105.0" layoutY="33.0" prefHeight="26.0" prefWidth="131.0" />
+            <TextField fx:id="searchBarTextField" layoutX="237.0" layoutY="33.0" prefHeight="11.0" prefWidth="223.0" promptText="Sök efter en produkt..." />
+            <Label id="text-bold" fx:id="previousPurchasesLabel" layoutX="525.0" layoutY="25.0" onMouseClicked="#openPreviousPurchasesOverlay" styleClass="text-header" text="Tidigare Köp">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@resources/logo.png" />
+                        <Image url="@resources/notepad.png" />
                      </image>
                   </ImageView>
-                  <TextField fx:id="SearchTextField" prefHeight="25.0" prefWidth="262.0" promptText="Sök efter en produkt..." />
-                  <Label id="text-bold" fx:id="previousPurchasesLabel" onMouseClicked="#openPreviousPurchasesOverlay" styleClass="text-header" text="Tidigare Köp">
-                     <graphic>
-                        <ImageView fitHeight="42.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/notepad.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label id="text-bold" fx:id="profileLabel" onMouseClicked="#openProfileOverlay" styleClass="text-header" text="Profil">
-                     <graphic>
-                        <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/person.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label id="text-bold" fx:id="shoppingCartLabel" onMouseClicked="#openShoppingCartOverlay" styleClass="text-header" text="Varukorg">
-                     <graphic>
-                        <ImageView fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/shopping_cart.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-            </FlowPane>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label id="text-bold" fx:id="profileLabel" layoutX="748.0" layoutY="25.0" onMouseClicked="#openProfileOverlay" styleClass="text-header" text="Profil">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/person.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label id="text-bold" fx:id="shoppingCartLabel" layoutX="883.0" layoutY="23.0" onMouseClicked="#openShoppingCartOverlay" styleClass="text-header" text="Varukorg">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/shopping_cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
          </children>
       </AnchorPane>
       <SplitPane dividerPositions="0.705753823743627" layoutX="-1.0" layoutY="85.0" prefHeight="616.0" prefWidth="999.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">

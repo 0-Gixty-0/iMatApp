@@ -7,6 +7,9 @@ import java.util.*;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -27,7 +30,8 @@ public class MainViewController implements Initializable {
     private ShoppingCart shoppingCart = dataHandler.getShoppingCart();
     private Customer customer = dataHandler.getCustomer();
     private CreditCard creditCard = dataHandler.getCreditCard();
-
+    private FilteredList<Product> flProduct;
+    private ObservableList<Product> productObservableList = FXCollections.observableArrayList();
 
     @FXML
     Label pathLabel;
@@ -117,6 +121,10 @@ public class MainViewController implements Initializable {
     AnchorPane previousPurchaseSummaryAnchorPane;
     @FXML
     FlowPane previousPurchaseSummaryFlowPane;
+    @FXML
+    TextField searchBarTextField;
+    @FXML
+    ComboBox searchCategoryComboBox;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -126,10 +134,11 @@ public class MainViewController implements Initializable {
 
         // pathLabel.setText(iMatDirectory);
 
-        // Initialize product list item map
+        // Initialize product list item map and observable list
         for (Product item : dataHandler.getProducts()) {
             ProductListItem productListItem = new ProductListItem(item, this);
             productListItemMap.put(item.getName(), productListItem);
+            productObservableList.add(item);
         }
 
         // Initialize change listeners
@@ -343,6 +352,22 @@ public class MainViewController implements Initializable {
             }
         });
 
+        // Initialize Searchbar
+        this.flProduct = new FilteredList(productObservableList, p -> true);
+        searchCategoryComboBox.getItems().addAll("Namn", "Kategori");
+        searchCategoryComboBox.setValue("Namn");
+
+        searchBarTextField.setPromptText("Sök efter en produkt...");
+        searchBarTextField.textProperty().addListener((obs, oldValue, newValue) -> {
+            switch (searchCategoryComboBox.getValue().toString())//Switch on choiceBox value
+            {
+                case "Namn":
+                    flProduct.setPredicate(p -> p.getName().toLowerCase().contains(newValue.toLowerCase().trim()));//filter table by first name
+                    break;
+            }
+            updateProductListSearch();
+        });
+
 
         updateShoppingCartLabels();
 
@@ -365,6 +390,13 @@ public class MainViewController implements Initializable {
     private void updateProductListFavorites(){
         generalItemsFlowPane.getChildren().clear();
         for (Product item : dataHandler.favorites()){
+            generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
+        }
+    }
+
+    private void updateProductListSearch(){
+        generalItemsFlowPane.getChildren().clear();
+        for (Product item : flProduct){
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
         }
     }
