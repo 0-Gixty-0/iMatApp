@@ -362,6 +362,13 @@ public class MainViewController implements Initializable {
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
     }
 
+    private void updateProductListFavorites(){
+        generalItemsFlowPane.getChildren().clear();
+        for (Product item : dataHandler.favorites()){
+            generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
+        }
+    }
+
     private void updateShoppingCart(){
         shoppingCartFlowPane.getChildren().clear();
         for (ShoppingCartListItem item : shoppingCartListItems) {
@@ -482,6 +489,10 @@ public class MainViewController implements Initializable {
 
     public void showBakingItems(){
         updateProductListCategory(ProductCategory.FLOUR_SUGAR_SALT);
+    }
+
+    public void showFavorites(){
+        updateProductListFavorites();
     }
 
     // Open / Close Overlays
@@ -624,6 +635,14 @@ public class MainViewController implements Initializable {
         }
         updateNumItemsLabels();
         updateShoppingCartLabels();
+    }
+
+    protected void addFavorite(Product product){
+        dataHandler.addFavorite(product);
+    }
+
+    protected void removeFavorite(Product product){
+        dataHandler.removeFavorite(product);
     }
 
     @FXML

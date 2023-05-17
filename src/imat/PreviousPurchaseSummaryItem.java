@@ -1,5 +1,6 @@
 package imat;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -50,5 +51,10 @@ public class PreviousPurchaseSummaryItem extends AnchorPane {
         this.summaryItemAmountLabel.setText(String.format("%s st",String.valueOf(this.item.getAmount())));
         this.summaryItemTotalPriceLabel.setText(String.format("%s kr", String.valueOf(this.item.getTotal())));
         this.summaryItemNameLabel.setText(this.product.getName());
+    }
+
+    @FXML
+    public void onClick(Event event){
+        mainViewController.openDetailView(this.product);
     }
 }

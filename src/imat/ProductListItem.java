@@ -26,6 +26,8 @@ public class ProductListItem extends AnchorPane {
     Label productPrice;
     @FXML
     Label numItemsLabel;
+    @FXML
+    ImageView favoriteImageView;
 
     public ProductListItem(Product product, MainViewController mainViewController){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("imat_item.fxml"));
@@ -47,6 +49,9 @@ public class ProductListItem extends AnchorPane {
         this.productPrice.setText(String.format("%s %s",df.format(product.getPrice()),product.getUnit()));
         String image_path = "file:" + "\\" + mainViewController.dataHandler.imatDirectory() + "\\" + "images" + "\\" + product.getImageName();
         this.productImageImageView.setImage(new Image(image_path));
+        if (mainViewController.dataHandler.isFavorite(this.product)){
+            favoriteImageView.setImage(new Image("imat/resources/red_heart.png"));
+        }
 
     }
     public Integer getProductId(){
@@ -72,5 +77,17 @@ public class ProductListItem extends AnchorPane {
         if (this.numItems > 0)
             this.numItems -= 1;
         mainViewController.removeItemFromCart(this.product);
+    }
+
+    @FXML
+    public void onFavorite(Event event){
+        if (this.mainViewController.dataHandler.isFavorite(this.product)){
+            this.favoriteImageView.setImage(new Image("imat/resources/empty_heart.png"));
+            mainViewController.removeFavorite(this.product);
+        } else {
+            this.favoriteImageView.setImage(new Image("imat/resources/red_heart.png"));
+            mainViewController.addFavorite(this.product);
+        }
+
     }
 }
