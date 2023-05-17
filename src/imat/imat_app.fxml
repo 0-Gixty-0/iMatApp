@@ -587,61 +587,6 @@
             </TextArea>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="2.0" layoutY="1.0" prefHeight="701.0" prefWidth="999.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
-         <children>
-            <AnchorPane layoutX="185.0" layoutY="57.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
-               <children>
-                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #F67952;" text="Tillbaka">
-                     <graphic>
-                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@resources/left_arrow.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Button>
-                  <Label layoutX="220.0" layoutY="51.0" text="Sammanfattning">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="373.0" layoutY="63.0" prefHeight="14.0" prefWidth="198.0" />
-                  <Label layoutX="103.0" layoutY="86.0" text="Vara">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="270.0" layoutY="86.0" text="Antal">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="449.0" layoutY="86.0" text="Pris">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="45.0" layoutY="113.0" prefHeight="14.0" prefWidth="155.0" />
-                  <Separator layoutX="387.0" layoutY="110.0" prefHeight="20.0" prefWidth="155.0" />
-                  <Separator layoutX="231.0" layoutY="113.0" prefHeight="14.0" prefWidth="127.0" />
-                  <Label layoutX="105.0" layoutY="145.0" />
-                  <ScrollPane layoutY="127.0" prefHeight="436.0" prefWidth="580.0">
-                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="434.0" prefWidth="580.0">
-                           <children>
-                              <FlowPane layoutX="-2.0" prefHeight="436.0" prefWidth="582.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                           </children>
-                        </AnchorPane>
-                     </content>
-                  </ScrollPane>
-                  <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="198.0" />
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
       <AnchorPane prefHeight="92.0" prefWidth="1007.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="608.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
          <children>
             <FlowPane hgap="60.0" maxHeight="92.0" minHeight="92.0" prefHeight="92.0" prefWidth="1007.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -866,5 +811,60 @@
             </AnchorPane>
         </items>
       </SplitPane>
+      <AnchorPane fx:id="previousPurchaseSummaryAnchorPane" layoutX="2.0" layoutY="1.0" onMouseClicked="#closePreviousPurchaseSummaryOverlay" prefHeight="702.0" prefWidth="1098.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+         <children>
+            <AnchorPane layoutX="258.0" layoutY="69.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closePreviousPurchaseSummaryOverlay" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #F67952;" text="Tillbaka">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@resources/left_arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="220.0" layoutY="51.0" text="Sammanfattning">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="373.0" layoutY="63.0" prefHeight="14.0" prefWidth="198.0" />
+                  <Label layoutX="117.0" layoutY="86.0" text="Vara">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="321.0" layoutY="86.0" text="Antal">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="472.0" layoutY="86.0" text="Pris">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="29.0" layoutY="113.0" prefHeight="14.0" prefWidth="214.0" />
+                  <Separator layoutX="430.0" layoutY="110.0" prefHeight="20.0" prefWidth="123.0" />
+                  <Separator layoutX="280.0" layoutY="113.0" prefHeight="14.0" prefWidth="127.0" />
+                  <Label layoutX="105.0" layoutY="145.0" />
+                  <ScrollPane layoutY="127.0" prefHeight="436.0" prefWidth="580.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="434.0" prefWidth="580.0">
+                           <children>
+                              <FlowPane fx:id="previousPurchaseSummaryFlowPane" layoutX="-2.0" prefHeight="436.0" prefWidth="582.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="198.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

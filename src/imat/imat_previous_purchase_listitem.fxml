@@ -15,7 +15,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="202.0" layoutY="8.0" prefHeight="78.0" prefWidth="166.0" style="-fx-background-color: LIGHTGRAY;">
+      <AnchorPane layoutX="202.0" layoutY="8.0" onMouseClicked="#onClick" prefHeight="78.0" prefWidth="166.0" style="-fx-background-color: LIGHTGRAY;">
          <children>
             <ImageView fitHeight="78.0" fitWidth="90.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                <image>

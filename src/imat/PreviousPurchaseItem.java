@@ -1,5 +1,6 @@
 package imat;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -32,9 +33,14 @@ public class PreviousPurchaseItem extends AnchorPane {
 
         this.order = order;
         this.mainViewController = mainViewController;
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        DateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
+        System.out.println(order.getDate());
         this.dateLabel.setText(dateFormat.format(order.getDate()));
-        this.numItemsLabel.setText(String.valueOf(order.getItems().size()));
+        this.numItemsLabel.setText(String.format("%d st",order.getItems().size()));
 
+    }
+    @FXML
+    public void onClick(Event event){
+        mainViewController.openPreviousPurchaseSummaryOverlay(this.order);
     }
 }

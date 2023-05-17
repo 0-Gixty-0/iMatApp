@@ -113,6 +113,10 @@ public class MainViewController implements Initializable {
     TextField profileCardNumberTextField;
     @FXML
     FlowPane previousPurchasesFlowPane;
+    @FXML
+    AnchorPane previousPurchaseSummaryAnchorPane;
+    @FXML
+    FlowPane previousPurchaseSummaryFlowPane;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -372,6 +376,13 @@ public class MainViewController implements Initializable {
         }
     }
 
+    private void updatePreviousPurchaseSummary(Order order){
+        previousPurchaseSummaryFlowPane.getChildren().clear();
+        for (ShoppingItem item : order.getItems()){
+            previousPurchaseSummaryFlowPane.getChildren().add(new PreviousPurchaseSummaryItem(item, this));
+        }
+    }
+
     public void placeOrder(){
         dataHandler.placeOrder();
         emptyCart();
@@ -542,6 +553,15 @@ public class MainViewController implements Initializable {
 
     public void closeCheckoutThankYou(){
         checkOutThankYouAnchorPane.toBack();
+    }
+
+    public void openPreviousPurchaseSummaryOverlay(Order order){
+        updatePreviousPurchaseSummary(order);
+        previousPurchaseSummaryAnchorPane.toFront();
+    }
+
+    public void closePreviousPurchaseSummaryOverlay(){
+        previousPurchaseSummaryAnchorPane.toBack();
     }
 
     private void updateNumItemsLabels(){
