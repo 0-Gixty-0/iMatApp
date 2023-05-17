@@ -22,6 +22,11 @@
 .text-grocery-title{
     -fx-font-size: 30px;
     -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
+}
+
+#text-grocery-bigger {
+    -fx-font-size: 35px;
 }
 
 .text-categories {
