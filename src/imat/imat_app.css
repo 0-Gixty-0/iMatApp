@@ -35,6 +35,19 @@
     -fx-font-weight: bold;
 }
 
+.text-buttons{
+    -fx-background-color: #FFDBD1;
+    -fx-effect: dropshadow(gaussian, #000000, 2, 0.2, 1, 1);
+}
+
+.text-buttons:hover{
+    -fx-background-color: #FCB8A6;
+}
+
+.text-buttons:pressed{
+    -fx-background-color: #FCB8A6;
+}
+
 #text-categories_larger {
     -fx-font-size: 20px;
 }
