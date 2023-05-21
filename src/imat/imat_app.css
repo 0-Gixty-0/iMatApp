@@ -68,3 +68,21 @@
 .split-pane *.split-pane-divider {
     -fx-padding: 0 0 0 0;
 }
+
+#help-button {
+    -fx-background-color: #F67952;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, #929292, 15, 0, 5, 5);
+    -fx-font-weight: 400;
+    -fx-text-fill: #000000;
+}
+
+#detail-text {
+    -fx-background-color: #EFEFF2;
+    -fx-control-inner-background: #EFEFF2
+}
+
+#minus-button {
+    -fx-background-color: #F67952;
+    -fx-background-radius: 15px;
+}

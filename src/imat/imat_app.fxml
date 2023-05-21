@@ -762,7 +762,7 @@
                   </Label>
                   <AnchorPane id="detail" fx:id="detailViewAnchorPane" layoutX="3.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="319.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Label layoutX="27.0" layoutY="14.0" onMouseClicked="#closeDetailView" styleClass="text-header" text="Hur använder jag iMat?">
+                        <Label id="help-button" layoutX="27.0" layoutY="14.0" onMouseClicked="#closeDetailView" styleClass="text-header" text="How to use iMat?" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -780,7 +780,7 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="detailItemImageView" fitHeight="155.0" fitWidth="208.0" layoutX="55.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="detailItemImageView" fitHeight="172.0" fitWidth="229.0" layoutX="39.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
                            <image>
                               <Image url="@resources/beans.jpg" />
                            </image>
@@ -805,7 +805,7 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <TextArea editable="false" layoutX="21.0" layoutY="384.0" prefHeight="215.0" prefWidth="286.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in consequat mauris. Cras ut magna non ante aliquet placerat. In iaculis dui eu pharetra tincidunt. Nulla vitae placerat tellus." wrapText="true">
+                        <TextArea id="detail-text" editable="false" layoutX="21.0" layoutY="384.0" prefHeight="215.0" prefWidth="286.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in consequat mauris. Cras ut magna non ante aliquet placerat. In iaculis dui eu pharetra tincidunt. Nulla vitae placerat tellus." wrapText="true">
                            <font>
                               <Font size="18.0" />
                            </font>
