@@ -354,17 +354,18 @@ public class MainViewController implements Initializable {
 
         // Initialize Searchbar
         this.flProduct = new FilteredList(productObservableList, p -> true);
-        searchCategoryComboBox.getItems().addAll("Namn", "Kategori");
-        searchCategoryComboBox.setValue("Namn");
+        //searchCategoryComboBox.getItems().addAll("Namn", "Kategori");
+        //searchCategoryComboBox.setValue("Namn");
 
         searchBarTextField.setPromptText("Sök efter en produkt...");
         searchBarTextField.textProperty().addListener((obs, oldValue, newValue) -> {
-            switch (searchCategoryComboBox.getValue().toString())//Switch on choiceBox value
-            {
-                case "Namn":
-                    flProduct.setPredicate(p -> p.getName().toLowerCase().contains(newValue.toLowerCase().trim()));//filter table by first name
-                    break;
-            }
+            //switch (searchCategoryComboBox.getValue().toString())//Switch on choiceBox value
+            //{
+            //    case "Namn":
+            //        flProduct.setPredicate(p -> p.getName().toLowerCase().contains(newValue.toLowerCase().trim()));//filter table by first name
+            //        break;
+            //}
+            flProduct.setPredicate(p -> p.getName().toLowerCase().contains(newValue.toLowerCase().trim()));
             updateProductListSearch();
         });
 

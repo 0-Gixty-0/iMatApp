@@ -760,20 +760,69 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
+                  <AnchorPane id="detail" fx:id="detailViewAnchorPane" layoutX="3.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="319.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="27.0" layoutY="14.0" onMouseClicked="#closeDetailView" styleClass="text-header" text="Hur använder jag iMat?">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/question_mark.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Separator layoutX="15.0" layoutY="56.0" prefHeight="19.0" prefWidth="277.0" />
+                        <Label id="text-grocery-bigger" fx:id="detailItemNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="297.0" prefHeight="35.0" prefWidth="265.0" styleClass="text-grocery-title" text="Bönor">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="detailItemImageView" fitHeight="155.0" fitWidth="208.0" layoutX="55.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/beans.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="detailNumItemsLabel" layoutX="139.0" layoutY="261.0" text="1 st">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="207.0" layoutY="241.0" onMouseClicked="#addDetailView" text="+" textFill="#2ea91b">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="85.0" layoutY="241.0" onMouseClicked="#removeDetailView" text="-" textFill="#c82525">
+                           <font>
+                              <Font name="System Bold" size="48.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="detailItemPriceLabel" layoutX="27.0" layoutY="345.0" styleClass="text-grocery-title" text="Pris: 25 kr">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextArea editable="false" layoutX="21.0" layoutY="384.0" prefHeight="215.0" prefWidth="286.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in consequat mauris. Cras ut magna non ante aliquet placerat. In iaculis dui eu pharetra tincidunt. Nulla vitae placerat tellus." wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
         </items>
       </SplitPane>
-      <AnchorPane prefHeight="92.0" prefWidth="1007.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="608.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane id="header" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="1000.0" prefHeight="90.0" prefWidth="1007.0" style="-fx-background-color: WHITE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="89.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@resources/logo.png" />
-               </image>
-            </ImageView>
-            <ComboBox fx:id="searchCategoryComboBox" layoutX="105.0" layoutY="32.0" prefHeight="29.0" prefWidth="95.0" />
-            <TextField fx:id="searchBarTextField" layoutX="203.0" layoutY="32.0" prefHeight="29.0" prefWidth="278.0" promptText="Sök efter en produkt..." />
-            <Label id="text-bold" fx:id="previousPurchasesLabel" layoutX="525.0" layoutY="25.0" onMouseClicked="#openPreviousPurchasesOverlay" styleClass="text-header" text="Tidigare Köp">
+            <TextField id="searchBar" fx:id="searchBarTextField" layoutX="174.0" layoutY="20.0" prefHeight="40.0" prefWidth="331.0" promptText="Sök efter en produkt..." AnchorPane.bottomAnchor="30.0" AnchorPane.topAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></TextField>
+            <Label id="text-bold" fx:id="previousPurchasesLabel" layoutX="525.0" layoutY="25.0" onMouseClicked="#openPreviousPurchasesOverlay" styleClass="text-header" text="Tidigare Köp" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="402.0" AnchorPane.topAnchor="20.0">
                <graphic>
                   <ImageView fitHeight="42.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -785,7 +834,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label id="text-bold" fx:id="profileLabel" layoutX="748.0" layoutY="25.0" onMouseClicked="#openProfileOverlay" styleClass="text-header" text="Profil">
+            <Label id="text-bold" fx:id="profileLabel" layoutX="748.0" layoutY="25.0" onMouseClicked="#openProfileOverlay" styleClass="text-header" text="Profil" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="20.0">
                <graphic>
                   <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -797,7 +846,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label id="text-bold" fx:id="shoppingCartLabel" layoutX="883.0" layoutY="23.0" onMouseClicked="#openShoppingCartOverlay" styleClass="text-header" text="Varukorg">
+            <Label id="text-bold" fx:id="shoppingCartLabel" layoutY="23.0" onMouseClicked="#openShoppingCartOverlay" styleClass="text-header" text="Varukorg" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
                <font>
                   <Font size="20.0" />
                </font>
@@ -809,58 +858,11 @@
                   </ImageView>
                </graphic>
             </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="detailViewAnchorPane" layoutX="781.0" layoutY="85.0" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="319.0" style="-fx-background-color: LIGHTGRAY;">
-         <children>
-            <Label layoutX="27.0" layoutY="14.0" onMouseClicked="#closeDetailView" styleClass="text-header" text="Hur använder jag iMat?">
+            <Label contentDisplay="CENTER" layoutX="29.0" layoutY="15.0" prefHeight="65.0" prefWidth="132.0" text="iMat" textFill="#f67952" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="15.0">
                <font>
-                  <Font size="20.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@resources/question_mark.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Separator layoutX="15.0" layoutY="56.0" prefHeight="19.0" prefWidth="277.0" />
-            <Label id="text-grocery-bigger" fx:id="detailItemNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="297.0" prefHeight="35.0" prefWidth="265.0" styleClass="text-grocery-title" text="Bönor">
-               <font>
-                  <Font size="24.0" />
+                  <Font name="Silom" size="50.0" />
                </font>
             </Label>
-            <ImageView fx:id="detailItemImageView" fitHeight="155.0" fitWidth="208.0" layoutX="55.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@resources/beans.jpg" />
-               </image>
-            </ImageView>
-            <Label fx:id="detailNumItemsLabel" layoutX="139.0" layoutY="261.0" text="1 st">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Label layoutX="207.0" layoutY="241.0" onMouseClicked="#addDetailView" text="+" textFill="#2ea91b">
-               <font>
-                  <Font size="48.0" />
-               </font>
-            </Label>
-            <Label layoutX="85.0" layoutY="241.0" onMouseClicked="#removeDetailView" text="-" textFill="#c82525">
-               <font>
-                  <Font name="System Bold" size="48.0" />
-               </font>
-            </Label>
-            <Label fx:id="detailItemPriceLabel" layoutX="27.0" layoutY="345.0" styleClass="text-grocery-title" text="Pris: 25 kr">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <TextArea editable="false" layoutX="21.0" layoutY="384.0" prefHeight="215.0" prefWidth="286.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in consequat mauris. Cras ut magna non ante aliquet placerat. In iaculis dui eu pharetra tincidunt. Nulla vitae placerat tellus." wrapText="true">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextArea>
          </children>
       </AnchorPane>
    </children>
