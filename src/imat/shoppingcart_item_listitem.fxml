@@ -6,24 +6,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="322.0" style="-fx-background-color: LIGHTGRAY;" styleClass="shoppingcart-list-item-background" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="322.0" style="-fx-background-color: LIGHTGRAY;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="shoppingCartImageView" fitHeight="119.0" fitWidth="134.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@resources/beans.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="shoppingCartItemNameLabel" layoutX="134.0" layoutY="6.0" styleClass="shoppingcart-list-item-text" text="Bönor">
+      <Label fx:id="shoppingCartItemNameLabel" layoutX="134.0" layoutY="6.0" text="Bönor">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="shoppingCartPriceLabel" layoutX="134.0" layoutY="69.0" styleClass="shoppingcart-list-item-text" text="25kr">
+      <Label fx:id="shoppingCartPriceLabel" layoutX="134.0" layoutY="69.0" text="20kr">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="numItemsLabel" layoutX="231.0" layoutY="54.0" styleClass="shoppingcart-list-item-text" text="1 st">
+      <Label fx:id="numItemsLabel" layoutX="231.0" layoutY="54.0" text="1 st">
          <font>
             <Font size="20.0" />
          </font>

@@ -18,11 +18,142 @@
 
 <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1100.0" prefHeight="700.0" prefWidth="1100.0" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
+      <AnchorPane fx:id="shoppingCartOverlay" onMouseClicked="#closeShoppingCartOverlay" prefHeight="702.0" prefWidth="1099.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+         <children>
+            <AnchorPane layoutX="766.0" prefHeight="702.0" prefWidth="332.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Label layoutX="109.0" layoutY="54.0" text="Varukorgen">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="9.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#closeShoppingCartOverlay" prefHeight="31.0" prefWidth="123.0" styleClass="button-back" text="Tillbaka">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@resources/left_arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="clear-button" layoutX="192.0" layoutY="12.0" mnemonicParsing="false" onAction="#emptyCart" text="Töm Korgen">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/trashcan.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="14.0" layoutY="83.0" prefHeight="11.0" prefWidth="293.0" />
+                  <ScrollPane layoutX="2.0" layoutY="94.0" prefHeight="427.0" prefWidth="319.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="426.0" prefWidth="322.0">
+                           <children>
+                              <FlowPane fx:id="shoppingCartFlowPane" layoutX="1.0" prefHeight="427.0" prefWidth="322.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <Label fx:id="numItemsLabel" layoutX="14.0" layoutY="529.0" text="Antal Varor: 7 styck">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalPriceLabel" layoutX="14.0" layoutY="559.0" text="Total Pris: 245 kr">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="91.0" layoutY="612.0" mnemonicParsing="false" onMouseClicked="#openCheckoutStep1" styleClass="button-green" text="Till Kassan">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="checkOutStepOneAnchorPane" layoutX="3.0" layoutY="2.0" onMouseClicked="#closeCheckoutStep1" prefHeight="702.0" prefWidth="1098.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+         <children>
+            <AnchorPane layoutX="258.0" layoutY="69.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Button layoutX="417.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closeCheckoutStep1" prefHeight="37.0" prefWidth="150.0" styleClass="button-green" text="Fortsätt Handla">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/grocery_bag.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="252.0" layoutY="48.0" text="Uppgifter">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="357.0" layoutY="63.0" prefHeight="14.0" prefWidth="214.0" />
+                  <Label layoutX="115.0" layoutY="154.0" text="Förnamn">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="275.0" layoutY="154.0" text="Efternamn">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="113.0" layoutY="220.0" text="Address">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="105.0" layoutY="145.0" />
+                  <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="222.0" />
+                  <TextField fx:id="customerFirstNameTextField" layoutX="113.0" layoutY="184.0" styleClass="config-input" />
+                  <TextField fx:id="customerLastNameTextField" layoutX="275.0" layoutY="184.0" prefHeight="26.0" prefWidth="198.0" styleClass="config-input" />
+                  <TextField fx:id="customerAddressTextField" layoutX="114.0" layoutY="250.0" prefHeight="26.0" prefWidth="361.0" styleClass="config-input" />
+                  <Label layoutX="114.0" layoutY="287.0" text="Postnummer">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="274.0" layoutY="287.0" text="Telefon Nummer">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="customerPostCodeTextField" layoutX="112.0" layoutY="317.0" styleClass="config-input" />
+                  <TextField fx:id="customerPhoneNumberTextField" layoutX="274.0" layoutY="317.0" prefHeight="26.0" prefWidth="198.0" styleClass="config-input" />
+                  <Label layoutX="113.0" layoutY="352.0" text="Epost">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="customerEmailTextField" layoutX="114.0" layoutY="382.0" prefHeight="26.0" prefWidth="361.0" styleClass="config-input" />
+                  <Button layoutX="248.0" layoutY="505.0" mnemonicParsing="false" onMousePressed="#closeCheckoutStep1" onMouseReleased="#openCheckoutStep2" styleClass="button-green" text="Nästa">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
       <AnchorPane fx:id="previousPurchaseSummaryAnchorPane" layoutX="2.0" layoutY="1.0" onMouseClicked="#closePreviousPurchaseSummaryOverlay" prefHeight="702.0" prefWidth="1098.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
          <children>
             <AnchorPane layoutX="258.0" layoutY="69.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
                <children>
-                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closePreviousPurchaseSummaryOverlay" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #F67952;" text="Tillbaka">
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closePreviousPurchaseSummaryOverlay" prefHeight="31.0" prefWidth="123.0" styleClass="button-back" text="Tillbaka">
                      <graphic>
                         <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
                            <image>
@@ -77,7 +208,7 @@
          <children>
             <AnchorPane layoutX="256.0" layoutY="69.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
                <children>
-                  <Button layoutX="417.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closeCheckoutStep3" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: #9ED296;" text="Fortsätt Handla">
+                  <Button layoutX="417.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closeCheckoutStep3" prefHeight="37.0" prefWidth="150.0" styleClass="button-green" text="Fortsätt Handla">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -102,7 +233,7 @@
                   </Label>
                   <Label layoutX="105.0" layoutY="145.0" />
                   <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="214.0" />
-                  <TextField fx:id="cardNumberTextField" layoutX="111.0" layoutY="193.0" prefHeight="26.0" prefWidth="361.0" />
+                  <TextField fx:id="cardNumberTextField" layoutX="111.0" layoutY="193.0" prefHeight="26.0" prefWidth="361.0" styleClass="config-input" />
                   <Label layoutX="111.0" layoutY="230.0" text="Utgångsdatum Månad / År">
                      <font>
                         <Font size="20.0" />
@@ -113,14 +244,14 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardVerificationCodeTextField" layoutX="110.0" layoutY="337.0" prefHeight="26.0" prefWidth="158.0" />
+                  <TextField fx:id="cardVerificationCodeTextField" layoutX="110.0" layoutY="337.0" prefHeight="26.0" prefWidth="158.0" styleClass="config-input" />
                   <Label layoutX="109.0" layoutY="366.0" text="Kommentar">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextArea layoutX="108.0" layoutY="402.0" prefHeight="54.0" prefWidth="370.0" />
-                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMousePressed="#closeCheckoutStep3" onMouseReleased="#openCheckoutStep2" prefHeight="38.0" prefWidth="183.0" style="-fx-background-color: #F67952;" text="Tillbaka Till Leverans">
+                  <TextArea layoutX="108.0" layoutY="402.0" prefHeight="54.0" prefWidth="370.0" styleClass="config-input" />
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMousePressed="#closeCheckoutStep3" onMouseReleased="#openCheckoutStep2" prefHeight="38.0" prefWidth="183.0" styleClass="button-back" text="Tillbaka Till Leverans">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -132,7 +263,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button layoutX="250.0" layoutY="505.0" mnemonicParsing="false" onAction="#placeOrder" style="-fx-background-color: #9ED296;" text="Betala">
+                  <Button layoutX="250.0" layoutY="505.0" mnemonicParsing="false" onAction="#placeOrder" styleClass="button-green" text="Betala">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -142,77 +273,15 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardHolderNameTextField" layoutX="110.0" layoutY="136.0" prefHeight="26.0" prefWidth="361.0" />
-                  <Spinner fx:id="cardExpirationMonthSpinner" editable="true" layoutX="111.0" layoutY="269.0" prefHeight="26.0" prefWidth="173.0" />
-                  <Spinner fx:id="cardExpirationYearSpinner" editable="true" layoutX="298.0" layoutY="269.0" prefHeight="26.0" prefWidth="174.0" />
+                  <TextField fx:id="cardHolderNameTextField" layoutX="110.0" layoutY="136.0" prefHeight="26.0" prefWidth="361.0" styleClass="config-input" />
+                  <Spinner fx:id="cardExpirationMonthSpinner" editable="true" layoutX="111.0" layoutY="269.0" prefHeight="26.0" prefWidth="173.0" styleClass="config-input" />
+                  <Spinner fx:id="cardExpirationYearSpinner" editable="true" layoutX="298.0" layoutY="269.0" prefHeight="26.0" prefWidth="174.0" styleClass="config-input" />
                   <Label layoutX="280.0" layoutY="307.0" text="Korttyp">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <ComboBox fx:id="cardTypeComboBox" layoutX="280.0" layoutY="338.0" prefHeight="26.0" prefWidth="198.0" />
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="shoppingCartOverlay" onMouseClicked="#closeShoppingCartOverlay" prefHeight="702.0" prefWidth="1099.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
-         <children>
-            <AnchorPane layoutX="766.0" prefHeight="702.0" prefWidth="332.0" style="-fx-background-color: WHITE;">
-               <children>
-                  <Label layoutX="109.0" layoutY="54.0" text="Varukorgen">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Button layoutX="9.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#closeShoppingCartOverlay" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #F67952;" text="Tillbaka">
-                     <graphic>
-                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@resources/left_arrow.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="192.0" layoutY="12.0" mnemonicParsing="false" onAction="#emptyCart" style="-fx-background-color: #F67952;" text="Töm Korgen">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/trashcan.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Separator layoutX="14.0" layoutY="83.0" prefHeight="11.0" prefWidth="293.0" />
-                  <ScrollPane layoutX="2.0" layoutY="94.0" prefHeight="427.0" prefWidth="319.0">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="426.0" prefWidth="322.0">
-                           <children>
-                              <FlowPane fx:id="shoppingCartFlowPane" layoutX="1.0" prefHeight="427.0" prefWidth="322.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                           </children>
-                        </AnchorPane>
-                    </content>
-                  </ScrollPane>
-                  <Label fx:id="numItemsLabel" layoutX="14.0" layoutY="529.0" text="Antal Varor: 7 styck">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="totalPriceLabel" layoutX="14.0" layoutY="559.0" text="Total Pris: 245 kr">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Button layoutX="91.0" layoutY="612.0" mnemonicParsing="false" onMouseClicked="#openCheckoutStep1" style="-fx-background-color: #9ED296;" text="Till Kassan">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Button>
+                  <ComboBox fx:id="cardTypeComboBox" layoutX="280.0" layoutY="338.0" prefHeight="26.0" prefWidth="198.0" styleClass="config-input" />
                </children>
             </AnchorPane>
          </children>
@@ -221,7 +290,7 @@
          <children>
             <AnchorPane layoutX="257.0" layoutY="69.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
                <children>
-                  <Button layoutX="183.0" layoutY="430.0" mnemonicParsing="false" onMousePressed="#closeCheckoutThankYou" onMouseReleased="#closeShoppingCartOverlay" prefHeight="62.0" prefWidth="214.0" style="-fx-background-color: #9ED296;" text="Fortsätt Handla">
+                  <Button layoutX="183.0" layoutY="430.0" mnemonicParsing="false" onMousePressed="#closeCheckoutThankYou" onMouseReleased="#closeShoppingCartOverlay" prefHeight="62.0" prefWidth="214.0" styleClass="button-green" text="Fortsätt Handla">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -257,7 +326,7 @@
          <children>
             <AnchorPane layoutX="257.0" layoutY="69.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
                <children>
-                  <Button layoutX="417.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closeCheckoutStep2" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: #9ED296;" text="Fortsätt Handla">
+                  <Button layoutX="417.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closeCheckoutStep2" prefHeight="37.0" prefWidth="150.0" styleClass="button-green" text="Fortsätt Handla">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -277,7 +346,7 @@
                   <Separator layoutX="357.0" layoutY="63.0" prefHeight="14.0" prefWidth="214.0" />
                   <Label layoutX="105.0" layoutY="145.0" />
                   <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="222.0" />
-                  <Button layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onMousePressed="#closeCheckoutStep2" onMouseReleased="#openCheckoutStep1" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #F67952;" text="Tillbaka till uppgifter">
+                  <Button layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onMousePressed="#closeCheckoutStep2" onMouseReleased="#openCheckoutStep1" prefHeight="37.0" prefWidth="187.0" styleClass="button-back" text="Tillbaka till uppgifter">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -345,122 +414,9 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="252.0" layoutY="499.0" mnemonicParsing="false" onMousePressed="#closeCheckoutStep2" onMouseReleased="#openCheckoutStep3" style="-fx-background-color: #9ED296;" text="Nästa">
+                  <Button layoutX="252.0" layoutY="499.0" mnemonicParsing="false" onMousePressed="#closeCheckoutStep2" onMouseReleased="#openCheckoutStep3" styleClass="button-green" text="Nästa">
                      <font>
                         <Font size="20.0" />
-                     </font>
-                  </Button>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="profileOverlay" layoutX="2.0" layoutY="2.0" onMouseClicked="#closeProfileOverlay" prefHeight="702.0" prefWidth="1096.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
-         <children>
-            <AnchorPane layoutX="257.0" layoutY="69.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
-               <children>
-                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeProfileOverlay" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #F67952;" text="Tillbaka">
-                     <graphic>
-                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@../../../iMatApp/src/imat/resources/left_arrow.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Button>
-                  <Label layoutX="244.0" layoutY="52.0" text="Leverans">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="355.0" layoutY="65.0" prefHeight="9.0" prefWidth="214.0" />
-                  <Separator layoutX="13.0" layoutY="66.0" prefHeight="9.0" prefWidth="214.0" />
-                  <Label layoutX="52.0" layoutY="87.0" text="Address">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="profileAddressTextField" layoutX="54.0" layoutY="117.0" prefHeight="26.0" prefWidth="276.0" />
-                  <Label layoutX="353.0" layoutY="91.0" text="Postnummer">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="profilePostCodeTextField" layoutX="353.0" layoutY="118.0" />
-                  <Separator layoutX="14.0" layoutY="162.0" prefHeight="14.0" prefWidth="190.0" />
-                  <Separator layoutX="377.0" layoutY="162.0" prefHeight="14.0" prefWidth="190.0" />
-                  <Label layoutX="219.0" layoutY="151.0" text="Kortuppgifter">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="51.0" layoutY="186.0" text="Kortnummer">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="profileCardNumberTextField" layoutX="51.0" layoutY="213.0" prefHeight="26.0" prefWidth="238.0" />
-                  <Label layoutX="54.0" layoutY="253.0" text="Utgångsdatum Månad / År">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="57.0" layoutY="314.0" text="CVC">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="profileCardVerificationCodeTextField" layoutX="54.0" layoutY="341.0" />
-                  <Label layoutX="240.0" layoutY="362.0" text="Uppgifter">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="15.0" layoutY="372.0" prefHeight="14.0" prefWidth="214.0" />
-                  <Separator layoutX="353.0" layoutY="372.0" prefHeight="14.0" prefWidth="214.0" />
-                  <Label layoutX="74.0" layoutY="397.0" text="Förnamn">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="317.0" layoutY="397.0" text="Efternamn">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="77.0" layoutY="454.0" text="Email-Address">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="320.0" layoutY="454.0" text="Telefonnummer">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="profileFirstNameTextField" layoutX="75.0" layoutY="424.0" prefHeight="26.0" prefWidth="190.0" />
-                  <TextField fx:id="profileLastNameTextField" layoutX="317.0" layoutY="424.0" prefHeight="26.0" prefWidth="190.0" />
-                  <TextField fx:id="profileEmailTextField" layoutX="75.0" layoutY="487.0" prefHeight="26.0" prefWidth="190.0" />
-                  <TextField fx:id="profilePhoneNumberTextField" layoutX="317.0" layoutY="487.0" prefHeight="26.0" prefWidth="190.0" />
-                  <Label layoutX="311.0" layoutY="186.0" text="Namn">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="profileCardNameTextField" layoutX="311.0" layoutY="213.0" prefHeight="26.0" prefWidth="238.0" />
-                  <Spinner fx:id="profileCardExpirationMonthSpinner" layoutX="54.0" layoutY="282.0" />
-                  <Spinner fx:id="profileCardExpirationYearSpinner" layoutX="214.0" layoutY="280.0" />
-                  <Label layoutX="382.0" layoutY="253.0" text="Korttyp">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <ComboBox fx:id="profileCardTypeComboBox" layoutX="379.0" layoutY="281.0" prefWidth="150.0" />
-                  <Button layoutX="260.0" layoutY="520.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="63.0" style="-fx-background-color: #9ED296;" text="Spara">
-                     <font>
-                        <Font size="14.0" />
                      </font>
                   </Button>
                </children>
@@ -471,7 +427,7 @@
          <children>
             <AnchorPane layoutX="260.0" layoutY="69.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
                <children>
-                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closePreviousPurchasesOverlay" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #F67952;" text="Tillbaka">
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closePreviousPurchasesOverlay" prefHeight="31.0" prefWidth="123.0" styleClass="button-back" text="Tillbaka">
                      <graphic>
                         <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
                            <image>
@@ -522,69 +478,113 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="checkOutStepOneAnchorPane" layoutX="3.0" layoutY="2.0" onMouseClicked="#closeCheckoutStep1" prefHeight="702.0" prefWidth="1098.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+      <AnchorPane fx:id="profileOverlay" layoutX="2.0" layoutY="2.0" onMouseClicked="#closeProfileOverlay" prefHeight="702.0" prefWidth="1096.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
          <children>
-            <AnchorPane layoutX="258.0" layoutY="69.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
+            <AnchorPane layoutX="257.0" layoutY="69.0" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
                <children>
-                  <Button layoutX="417.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closeCheckoutStep1" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: #9ED296;" text="Fortsätt Handla">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeProfileOverlay" prefHeight="31.0" prefWidth="123.0" styleClass="button-back" text="Tillbaka">
                      <graphic>
-                        <ImageView fitHeight="32.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
                            <image>
-                              <Image url="@resources/grocery_bag.png" />
+                              <Image url="@../../../iMatApp/src/imat/resources/left_arrow.png" />
                            </image>
                         </ImageView>
                      </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                   </Button>
-                  <Label layoutX="252.0" layoutY="48.0" text="Uppgifter">
+                  <Label layoutX="244.0" layoutY="52.0" text="Leverans">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="24.0" />
                      </font>
                   </Label>
-                  <Separator layoutX="357.0" layoutY="63.0" prefHeight="14.0" prefWidth="214.0" />
-                  <Label layoutX="115.0" layoutY="154.0" text="Förnamn">
+                  <Separator layoutX="355.0" layoutY="65.0" prefHeight="9.0" prefWidth="214.0" />
+                  <Separator layoutX="13.0" layoutY="66.0" prefHeight="9.0" prefWidth="214.0" />
+                  <Label layoutX="52.0" layoutY="87.0" text="Address">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="275.0" layoutY="154.0" text="Efternamn">
+                  <TextField fx:id="profileAddressTextField" layoutX="54.0" layoutY="117.0" prefHeight="26.0" prefWidth="276.0" styleClass="config-input" />
+                  <Label layoutX="353.0" layoutY="91.0" text="Postnummer">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="113.0" layoutY="220.0" text="Address">
+                  <TextField fx:id="profilePostCodeTextField" layoutX="353.0" layoutY="118.0" styleClass="config-input" />
+                  <Separator layoutX="14.0" layoutY="162.0" prefHeight="14.0" prefWidth="190.0" />
+                  <Separator layoutX="377.0" layoutY="162.0" prefHeight="14.0" prefWidth="190.0" />
+                  <Label layoutX="219.0" layoutY="151.0" text="Kortuppgifter">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label layoutX="105.0" layoutY="145.0" />
-                  <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="222.0" />
-                  <TextField fx:id="customerFirstNameTextField" layoutX="113.0" layoutY="184.0" />
-                  <TextField fx:id="customerLastNameTextField" layoutX="275.0" layoutY="184.0" prefHeight="26.0" prefWidth="198.0" />
-                  <TextField fx:id="customerAddressTextField" layoutX="114.0" layoutY="250.0" prefHeight="26.0" prefWidth="361.0" />
-                  <Label layoutX="114.0" layoutY="287.0" text="Postnummer">
+                  <Label layoutX="51.0" layoutY="186.0" text="Kortnummer">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="274.0" layoutY="287.0" text="Telefon Nummer">
+                  <TextField fx:id="profileCardNumberTextField" layoutX="51.0" layoutY="213.0" prefHeight="26.0" prefWidth="238.0" styleClass="config-input" />
+                  <Label layoutX="54.0" layoutY="253.0" text="Utgångsdatum Månad / År">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="customerPostCodeTextField" layoutX="112.0" layoutY="317.0" />
-                  <TextField fx:id="customerPhoneNumberTextField" layoutX="274.0" layoutY="317.0" prefHeight="26.0" prefWidth="198.0" />
-                  <Label layoutX="113.0" layoutY="352.0" text="Epost">
+                  <Label layoutX="57.0" layoutY="314.0" text="CVC">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="customerEmailTextField" layoutX="114.0" layoutY="382.0" prefHeight="26.0" prefWidth="361.0" />
-                  <Button layoutX="248.0" layoutY="505.0" mnemonicParsing="false" onMousePressed="#closeCheckoutStep1" onMouseReleased="#openCheckoutStep2" style="-fx-background-color: #9ED296;" text="Nästa">
+                  <TextField fx:id="profileCardVerificationCodeTextField" layoutX="54.0" layoutY="341.0" styleClass="config-input" />
+                  <Label layoutX="240.0" layoutY="362.0" text="Uppgifter">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="15.0" layoutY="372.0" prefHeight="14.0" prefWidth="214.0" />
+                  <Separator layoutX="353.0" layoutY="372.0" prefHeight="14.0" prefWidth="214.0" />
+                  <Label layoutX="74.0" layoutY="397.0" text="Förnamn">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="317.0" layoutY="397.0" text="Efternamn">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="454.0" text="Email-Address">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="320.0" layoutY="454.0" text="Telefonnummer">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="profileFirstNameTextField" layoutX="75.0" layoutY="424.0" prefHeight="26.0" prefWidth="190.0" styleClass="config-input" />
+                  <TextField fx:id="profileLastNameTextField" layoutX="317.0" layoutY="424.0" prefHeight="26.0" prefWidth="190.0" styleClass="config-input" />
+                  <TextField fx:id="profileEmailTextField" layoutX="75.0" layoutY="487.0" prefHeight="26.0" prefWidth="190.0" styleClass="config-input" />
+                  <TextField fx:id="profilePhoneNumberTextField" layoutX="317.0" layoutY="487.0" prefHeight="26.0" prefWidth="190.0" styleClass="config-input" />
+                  <Label layoutX="311.0" layoutY="186.0" text="Namn">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="profileCardNameTextField" layoutX="311.0" layoutY="213.0" prefHeight="26.0" prefWidth="238.0" styleClass="config-input" />
+                  <Spinner fx:id="profileCardExpirationMonthSpinner" layoutX="54.0" layoutY="282.0" />
+                  <Spinner fx:id="profileCardExpirationYearSpinner" layoutX="214.0" layoutY="280.0" />
+                  <Label layoutX="382.0" layoutY="253.0" text="Korttyp">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="profileCardTypeComboBox" layoutX="379.0" layoutY="281.0" prefWidth="150.0" />
+                  <Button layoutX="260.0" layoutY="520.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="63.0" styleClass="button-green" text="Spara">
+                     <font>
+                        <Font size="14.0" />
                      </font>
                   </Button>
                </children>
@@ -595,13 +595,13 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="100.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Label id="text-categories_larger" layoutX="339.0" layoutY="3.0" styleClass="text-categories" text="Kategorier">
+                  <Label id="text-categories_larger" layoutX="338.0" layoutY="9.0" styleClass="text-categories" text="Kategorier">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Separator layoutX="9.0" layoutY="11.0" prefHeight="17.0" prefWidth="321.0" AnchorPane.bottomAnchor="588.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="442.0" AnchorPane.topAnchor="8.0" />
-                  <Separator layoutX="439.0" layoutY="11.0" prefHeight="8.0" prefWidth="322.0" />
+                  <Separator layoutX="9.0" layoutY="13.0" prefHeight="17.0" prefWidth="321.0" AnchorPane.bottomAnchor="583.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="442.0" AnchorPane.topAnchor="13.0" />
+                  <Separator layoutX="439.0" layoutY="18.0" prefHeight="8.0" prefWidth="322.0" />
                   <Button fx:id="fruitButton" layoutX="519.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFruitItems" prefHeight="45.0" prefWidth="110.0" text="Frukt">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
@@ -759,7 +759,7 @@
                            <content>
                               <AnchorPane prefHeight="436.0" prefWidth="750.0">
                                  <children>
-                                    <FlowPane fx:id="generalItemsFlowPane" layoutX="3.0" layoutY="2.0" prefHeight="420.0" prefWidth="374.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="2.0" />
+                                    <FlowPane id="item-grid" fx:id="generalItemsFlowPane" layoutX="3.0" layoutY="2.0" prefHeight="420.0" prefWidth="374.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="2.0" />
                                  </children>
                               </AnchorPane>
                            </content>
@@ -809,9 +809,9 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <AnchorPane id="detail" fx:id="detailViewAnchorPane" layoutX="3.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="319.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane id="detail" fx:id="detailViewAnchorPane" layoutX="3.0" layoutY="10.0" maxWidth="320.0" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="319.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Label id="help-button" layoutX="27.0" layoutY="14.0" onMouseClicked="#closeDetailView" styleClass="text-header" text="How to use iMat?" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
+                        <Label id="help-button" layoutX="27.0" layoutY="14.0" onMouseClicked="#closeDetailView" styleClass="text-header" text="   Hur Fungerar iMat?" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -839,12 +839,12 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="207.0" layoutY="241.0" onMouseClicked="#addDetailView" text="+" textFill="#2ea91b">
+                        <Label layoutX="207.0" layoutY="241.0" onMouseClicked="#addDetailView" styleClass="plus-button" text="+">
                            <font>
                               <Font size="48.0" />
                            </font>
                         </Label>
-                        <Label layoutX="85.0" layoutY="241.0" onMouseClicked="#removeDetailView" text="-" textFill="#c82525">
+                        <Label layoutX="85.0" layoutY="241.0" onMouseClicked="#removeDetailView" styleClass="minus-button" text="-">
                            <font>
                               <Font name="System Bold" size="48.0" />
                            </font>

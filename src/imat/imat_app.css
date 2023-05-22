@@ -117,13 +117,10 @@
 .product-item:selected{
     -fx-background-color: lightgrey;
 }
-
-.shoppingcart-list-item-background{
-    -fx-background-color: lightgrey;
-
-}
-.shoppingcart-list-item-text{
-    -fx-font-family: "Arial";
+.shopping-cart-list-item{
     -fx-font-size: 20px;
+    -fx-font-family: "Arial";
     -fx-font-weight: bold;
+
+
 }
