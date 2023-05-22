@@ -811,7 +811,7 @@
                   </Label>
                   <AnchorPane id="detail" fx:id="detailViewAnchorPane" layoutX="3.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="319.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Label id="help-button" layoutX="27.0" layoutY="14.0" onMouseClicked="#closeDetailView" styleClass="text-header" text="How to use iMat?" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
+                        <Label id="help-button" layoutX="27.0" layoutY="14.0" onMouseClicked="#closeDetailView" styleClass="text-header" text="   Hur Fungerar iMat?" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -839,12 +839,12 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="207.0" layoutY="241.0" onMouseClicked="#addDetailView" text="+" textFill="#2ea91b">
+                        <Label layoutX="207.0" layoutY="241.0" onMouseClicked="#addDetailView" styleClass="plus-button" text="+">
                            <font>
                               <Font size="48.0" />
                            </font>
                         </Label>
-                        <Label layoutX="85.0" layoutY="241.0" onMouseClicked="#removeDetailView" text="-" textFill="#c82525">
+                        <Label layoutX="85.0" layoutY="241.0" onMouseClicked="#removeDetailView" styleClass="minus-button" text="-">
                            <font>
                               <Font name="System Bold" size="48.0" />
                            </font>

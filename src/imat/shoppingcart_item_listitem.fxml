@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="322.0" style="-fx-background-color: LIGHTGRAY;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="322.0" style="-fx-background-color: LIGHTGRAY;" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="shoppingCartImageView" fitHeight="119.0" fitWidth="134.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -28,12 +28,12 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="203.0" layoutY="47.0" onMouseClicked="#onRemove" text="-">
+      <Label layoutX="203.0" layoutY="47.0" onMouseClicked="#onRemove" styleClass="minus-button" text="-">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label layoutX="279.0" layoutY="47.0" onMouseClicked="#onAdd" text="+">
+      <Label layoutX="279.0" layoutY="47.0" onMouseClicked="#onAdd" styleClass="plus-button" text="+">
          <font>
             <Font size="30.0" />
          </font>

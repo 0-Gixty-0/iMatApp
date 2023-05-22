@@ -1,5 +1,6 @@
 .root{
     category-color: #FFDBD1;
+    product-item-color: white;
 }
 .text-sample{
       -fx-font-size: 16px;
@@ -19,6 +20,10 @@
 .text-header {
     -fx-font-size: 22px;
     -fx-font-family: "Times New Roman";
+}
+
+.text-header:hover{
+    -fx-text-fill: darkgray;
 }
 
 .text-grocery-title{
@@ -97,16 +102,29 @@
     -fx-control-inner-background: #EFEFF2
 }
 
-#minus-button {
-    -fx-background-color: #F67952;
-    -fx-background-radius: 15px;
+.minus-button {
+    -fx-text-fill: #c82525;
+    -fx-effect: dropshadow(three-pass-box, #000000, 2, 0.2, 1, 1);
+}
+
+.minus-button:hover {
+    -fx-text-fill: #fa144a;
+}
+
+.plus-button{
+    -fx-text-fill: #2ea91b;
+    -fx-effect: dropshadow(three-pass-box, #000000, 2, 0.2, 1, 1);
+}
+
+.plus-button:hover{
+    -fx-text-fill: #11ed39;
 }
 
 .product-item{
     -fx-effect: dropshadow(three-pass-box, #000000, 2, 0.2, 1, 1);
     -fx-border-color: #4E4E4E;
     -fx-border-radius: 15px;
-    -fx-background-color: white;
+    -fx-background-color: product-item-color;
     -fx-border-width: 2px;
 }
 

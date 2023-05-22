@@ -17,12 +17,12 @@
          <font>
             <Font size="22.0" />
          </font></Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="245.0" onMouseClicked="#onRemove" prefHeight="13.0" prefWidth="10.0" text="-" textFill="#c82525">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="245.0" onMouseClicked="#onRemove" prefHeight="13.0" prefWidth="10.0" styleClass="minus-button" text="-">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="172.0" layoutY="244.0" onMouseClicked="#onAdd" prefHeight="54.0" prefWidth="32.0" text="+" textFill="#2ea91b">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="172.0" layoutY="244.0" onMouseClicked="#onAdd" prefHeight="54.0" prefWidth="32.0" styleClass="plus-button" text="+" textFill="#2ea91b">
          <font>
             <Font size="36.0" />
          </font>
