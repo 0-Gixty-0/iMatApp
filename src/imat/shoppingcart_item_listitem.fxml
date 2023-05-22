@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="322.0" style="-fx-background-color: LIGHTGRAY;" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="306.0" styleClass="shopping-cart-item" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="shoppingCartImageView" fitHeight="119.0" fitWidth="134.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="shoppingCartImageView" fitHeight="93.0" fitWidth="128.0" layoutX="3.0" layoutY="4.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@resources/beans.jpg" />
          </image>

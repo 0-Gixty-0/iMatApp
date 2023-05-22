@@ -163,6 +163,8 @@ public class MainViewController implements Initializable {
         generalItemsFlowPane.setHgap(4);
         generalItemsFlowPane.setVgap(7);
 
+        shoppingCartFlowPane.setVgap(5);
+
         // Initialize product list item map and observable list
         for (Product item : dataHandler.getProducts()) {
             ProductListItem productListItem = new ProductListItem(item, this);

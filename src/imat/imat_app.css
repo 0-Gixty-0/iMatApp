@@ -135,3 +135,14 @@
 .product-item:selected{
     -fx-background-color: lightgrey;
 }
+
+.shopping-cart-item{
+    -fx-effect: dropshadow(gaussian, #000000, 2, 0.2, 1, 1);
+    -fx-background-color: product-item-color;
+    -fx-border-color: #4E4E4E;
+    -fx-border-width: 2px;
+}
+
+.shopping-cart-item:hover{
+    -fx-background-color: lightgrey;
+}
