@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -601,102 +602,150 @@
                   </Label>
                   <Separator layoutX="9.0" layoutY="11.0" prefHeight="17.0" prefWidth="321.0" AnchorPane.bottomAnchor="588.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="442.0" AnchorPane.topAnchor="8.0" />
                   <Separator layoutX="439.0" layoutY="11.0" prefHeight="8.0" prefWidth="322.0" />
-                  <Button fx:id="fruitButton" layoutX="519.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFruitItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Frukt">
+                  <Button fx:id="fruitButton" layoutX="519.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFruitItems" prefHeight="45.0" prefWidth="110.0" text="Frukt">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/fruit.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="vegetablesButton" layoutX="393.0" layoutY="36.0" mnemonicParsing="false" onAction="#showVegetableItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Grönt">
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="text-categories" />
+                        <String fx:value="text-buttons" />
+                     </styleClass></Button>
+                  <Button fx:id="vegetablesButton" layoutX="393.0" layoutY="36.0" mnemonicParsing="false" onAction="#showVegetableItems" prefHeight="45.0" prefWidth="110.0" text="Grönt">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/vedgetable.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="meatButton" layoutX="142.0" layoutY="36.0" mnemonicParsing="false" onAction="#showMeatItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Kött">
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="text-categories" />
+                        <String fx:value="text-buttons" />
+                     </styleClass></Button>
+                  <Button fx:id="meatButton" layoutX="142.0" layoutY="36.0" mnemonicParsing="false" onAction="#showMeatItems" prefHeight="45.0" prefWidth="110.0" text="Kött">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/meat.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="dairyButton" layoutX="19.0" layoutY="36.0" mnemonicParsing="false" onAction="#showDairyItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Mejeri">
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="text-categories" />
+                        <String fx:value="text-buttons" />
+                     </styleClass></Button>
+                  <Button fx:id="dairyButton" layoutX="19.0" layoutY="36.0" mnemonicParsing="false" onAction="#showDairyItems" prefHeight="45.0" prefWidth="110.0" stylesheets="@imat_app.css" text="Mejeri">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/milk.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="fishButton" layoutX="263.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFishItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Fisk">
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="text-categories" />
+                        <String fx:value="text-buttons" />
+                     </styleClass></Button>
+                  <Button fx:id="fishButton" layoutX="263.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFishItems" prefHeight="45.0" prefWidth="110.0" text="Fisk">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/fish.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="favoritesButton" layoutX="640.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFavorites" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FCB8A6;" styleClass="text-categories" text="Favoriter">
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="text-categories" />
+                        <String fx:value="text-buttons" />
+                     </styleClass></Button>
+                  <Button fx:id="favoritesButton" layoutX="640.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFavorites" prefHeight="45.0" prefWidth="110.0" text="Favoriter">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/favourites.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="beveragesButton" layoutX="518.0" layoutY="97.0" mnemonicParsing="false" onAction="#showColdDrinksItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Läsk">
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="text-categories" />
+                        <String fx:value="text-buttons" />
+                     </styleClass></Button>
+                  <Button fx:id="sodaButton" layoutX="518.0" layoutY="97.0" mnemonicParsing="false" onAction="#showColdDrinksItems" prefHeight="45.0" prefWidth="110.0" text="Läsk">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/colddrink.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="snacksButton" layoutX="393.0" layoutY="97.0" mnemonicParsing="false" onAction="#showHotDrinksItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Te">
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="text-categories" />
+                        <String fx:value="text-buttons" />
+                     </styleClass></Button>
+                  <Button fx:id="teaButton" layoutX="393.0" layoutY="97.0" mnemonicParsing="false" onAction="#showHotDrinksItems" prefHeight="45.0" prefWidth="110.0" text="Te">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/hotdrink.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="spicesButton" layoutX="142.0" layoutY="97.0" mnemonicParsing="false" onAction="#showHerbItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Örter">
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="text-categories" />
+                        <String fx:value="text-buttons" />
+                     </styleClass></Button>
+                  <Button fx:id="herbsButton" layoutX="142.0" layoutY="97.0" mnemonicParsing="false" onAction="#showHerbItems" prefHeight="45.0" prefWidth="110.0" text="Örter">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/herbs.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="bakedButton" layoutX="19.0" layoutY="97.0" mnemonicParsing="false" onAction="#showBakingItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Bakat">
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="text-categories" />
+                        <String fx:value="text-buttons" />
+                     </styleClass></Button>
+                  <Button fx:id="bakedButton" layoutX="19.0" layoutY="97.0" mnemonicParsing="false" onAction="#showBakingItems" prefHeight="45.0" prefWidth="110.0" text="Bakat">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/baked.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="pastaButton" layoutX="263.0" layoutY="97.0" mnemonicParsing="false" onAction="#showPastaItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Pasta">
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="text-categories" />
+                        <String fx:value="text-buttons" />
+                     </styleClass></Button>
+                  <Button fx:id="pastaButton" layoutX="263.0" layoutY="97.0" mnemonicParsing="false" onAction="#showPastaItems" prefHeight="45.0" prefWidth="110.0" text="Pasta">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/pasta.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="freezedButton" layoutX="640.0" layoutY="97.0" mnemonicParsing="false" onAction="#showNutsItems" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: FFDBD1;" styleClass="text-categories" text="Nötter">
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="text-categories" />
+                        <String fx:value="text-buttons" />
+                     </styleClass></Button>
+                  <Button fx:id="nutsButton" layoutX="640.0" layoutY="97.0" mnemonicParsing="false" onAction="#showNutsItems" prefHeight="45.0" prefWidth="110.0" text="Nötter">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/nuts.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="text-categories" />
+                        <String fx:value="text-buttons" />
+                     </styleClass></Button>
                   <Label id="text-categories_larger" layoutX="359.0" layoutY="150.0" styleClass="text-categories" text="Varor">
                      <font>
                         <Font size="20.0" />
@@ -760,20 +809,69 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
+                  <AnchorPane id="detail" fx:id="detailViewAnchorPane" layoutX="3.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="319.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label id="help-button" layoutX="27.0" layoutY="14.0" onMouseClicked="#closeDetailView" styleClass="text-header" text="How to use iMat?" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/question_mark.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Separator layoutX="15.0" layoutY="56.0" prefHeight="19.0" prefWidth="277.0" />
+                        <Label id="text-grocery-bigger" fx:id="detailItemNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="297.0" prefHeight="35.0" prefWidth="265.0" styleClass="text-grocery-title" text="Bönor">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="detailItemImageView" fitHeight="172.0" fitWidth="229.0" layoutX="39.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+                           <image>
+                              <Image url="@resources/beans.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="detailNumItemsLabel" layoutX="139.0" layoutY="261.0" text="1 st">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="207.0" layoutY="241.0" onMouseClicked="#addDetailView" text="+" textFill="#2ea91b">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="85.0" layoutY="241.0" onMouseClicked="#removeDetailView" text="-" textFill="#c82525">
+                           <font>
+                              <Font name="System Bold" size="48.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="detailItemPriceLabel" layoutX="27.0" layoutY="345.0" styleClass="text-grocery-title" text="Pris: 25 kr">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextArea id="detail-text" editable="false" layoutX="21.0" layoutY="384.0" prefHeight="215.0" prefWidth="286.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in consequat mauris. Cras ut magna non ante aliquet placerat. In iaculis dui eu pharetra tincidunt. Nulla vitae placerat tellus." wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
         </items>
       </SplitPane>
-      <AnchorPane prefHeight="92.0" prefWidth="1007.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="608.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane id="header" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="1000.0" prefHeight="90.0" prefWidth="1007.0" style="-fx-background-color: WHITE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="89.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@resources/logo.png" />
-               </image>
-            </ImageView>
-            <ComboBox fx:id="searchCategoryComboBox" layoutX="105.0" layoutY="32.0" prefHeight="29.0" prefWidth="95.0" />
-            <TextField fx:id="searchBarTextField" layoutX="203.0" layoutY="32.0" prefHeight="29.0" prefWidth="278.0" promptText="Sök efter en produkt..." />
-            <Label id="text-bold" fx:id="previousPurchasesLabel" layoutX="525.0" layoutY="25.0" onMouseClicked="#openPreviousPurchasesOverlay" styleClass="text-header" text="Tidigare Köp">
+            <TextField id="searchBar" fx:id="searchBarTextField" layoutX="174.0" layoutY="20.0" prefHeight="40.0" prefWidth="331.0" promptText="Sök efter en produkt..." AnchorPane.bottomAnchor="30.0" AnchorPane.topAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></TextField>
+            <Label id="text-bold" fx:id="previousPurchasesLabel" layoutX="525.0" layoutY="25.0" onMouseClicked="#openPreviousPurchasesOverlay" styleClass="text-header" text="Tidigare Köp" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="402.0" AnchorPane.topAnchor="20.0">
                <graphic>
                   <ImageView fitHeight="42.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -785,7 +883,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label id="text-bold" fx:id="profileLabel" layoutX="748.0" layoutY="25.0" onMouseClicked="#openProfileOverlay" styleClass="text-header" text="Profil">
+            <Label id="text-bold" fx:id="profileLabel" layoutX="748.0" layoutY="25.0" onMouseClicked="#openProfileOverlay" styleClass="text-header" text="Profil" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="20.0">
                <graphic>
                   <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -797,7 +895,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label id="text-bold" fx:id="shoppingCartLabel" layoutX="883.0" layoutY="23.0" onMouseClicked="#openShoppingCartOverlay" styleClass="text-header" text="Varukorg">
+            <Label id="text-bold" fx:id="shoppingCartLabel" layoutY="23.0" onMouseClicked="#openShoppingCartOverlay" styleClass="text-header" text="Varukorg" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
                <font>
                   <Font size="20.0" />
                </font>
@@ -809,58 +907,11 @@
                   </ImageView>
                </graphic>
             </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="detailViewAnchorPane" layoutX="781.0" layoutY="85.0" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="319.0" style="-fx-background-color: LIGHTGRAY;">
-         <children>
-            <Label layoutX="27.0" layoutY="14.0" onMouseClicked="#closeDetailView" styleClass="text-header" text="Hur använder jag iMat?">
+            <Label contentDisplay="CENTER" layoutX="29.0" layoutY="15.0" prefHeight="65.0" prefWidth="132.0" text="iMat" textFill="#f67952" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="15.0">
                <font>
-                  <Font size="20.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@resources/question_mark.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Separator layoutX="15.0" layoutY="56.0" prefHeight="19.0" prefWidth="277.0" />
-            <Label id="text-grocery-bigger" fx:id="detailItemNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="297.0" prefHeight="35.0" prefWidth="265.0" styleClass="text-grocery-title" text="Bönor">
-               <font>
-                  <Font size="24.0" />
+                  <Font name="Silom" size="50.0" />
                </font>
             </Label>
-            <ImageView fx:id="detailItemImageView" fitHeight="155.0" fitWidth="208.0" layoutX="55.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@resources/beans.jpg" />
-               </image>
-            </ImageView>
-            <Label fx:id="detailNumItemsLabel" layoutX="139.0" layoutY="261.0" text="1 st">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Label layoutX="207.0" layoutY="241.0" onMouseClicked="#addDetailView" text="+" textFill="#2ea91b">
-               <font>
-                  <Font size="48.0" />
-               </font>
-            </Label>
-            <Label layoutX="85.0" layoutY="241.0" onMouseClicked="#removeDetailView" text="-" textFill="#c82525">
-               <font>
-                  <Font name="System Bold" size="48.0" />
-               </font>
-            </Label>
-            <Label fx:id="detailItemPriceLabel" layoutX="27.0" layoutY="345.0" styleClass="text-grocery-title" text="Pris: 25 kr">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <TextArea editable="false" layoutX="21.0" layoutY="384.0" prefHeight="215.0" prefWidth="286.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in consequat mauris. Cras ut magna non ante aliquet placerat. In iaculis dui eu pharetra tincidunt. Nulla vitae placerat tellus." wrapText="true">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextArea>
          </children>
       </AnchorPane>
    </children>

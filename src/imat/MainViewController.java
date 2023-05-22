@@ -14,6 +14,7 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.effect.Effect;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -125,6 +126,30 @@ public class MainViewController implements Initializable {
     TextField searchBarTextField;
     @FXML
     ComboBox searchCategoryComboBox;
+    @FXML
+    Button dairyButton;
+    @FXML
+    Button meatButton;
+    @FXML
+    Button fishButton;
+    @FXML
+    Button vegetablesButton;
+    @FXML
+    Button fruitButton;
+    @FXML
+    Button favoritesButton;
+    @FXML
+    Button bakedButton;
+    @FXML
+    Button herbsButton;
+    @FXML
+    Button pastaButton;
+    @FXML
+    Button teaButton;
+    @FXML
+    Button sodaButton;
+    @FXML
+    Button nutsButton;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -133,6 +158,10 @@ public class MainViewController implements Initializable {
         String iMatDirectory = iMatDataHandler.imatDirectory();
 
         // pathLabel.setText(iMatDirectory);
+
+        //Setup FlowPane
+        generalItemsFlowPane.setHgap(4);
+        generalItemsFlowPane.setVgap(7);
 
         // Initialize product list item map and observable list
         for (Product item : dataHandler.getProducts()) {
@@ -354,17 +383,18 @@ public class MainViewController implements Initializable {
 
         // Initialize Searchbar
         this.flProduct = new FilteredList(productObservableList, p -> true);
-        searchCategoryComboBox.getItems().addAll("Namn", "Kategori");
-        searchCategoryComboBox.setValue("Namn");
+        //searchCategoryComboBox.getItems().addAll("Namn", "Kategori");
+        //searchCategoryComboBox.setValue("Namn");
 
         searchBarTextField.setPromptText("Sök efter en produkt...");
         searchBarTextField.textProperty().addListener((obs, oldValue, newValue) -> {
-            switch (searchCategoryComboBox.getValue().toString())//Switch on choiceBox value
-            {
-                case "Namn":
-                    flProduct.setPredicate(p -> p.getName().toLowerCase().contains(newValue.toLowerCase().trim()));//filter table by first name
-                    break;
-            }
+            //switch (searchCategoryComboBox.getValue().toString())//Switch on choiceBox value
+            //{
+            //    case "Namn":
+            //        flProduct.setPredicate(p -> p.getName().toLowerCase().contains(newValue.toLowerCase().trim()));//filter table by first name
+            //        break;
+            //}
+            flProduct.setPredicate(p -> p.getName().toLowerCase().contains(newValue.toLowerCase().trim()));
             updateProductListSearch();
         });
 
@@ -382,12 +412,14 @@ public class MainViewController implements Initializable {
     }
     // Update productlist with category
     private void updateProductListCategory(ProductCategory category){
+        resetButtons();
         generalItemsFlowPane.getChildren().clear();
         for (Product item : dataHandler.getProducts(category))
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
     }
 
     private void updateProductListFavorites(){
+        resetButtons();
         generalItemsFlowPane.getChildren().clear();
         for (Product item : dataHandler.favorites()){
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
@@ -395,6 +427,7 @@ public class MainViewController implements Initializable {
     }
 
     private void updateProductListSearch(){
+        resetButtons();
         generalItemsFlowPane.getChildren().clear();
         for (Product item : flProduct){
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
@@ -479,52 +512,78 @@ public class MainViewController implements Initializable {
     }
 
     // Category Button Methods
+    private void resetButtons(){
+        dairyButton.setStyle("category-color: #FFDBD1");
+        meatButton.setStyle("category-color: #FFDBD1");
+        fishButton.setStyle("category-color: #FFDBD1");
+        herbsButton.setStyle("category-color: #FFDBD1");
+        teaButton.setStyle("category-color: #FFDBD1");
+        sodaButton.setStyle("category-color: #FFDBD1");
+        favoritesButton.setStyle("category-color: #FFDBD1");
+        vegetablesButton.setStyle("category-color: #FFDBD1");
+        fruitButton.setStyle("category-color: #FFDBD1");
+        bakedButton.setStyle("category-color: #FFDBD1");
+        pastaButton.setStyle("category-color: #FFDBD1");
+        nutsButton.setStyle("category-color: #FFDBD1");
+    }
     public void showDairyItems(){
         updateProductListCategory(ProductCategory.DAIRIES);
+        dairyButton.setStyle("category-color: #FCB8A6");
     }
 
     public void showMeatItems(){
         updateProductListCategory(ProductCategory.MEAT);
+        meatButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
     public void showFishItems(){
         updateProductListCategory(ProductCategory.FISH);
+        fishButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
     public void showVegetableItems(){
         updateProductListCategory(ProductCategory.VEGETABLE_FRUIT);
+        vegetablesButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
     public void showFruitItems(){
         updateProductListCategory(ProductCategory.FRUIT);
+        fruitButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
     public void showHerbItems(){
         updateProductListCategory(ProductCategory.HERB);
+        herbsButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
     public void showPastaItems(){
         updateProductListCategory(ProductCategory.PASTA);
+        pastaButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
     public void showNutsItems(){
         updateProductListCategory(ProductCategory.NUTS_AND_SEEDS);
+        nutsButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
     public void showColdDrinksItems(){
         updateProductListCategory(ProductCategory.COLD_DRINKS);
+        sodaButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
     public void showHotDrinksItems(){
         updateProductListCategory(ProductCategory.HOT_DRINKS);
+        teaButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
     public void showBakingItems(){
         updateProductListCategory(ProductCategory.FLOUR_SUGAR_SALT);
+        bakedButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
     public void showFavorites(){
         updateProductListFavorites();
+        favoritesButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
     // Open / Close Overlays
