@@ -52,6 +52,7 @@ public class ProductListItem extends AnchorPane {
         if (mainViewController.dataHandler.isFavorite(this.product)){
             favoriteImageView.setImage(new Image("imat/resources/red_heart.png"));
         }
+        System.out.println(image_path);
 
     }
     public Integer getProductId(){

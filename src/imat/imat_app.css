@@ -87,6 +87,11 @@
     -fx-effect: innershadow(three-pass-box, grey, 25, 0, 1, 1);
 }
 
+#how-to{
+    -fx-background-color: #EFEFF2;
+    -fx-effect: innershadow(three-pass-box, grey, 25, 0, 1, 1);
+}
+
 .split-pane *.split-pane-divider {
     -fx-padding: 0 0 0 0;
 }
@@ -186,9 +191,9 @@
 .config-input {
     -fx-control-inner-background: #D9D9D9;
     -fx-background-radius: 5px;
-    -fx-pref-height: 50px;
+    -fx-pref-height: 14px;
     -fx-font-weight: 400;
-    -fx-font-size: 18;
+    -fx-font-size: 14;
 }
 
 #item-grid {
