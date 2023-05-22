@@ -51,3 +51,51 @@
 #text-categories_larger {
     -fx-font-size: 20px;
 }
+
+#logo {
+    -fx-background-color: #FFFFFF;
+    -fx-font-weight: 800;
+}
+
+#searchBar {
+    -fx-border-radius: 15px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+    -fx-border-style: bold;
+    -fx-border-width: 2px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #000000;
+
+}
+
+#header {
+    -fx-effect: dropshadow(three-pass-box, grey, 15, 0, 0, 0);
+}
+
+#detail {
+    -fx-background-color: #EFEFF2;
+    -fx-effect: innershadow(three-pass-box, grey, 25, 0, 1, 1);
+}
+
+.split-pane *.split-pane-divider {
+    -fx-padding: 0 0 0 0;
+}
+
+#help-button {
+    -fx-background-color: #F67952;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, #929292, 15, 0, 5, 5);
+    -fx-font-weight: 400;
+    -fx-text-fill: #000000;
+}
+
+#detail-text {
+    -fx-background-color: #EFEFF2;
+    -fx-control-inner-background: #EFEFF2
+}
+
+#minus-button {
+    -fx-background-color: #F67952;
+    -fx-background-radius: 15px;
+}
