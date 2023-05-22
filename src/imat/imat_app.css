@@ -1,5 +1,5 @@
 .root{
-    category-color: #FFDBD1;
+    category-color: #FFABA1;
     product-item-color: white;
 }
 .text-sample{
@@ -18,8 +18,8 @@
 }
 
 .text-header {
-    -fx-font-size: 22px;
-    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+    -fx-font-family: "Silom";
 }
 
 .text-header:hover{
@@ -47,6 +47,9 @@
     -fx-background-color: category-color;
     -fx-pref-height: 40px;
     -fx-effect: dropshadow(gaussian, #000000, 2, 0.2, 1, 1);
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-font-family: Silom;
 }
 
 .text-buttons:hover{
