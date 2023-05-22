@@ -146,3 +146,33 @@
 .shopping-cart-item:hover{
     -fx-background-color: lightgrey;
 }
+
+.button-green{
+    -fx-effect: dropshadow(gaussian, #000000, 2, 0.2, 2, 2);
+    -fx-background-radius: 10%;
+    -fx-background-color: #9ED296;
+}
+
+.button-green:hover{
+    -fx-background-color: derive(#9ED296, 20%);
+}
+
+.button-back{
+    -fx-effect: dropshadow(gaussian, #000000, 2, 0.2, 2, 2);
+    -fx-background-radius: 10%;
+    -fx-background-color: #F67952;
+}
+
+.button-back:hover{
+    -fx-background-color: derive(#F67952, 20%);
+}
+
+#clear-button{
+    -fx-effect: dropshadow(gaussian, #000000, 2, 0.2, 2, 2);
+    -fx-background-radius: 10%;
+    -fx-background-color: red;
+}
+
+#clear-button:hover{
+    -fx-background-color: #fa144a;
+}
