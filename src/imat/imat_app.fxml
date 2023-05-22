@@ -119,9 +119,9 @@
                   </Label>
                   <Label layoutX="105.0" layoutY="145.0" />
                   <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="222.0" />
-                  <TextField fx:id="customerFirstNameTextField" layoutX="113.0" layoutY="184.0" />
-                  <TextField fx:id="customerLastNameTextField" layoutX="275.0" layoutY="184.0" prefHeight="26.0" prefWidth="198.0" />
-                  <TextField fx:id="customerAddressTextField" layoutX="114.0" layoutY="250.0" prefHeight="26.0" prefWidth="361.0" />
+                  <TextField fx:id="customerFirstNameTextField" layoutX="113.0" layoutY="184.0" styleClass="config-input" />
+                  <TextField fx:id="customerLastNameTextField" layoutX="275.0" layoutY="184.0" prefHeight="26.0" prefWidth="198.0" styleClass="config-input" />
+                  <TextField fx:id="customerAddressTextField" layoutX="114.0" layoutY="250.0" prefHeight="26.0" prefWidth="361.0" styleClass="config-input" />
                   <Label layoutX="114.0" layoutY="287.0" text="Postnummer">
                      <font>
                         <Font size="20.0" />
@@ -132,14 +132,14 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="customerPostCodeTextField" layoutX="112.0" layoutY="317.0" />
-                  <TextField fx:id="customerPhoneNumberTextField" layoutX="274.0" layoutY="317.0" prefHeight="26.0" prefWidth="198.0" />
+                  <TextField fx:id="customerPostCodeTextField" layoutX="112.0" layoutY="317.0" styleClass="config-input" />
+                  <TextField fx:id="customerPhoneNumberTextField" layoutX="274.0" layoutY="317.0" prefHeight="26.0" prefWidth="198.0" styleClass="config-input" />
                   <Label layoutX="113.0" layoutY="352.0" text="Epost">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="customerEmailTextField" layoutX="114.0" layoutY="382.0" prefHeight="26.0" prefWidth="361.0" />
+                  <TextField fx:id="customerEmailTextField" layoutX="114.0" layoutY="382.0" prefHeight="26.0" prefWidth="361.0" styleClass="config-input" />
                   <Button layoutX="248.0" layoutY="505.0" mnemonicParsing="false" onMousePressed="#closeCheckoutStep1" onMouseReleased="#openCheckoutStep2" styleClass="button-green" text="Nästa">
                      <font>
                         <Font size="20.0" />
@@ -233,7 +233,7 @@
                   </Label>
                   <Label layoutX="105.0" layoutY="145.0" />
                   <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="214.0" />
-                  <TextField fx:id="cardNumberTextField" layoutX="111.0" layoutY="193.0" prefHeight="26.0" prefWidth="361.0" />
+                  <TextField fx:id="cardNumberTextField" layoutX="111.0" layoutY="193.0" prefHeight="26.0" prefWidth="361.0" styleClass="config-input" />
                   <Label layoutX="111.0" layoutY="230.0" text="Utgångsdatum Månad / År">
                      <font>
                         <Font size="20.0" />
@@ -244,13 +244,13 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardVerificationCodeTextField" layoutX="110.0" layoutY="337.0" prefHeight="26.0" prefWidth="158.0" />
+                  <TextField fx:id="cardVerificationCodeTextField" layoutX="110.0" layoutY="337.0" prefHeight="26.0" prefWidth="158.0" styleClass="config-input" />
                   <Label layoutX="109.0" layoutY="366.0" text="Kommentar">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextArea layoutX="108.0" layoutY="402.0" prefHeight="54.0" prefWidth="370.0" />
+                  <TextArea layoutX="108.0" layoutY="402.0" prefHeight="54.0" prefWidth="370.0" styleClass="config-input" />
                   <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMousePressed="#closeCheckoutStep3" onMouseReleased="#openCheckoutStep2" prefHeight="38.0" prefWidth="183.0" styleClass="button-back" text="Tillbaka Till Leverans">
                      <font>
                         <Font size="14.0" />
@@ -273,15 +273,15 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardHolderNameTextField" layoutX="110.0" layoutY="136.0" prefHeight="26.0" prefWidth="361.0" />
-                  <Spinner fx:id="cardExpirationMonthSpinner" editable="true" layoutX="111.0" layoutY="269.0" prefHeight="26.0" prefWidth="173.0" />
-                  <Spinner fx:id="cardExpirationYearSpinner" editable="true" layoutX="298.0" layoutY="269.0" prefHeight="26.0" prefWidth="174.0" />
+                  <TextField fx:id="cardHolderNameTextField" layoutX="110.0" layoutY="136.0" prefHeight="26.0" prefWidth="361.0" styleClass="config-input" />
+                  <Spinner fx:id="cardExpirationMonthSpinner" editable="true" layoutX="111.0" layoutY="269.0" prefHeight="26.0" prefWidth="173.0" styleClass="config-input" />
+                  <Spinner fx:id="cardExpirationYearSpinner" editable="true" layoutX="298.0" layoutY="269.0" prefHeight="26.0" prefWidth="174.0" styleClass="config-input" />
                   <Label layoutX="280.0" layoutY="307.0" text="Korttyp">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <ComboBox fx:id="cardTypeComboBox" layoutX="280.0" layoutY="338.0" prefHeight="26.0" prefWidth="198.0" />
+                  <ComboBox fx:id="cardTypeComboBox" layoutX="280.0" layoutY="338.0" prefHeight="26.0" prefWidth="198.0" styleClass="config-input" />
                </children>
             </AnchorPane>
          </children>
@@ -506,13 +506,13 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="profileAddressTextField" layoutX="54.0" layoutY="117.0" prefHeight="26.0" prefWidth="276.0" />
+                  <TextField fx:id="profileAddressTextField" layoutX="54.0" layoutY="117.0" prefHeight="26.0" prefWidth="276.0" styleClass="config-input" />
                   <Label layoutX="353.0" layoutY="91.0" text="Postnummer">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="profilePostCodeTextField" layoutX="353.0" layoutY="118.0" />
+                  <TextField fx:id="profilePostCodeTextField" layoutX="353.0" layoutY="118.0" styleClass="config-input" />
                   <Separator layoutX="14.0" layoutY="162.0" prefHeight="14.0" prefWidth="190.0" />
                   <Separator layoutX="377.0" layoutY="162.0" prefHeight="14.0" prefWidth="190.0" />
                   <Label layoutX="219.0" layoutY="151.0" text="Kortuppgifter">
@@ -525,7 +525,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="profileCardNumberTextField" layoutX="51.0" layoutY="213.0" prefHeight="26.0" prefWidth="238.0" />
+                  <TextField fx:id="profileCardNumberTextField" layoutX="51.0" layoutY="213.0" prefHeight="26.0" prefWidth="238.0" styleClass="config-input" />
                   <Label layoutX="54.0" layoutY="253.0" text="Utgångsdatum Månad / År">
                      <font>
                         <Font size="18.0" />
@@ -536,7 +536,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="profileCardVerificationCodeTextField" layoutX="54.0" layoutY="341.0" />
+                  <TextField fx:id="profileCardVerificationCodeTextField" layoutX="54.0" layoutY="341.0" styleClass="config-input" />
                   <Label layoutX="240.0" layoutY="362.0" text="Uppgifter">
                      <font>
                         <Font size="24.0" />
@@ -564,16 +564,16 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="profileFirstNameTextField" layoutX="75.0" layoutY="424.0" prefHeight="26.0" prefWidth="190.0" />
-                  <TextField fx:id="profileLastNameTextField" layoutX="317.0" layoutY="424.0" prefHeight="26.0" prefWidth="190.0" />
-                  <TextField fx:id="profileEmailTextField" layoutX="75.0" layoutY="487.0" prefHeight="26.0" prefWidth="190.0" />
-                  <TextField fx:id="profilePhoneNumberTextField" layoutX="317.0" layoutY="487.0" prefHeight="26.0" prefWidth="190.0" />
+                  <TextField fx:id="profileFirstNameTextField" layoutX="75.0" layoutY="424.0" prefHeight="26.0" prefWidth="190.0" styleClass="config-input" />
+                  <TextField fx:id="profileLastNameTextField" layoutX="317.0" layoutY="424.0" prefHeight="26.0" prefWidth="190.0" styleClass="config-input" />
+                  <TextField fx:id="profileEmailTextField" layoutX="75.0" layoutY="487.0" prefHeight="26.0" prefWidth="190.0" styleClass="config-input" />
+                  <TextField fx:id="profilePhoneNumberTextField" layoutX="317.0" layoutY="487.0" prefHeight="26.0" prefWidth="190.0" styleClass="config-input" />
                   <Label layoutX="311.0" layoutY="186.0" text="Namn">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="profileCardNameTextField" layoutX="311.0" layoutY="213.0" prefHeight="26.0" prefWidth="238.0" />
+                  <TextField fx:id="profileCardNameTextField" layoutX="311.0" layoutY="213.0" prefHeight="26.0" prefWidth="238.0" styleClass="config-input" />
                   <Spinner fx:id="profileCardExpirationMonthSpinner" layoutX="54.0" layoutY="282.0" />
                   <Spinner fx:id="profileCardExpirationYearSpinner" layoutX="214.0" layoutY="280.0" />
                   <Label layoutX="382.0" layoutY="253.0" text="Korttyp">
@@ -595,13 +595,13 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="100.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Label id="text-categories_larger" layoutX="339.0" layoutY="3.0" styleClass="text-categories" text="Kategorier">
+                  <Label id="text-categories_larger" layoutX="338.0" layoutY="9.0" styleClass="text-categories" text="Kategorier">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Separator layoutX="9.0" layoutY="11.0" prefHeight="17.0" prefWidth="321.0" AnchorPane.bottomAnchor="588.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="442.0" AnchorPane.topAnchor="8.0" />
-                  <Separator layoutX="439.0" layoutY="11.0" prefHeight="8.0" prefWidth="322.0" />
+                  <Separator layoutX="9.0" layoutY="13.0" prefHeight="17.0" prefWidth="321.0" AnchorPane.bottomAnchor="583.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="442.0" AnchorPane.topAnchor="13.0" />
+                  <Separator layoutX="439.0" layoutY="18.0" prefHeight="8.0" prefWidth="322.0" />
                   <Button fx:id="fruitButton" layoutX="519.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFruitItems" prefHeight="45.0" prefWidth="110.0" text="Frukt">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
@@ -759,7 +759,7 @@
                            <content>
                               <AnchorPane prefHeight="436.0" prefWidth="750.0">
                                  <children>
-                                    <FlowPane fx:id="generalItemsFlowPane" layoutX="3.0" layoutY="2.0" prefHeight="420.0" prefWidth="374.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="2.0" />
+                                    <FlowPane id="item-grid" fx:id="generalItemsFlowPane" layoutX="3.0" layoutY="2.0" prefHeight="420.0" prefWidth="374.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="2.0" />
                                  </children>
                               </AnchorPane>
                            </content>
@@ -809,7 +809,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <AnchorPane id="detail" fx:id="detailViewAnchorPane" layoutX="3.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="319.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane id="detail" fx:id="detailViewAnchorPane" layoutX="3.0" layoutY="10.0" maxWidth="320.0" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="319.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <Label id="help-button" layoutX="27.0" layoutY="14.0" onMouseClicked="#closeDetailView" styleClass="text-header" text="   Hur Fungerar iMat?" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
                            <font>
