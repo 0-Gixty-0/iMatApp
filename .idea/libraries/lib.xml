@@ -1,13 +1,10 @@
 <component name="libraryTable">
   <library name="lib">
     <CLASSES>
-      <root url="file:///Library/Java/javafx-sdk-20/lib" />
+      <root url="file://$USER_HOME$/Documents/javafx-sdk-17.0.6/lib" />
     </CLASSES>
     <JAVADOC />
-    <NATIVE>
-      <root url="file:///Library/Java/javafx-sdk-20/lib" />
-    </NATIVE>
     <SOURCES />
-    <jarDirectory url="file:///Library/Java/javafx-sdk-20/lib" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Documents/javafx-sdk-17.0.6/lib" recursive="false" />
   </library>
 </component>

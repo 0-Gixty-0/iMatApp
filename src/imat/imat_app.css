@@ -1,4 +1,6 @@
-
+.root{
+    category-color: #FFDBD1;
+}
 .text-sample{
       -fx-font-size: 16px;
       -fx-font-family: "Arial";
@@ -36,7 +38,7 @@
 }
 
 .text-buttons{
-    -fx-background-color: #FFDBD1;
+    -fx-background-color: category-color;
     -fx-effect: dropshadow(gaussian, #000000, 2, 0.2, 1, 1);
 }
 
@@ -98,4 +100,20 @@
 #minus-button {
     -fx-background-color: #F67952;
     -fx-background-radius: 15px;
+}
+
+.product-item{
+    -fx-effect: dropshadow(three-pass-box, #000000, 2, 0.2, 1, 1);
+    -fx-border-color: #4E4E4E;
+    -fx-border-radius: 15px;
+    -fx-background-color: white;
+    -fx-border-width: 2px;
+}
+
+.product-item:hover{
+    -fx-background-color: lightgrey;
+}
+
+.product-item:selected{
+    -fx-background-color: lightgrey;
 }

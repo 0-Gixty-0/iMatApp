@@ -674,7 +674,7 @@
                         <String fx:value="text-categories" />
                         <String fx:value="text-buttons" />
                      </styleClass></Button>
-                  <Button fx:id="beveragesButton" layoutX="518.0" layoutY="97.0" mnemonicParsing="false" onAction="#showColdDrinksItems" prefHeight="45.0" prefWidth="110.0" text="Läsk">
+                  <Button fx:id="sodaButton" layoutX="518.0" layoutY="97.0" mnemonicParsing="false" onAction="#showColdDrinksItems" prefHeight="45.0" prefWidth="110.0" text="Läsk">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -686,7 +686,7 @@
                         <String fx:value="text-categories" />
                         <String fx:value="text-buttons" />
                      </styleClass></Button>
-                  <Button fx:id="snacksButton" layoutX="393.0" layoutY="97.0" mnemonicParsing="false" onAction="#showHotDrinksItems" prefHeight="45.0" prefWidth="110.0" text="Te">
+                  <Button fx:id="teaButton" layoutX="393.0" layoutY="97.0" mnemonicParsing="false" onAction="#showHotDrinksItems" prefHeight="45.0" prefWidth="110.0" text="Te">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -698,7 +698,7 @@
                         <String fx:value="text-categories" />
                         <String fx:value="text-buttons" />
                      </styleClass></Button>
-                  <Button fx:id="spicesButton" layoutX="142.0" layoutY="97.0" mnemonicParsing="false" onAction="#showHerbItems" prefHeight="45.0" prefWidth="110.0" text="Örter">
+                  <Button fx:id="herbsButton" layoutX="142.0" layoutY="97.0" mnemonicParsing="false" onAction="#showHerbItems" prefHeight="45.0" prefWidth="110.0" text="Örter">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -734,7 +734,7 @@
                         <String fx:value="text-categories" />
                         <String fx:value="text-buttons" />
                      </styleClass></Button>
-                  <Button fx:id="freezedButton" layoutX="640.0" layoutY="97.0" mnemonicParsing="false" onAction="#showNutsItems" prefHeight="45.0" prefWidth="110.0" text="Nötter">
+                  <Button fx:id="nutsButton" layoutX="640.0" layoutY="97.0" mnemonicParsing="false" onAction="#showNutsItems" prefHeight="45.0" prefWidth="110.0" text="Nötter">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
