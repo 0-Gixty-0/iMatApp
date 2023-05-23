@@ -247,3 +247,7 @@
     -fx-background-insets : 0;
     -fx-background-radius : 0;
 }
+
+.imat-label:hover{
+    -fx-text-fill: #8B4000;
+}

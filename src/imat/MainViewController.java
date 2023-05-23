@@ -170,6 +170,7 @@ public class MainViewController implements Initializable {
             ProductListItem productListItem = new ProductListItem(item, this);
             productListItemMap.put(item.getName(), productListItem);
             productObservableList.add(item);
+
         }
 
         // Initialize change listeners
@@ -413,7 +414,7 @@ public class MainViewController implements Initializable {
 
     }
 
-    private void updateProductListAll(){
+    public void updateProductListAll(){
         generalItemsFlowPane.getChildren().clear();
         for (Product item : dataHandler.getProducts())
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
