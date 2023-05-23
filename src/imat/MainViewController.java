@@ -150,6 +150,8 @@ public class MainViewController implements Initializable {
     Button drinksButton;
     @FXML
     Button nutsButton;
+    @FXML
+    Button toCheckOutButton;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -407,6 +409,19 @@ public class MainViewController implements Initializable {
             shoppingCartListItems.add(new ShoppingCartListItem(item.getProduct(), this));
             shoppingCartNumItemsMap.put(item.getProduct().getProductId(), (int) item.getAmount());
         }
+
+        // Setup Checkoutbutton
+        List<ShoppingItem> shoppingItemsToRemove = new ArrayList<ShoppingItem>();
+        for (ShoppingItem item : shoppingCart.getItems()){
+            if (item.getAmount() == 0){
+                shoppingItemsToRemove.add(item);
+            }
+        }
+        for (ShoppingItem item : shoppingItemsToRemove){
+            shoppingCart.removeProduct(item.getProduct());
+        }
+        if (shoppingCart.getItems().isEmpty())
+            toCheckOutButton.setDisable(true);
 
         updateShoppingCartLabels();
         updateNumItemsLabels();
@@ -718,6 +733,7 @@ public class MainViewController implements Initializable {
             shoppingCartListItems.add(listItem);
         }
         shoppingCart.addProduct(product);
+        toCheckOutButton.setDisable(false);
         updateNumItemsLabels();
         updateShoppingCartLabels();
     }
@@ -737,6 +753,9 @@ public class MainViewController implements Initializable {
                 Double numInCart = currentItem.getAmount();
                 shoppingCart.removeProduct(product);
                 shoppingCart.addProduct(product, numInCart - 1);
+                if (numInCart < 2){
+                    toCheckOutButton.setDisable(true);
+                }
             } else {
                 shoppingCart.removeProduct(product);
             }
@@ -762,6 +781,7 @@ public class MainViewController implements Initializable {
         updateNumItemsLabels();
         updateShoppingCart();
         updateShoppingCartLabels();
+        toCheckOutButton.setDisable(true);
     }
 
     @FXML
