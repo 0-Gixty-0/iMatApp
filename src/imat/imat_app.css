@@ -256,3 +256,7 @@
     -fx-text-box-border: red ;
     -fx-focus-color: red
 }
+
+#error-text{
+    -fx-text-fill: red;
+}

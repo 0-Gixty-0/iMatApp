@@ -158,6 +158,12 @@ public class MainViewController implements Initializable {
     Label infoErrorLabel;
     @FXML
     Label profileErrorLabel;
+    @FXML
+    Button payButton;
+    @FXML
+    Button infoNextButton;
+    @FXML
+    Button saveProfileButton;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -192,6 +198,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 customerFirstNameTextField.getStyleClass().remove("error");
+                infoNextButton.setDisable(false);
                 if (!containsInt(customerFirstNameTextField.getText())){
                     customer.setFirstName(t1);
                     infoErrorLabel.setVisible(false);
@@ -199,6 +206,7 @@ public class MainViewController implements Initializable {
                     customerFirstNameTextField.getStyleClass().add("error");
                     infoErrorLabel.setText("Förnamnet kan inte innehålla siffror");
                     infoErrorLabel.setVisible(true);
+                    infoNextButton.setDisable(true);
                 }
             }
         });
@@ -207,6 +215,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 customerLastNameTextField.getStyleClass().remove("error");
+                infoNextButton.setDisable(false);
                 if (!containsInt(customerLastNameTextField.getText())){
                     customer.setLastName(t1);
                     infoErrorLabel.setVisible(false);
@@ -214,6 +223,7 @@ public class MainViewController implements Initializable {
                     customerLastNameTextField.getStyleClass().add("error");
                     infoErrorLabel.setText("Efternamnet kan inte innehålla siffror");
                     infoErrorLabel.setVisible(true);
+                    infoNextButton.setDisable(true);
                 }
             }
         });
@@ -229,6 +239,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 customerPostCodeTextField.getStyleClass().remove("error");
+                infoNextButton.setDisable(false);
                 if (!containsChar(customerPostCodeTextField.getText())){
                     customer.setPostCode(t1);
                     infoErrorLabel.setVisible(false);
@@ -236,6 +247,7 @@ public class MainViewController implements Initializable {
                     customerPostCodeTextField.getStyleClass().add("error");
                     infoErrorLabel.setText("Postkoden kan inte innehålla bokstäver");
                     infoErrorLabel.setVisible(true);
+                    infoNextButton.setDisable(true);
                 }
             }
         });
@@ -244,6 +256,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 customerPhoneNumberTextField.getStyleClass().remove("error");
+                infoNextButton.setDisable(false);
                 if (!containsChar(customerPhoneNumberTextField.getText())){
                     customer.setPhoneNumber(t1);
                     infoErrorLabel.setVisible(false);
@@ -251,6 +264,7 @@ public class MainViewController implements Initializable {
                     customerPhoneNumberTextField.getStyleClass().add("error");
                     infoErrorLabel.setText("Telefonnummer kan inte innehålla bokstäver");
                     infoErrorLabel.setVisible(true);
+                    infoNextButton.setDisable(true);
                 }
             }
         });
@@ -259,6 +273,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 customerEmailTextField.getStyleClass().remove("error");
+                infoNextButton.setDisable(false);
                 if (customerEmailTextField.getText().contains("@")) {
                     customer.setEmail(customerEmailTextField.getText());
                     infoErrorLabel.setVisible(false);
@@ -266,6 +281,7 @@ public class MainViewController implements Initializable {
                     customerEmailTextField.getStyleClass().add("error");
                     infoErrorLabel.setText("Epost behöver innehålla @");
                     infoErrorLabel.setVisible(true);
+                    infoNextButton.setDisable(true);
                 }
             }
         });
@@ -273,6 +289,7 @@ public class MainViewController implements Initializable {
         cardHolderNameTextField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                payButton.setDisable(false);
                 cardHolderNameTextField.getStyleClass().remove("error");
                 if (!containsInt(cardHolderNameTextField.getText())){
                     creditCard.setHoldersName(cardHolderNameTextField.getText());
@@ -281,6 +298,7 @@ public class MainViewController implements Initializable {
                     cardHolderNameTextField.getStyleClass().add("error");
                     paymentErrorLabel.setText("Namn på kortet kan inte innehålla siffror");
                     paymentErrorLabel.setVisible(true);
+                    payButton.setDisable(true);
                 }
             }
         });
@@ -289,6 +307,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 cardNumberTextField.getStyleClass().remove("error");
+                payButton.setDisable(false);
                 if (!containsChar(cardNumberTextField.getText())){
                     creditCard.setCardNumber(cardNumberTextField.getText());
                     paymentErrorLabel.setVisible(false);
@@ -296,6 +315,7 @@ public class MainViewController implements Initializable {
                     cardNumberTextField.getStyleClass().add("error");
                     paymentErrorLabel.setText("Kortnumret kan inte innehålla bokstäver");
                     paymentErrorLabel.setVisible(true);
+                    payButton.setDisable(true);
                 }
             }
         });
@@ -322,6 +342,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 cardVerificationCodeTextField.getStyleClass().remove("error");
+                payButton.setDisable(false);
                 if (!containsChar(cardVerificationCodeTextField.getText())){
                     creditCard.setVerificationCode(Integer.parseInt(cardVerificationCodeTextField.getText()));
                     paymentErrorLabel.setVisible(false);
@@ -329,6 +350,7 @@ public class MainViewController implements Initializable {
                     cardVerificationCodeTextField.getStyleClass().add("error");
                     paymentErrorLabel.setText("CVC kan inte innehålla bokstäver");
                     paymentErrorLabel.setVisible(true);
+                    payButton.setDisable(true);
                 }
             }
         });
@@ -347,6 +369,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profileFirstNameTextField.getStyleClass().remove("error");
+                saveProfileButton.setDisable(false);
                 if (!containsInt(profileFirstNameTextField.getText())){
                     customer.setFirstName(t1);
                     profileErrorLabel.setVisible(false);
@@ -354,6 +377,7 @@ public class MainViewController implements Initializable {
                     profileFirstNameTextField.getStyleClass().add("error");
                     profileErrorLabel.setText("Förnamn kan inte innehålla siffor");
                     profileErrorLabel.setVisible(true);
+                    saveProfileButton.setDisable(true);
                 }
             }
         });
@@ -362,6 +386,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profileLastNameTextField.getStyleClass().remove("error");
+                saveProfileButton.setDisable(false);
                 if (!containsInt(profileLastNameTextField.getText())){
                     customer.setLastName(t1);
                     profileErrorLabel.setVisible(false);
@@ -369,6 +394,7 @@ public class MainViewController implements Initializable {
                     profileLastNameTextField.getStyleClass().add("error");
                     profileErrorLabel.setText("Efternamn kan inte innehålla siffor");
                     profileErrorLabel.setVisible(true);
+                    saveProfileButton.setDisable(true);
                 }
             }
         });
@@ -384,6 +410,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profilePostCodeTextField.getStyleClass().remove("error");
+                saveProfileButton.setDisable(false);
                 if (!containsChar(profilePostCodeTextField.getText())){
                     customer.setPostCode(t1);
                     profileErrorLabel.setVisible(false);
@@ -391,6 +418,7 @@ public class MainViewController implements Initializable {
                     profilePostCodeTextField.getStyleClass().add("error");
                     profileErrorLabel.setText("Postkod kan inte innehålla bokstäver");
                     profileErrorLabel.setVisible(true);
+                    saveProfileButton.setDisable(true);
                 }
             }
         });
@@ -399,6 +427,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profilePhoneNumberTextField.getStyleClass().remove("error");
+                saveProfileButton.setDisable(false);
                 if (!containsChar(profilePhoneNumberTextField.getText())){
                     customer.setPhoneNumber(t1);
                     profileErrorLabel.setVisible(false);
@@ -406,6 +435,7 @@ public class MainViewController implements Initializable {
                     profilePhoneNumberTextField.getStyleClass().add("error");
                     profileErrorLabel.setText("Telefonnummer kan inte innehålla bokstäver");
                     profileErrorLabel.setVisible(true);
+                    saveProfileButton.setDisable(true);
                 }
             }
         });
@@ -414,6 +444,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profileEmailTextField.getStyleClass().remove("error");
+                saveProfileButton.setDisable(false);
                 if (profileEmailTextField.getText().contains("@")) {
                     customer.setEmail(profileAddressTextField.getText());
                     profileErrorLabel.setVisible(false);
@@ -421,6 +452,7 @@ public class MainViewController implements Initializable {
                     profileEmailTextField.getStyleClass().add("error");
                     profileErrorLabel.setText("Epost måste innehålla @");
                     profileErrorLabel.setVisible(true);
+                    saveProfileButton.setDisable(true);
                 }
             }
         });
@@ -429,6 +461,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profileCardNameTextField.getStyleClass().remove("error");
+                saveProfileButton.setDisable(false);
                 if (!containsInt(profileCardNameTextField.getText())){
                     creditCard.setHoldersName(profileCardNameTextField.getText());
                     profileErrorLabel.setVisible(false);
@@ -436,6 +469,7 @@ public class MainViewController implements Initializable {
                     profileCardNameTextField.getStyleClass().add("error");
                     profileErrorLabel.setText("Namn på kortet kan inte innehålla siffor");
                     profileErrorLabel.setVisible(true);
+                    saveProfileButton.setDisable(true);
                 }
             }
         });
@@ -444,6 +478,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profileCardNumberTextField.getStyleClass().remove("error");
+                saveProfileButton.setDisable(false);
                 if (!containsChar(profileCardNumberTextField.getText())){
                     creditCard.setCardNumber(profileCardNumberTextField.getText());
                     profileErrorLabel.setVisible(false);
@@ -451,6 +486,7 @@ public class MainViewController implements Initializable {
                     profileCardNumberTextField.getStyleClass().add("error");
                     profileErrorLabel.setText("Kortnummret kan inte innehålla bokstäver");
                     profileErrorLabel.setVisible(true);
+                    saveProfileButton.setDisable(true);
                 }
             }
         });
@@ -475,6 +511,7 @@ public class MainViewController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profileCardVerificationCodeTextField.getStyleClass().remove("error");
+                saveProfileButton.setDisable(false);
                 if (!containsChar(profileCardVerificationCodeTextField.getText())){
                     creditCard.setVerificationCode(Integer.parseInt(profileCardVerificationCodeTextField.getText()));
                     profileErrorLabel.setVisible(false);
@@ -482,6 +519,7 @@ public class MainViewController implements Initializable {
                     profileCardVerificationCodeTextField.getStyleClass().add("error");
                     profileErrorLabel.setText("CVC kan inte innehålla bokstäver");
                     profileErrorLabel.setVisible(true);
+                    saveProfileButton.setDisable(true);
                 }
             }
         });
