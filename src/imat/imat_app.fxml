@@ -765,7 +765,7 @@
                   </ImageView>
                </graphic>
             </Label>
-            <Label contentDisplay="CENTER" layoutX="29.0" layoutY="15.0" prefHeight="65.0" prefWidth="132.0" text="iMat" textFill="#f67952" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="15.0">
+            <Label contentDisplay="CENTER" layoutX="29.0" layoutY="15.0" onMouseClicked="#updateProductListAll" prefHeight="65.0" prefWidth="132.0" styleClass="imat-label" text="iMat" textFill="#f67952" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="15.0">
                <font>
                   <Font name="Silom" size="50.0" />
                </font>

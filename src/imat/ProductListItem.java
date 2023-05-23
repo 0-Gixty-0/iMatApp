@@ -51,6 +51,7 @@ public class ProductListItem extends AnchorPane {
         this.productImageImageView.setImage(new Image(image_path));
         if (mainViewController.dataHandler.isFavorite(this.product)){
             favoriteImageView.setImage(new Image("imat/resources/red_heart.png"));
+
         }
         System.out.println(image_path);
 
