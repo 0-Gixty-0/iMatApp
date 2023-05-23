@@ -157,6 +157,8 @@ public class MainViewController implements Initializable {
 
         String iMatDirectory = iMatDataHandler.imatDirectory();
 
+        Collections.reverse(dataHandler.getOrders());
+
         // pathLabel.setText(iMatDirectory);
 
         //Setup FlowPane
@@ -474,7 +476,9 @@ public class MainViewController implements Initializable {
     }
 
     public void placeOrder(){
+        Collections.reverse(dataHandler.getOrders());
         dataHandler.placeOrder();
+        Collections.reverse(dataHandler.getOrders());
         emptyCart();
         checkOutStepThreeAnchorPane.toBack();
         checkOutThankYouAnchorPane.toFront();
