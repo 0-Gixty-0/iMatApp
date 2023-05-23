@@ -600,7 +600,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Separator layoutX="9.0" layoutY="13.0" prefHeight="17.0" prefWidth="321.0" AnchorPane.bottomAnchor="583.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="442.0" AnchorPane.topAnchor="13.0" />
+                  <Separator layoutX="9.0" layoutY="13.0" prefHeight="17.0" prefWidth="321.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="442.0" AnchorPane.topAnchor="13.0" />
                   <Separator layoutX="439.0" layoutY="18.0" prefHeight="8.0" prefWidth="322.0" />
                   <Button fx:id="fruitButton" layoutX="519.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFruitItems" prefHeight="45.0" prefWidth="110.0" text="Frukt">
                      <styleClass>
@@ -662,20 +662,20 @@
                         <String fx:value="text-categories" />
                         <String fx:value="text-buttons" />
                      </styleClass></Button>
-                  <Label id="text-categories_larger" layoutX="358.0" layoutY="143.0" styleClass="text-categories" text="Varor">
+                  <Label id="text-categories_larger" layoutX="366.0" layoutY="150.0" styleClass="text-categories" text="Varor" AnchorPane.leftAnchor="366.0" AnchorPane.rightAnchor="356.5">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Separator layoutX="5.0" layoutY="154.0" prefHeight="14.0" prefWidth="348.0" />
-                  <Separator layoutX="422.0" layoutY="155.0" prefHeight="15.0" prefWidth="336.0" />
-                  <AnchorPane layoutX="5.0" layoutY="176.0" prefHeight="434.0" prefWidth="759.0" style="-fx-background-color: RED;">
+                  <Separator layoutX="5.0" layoutY="154.0" prefHeight="14.0" prefWidth="348.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="412.0" />
+                  <Separator layoutX="422.0" layoutY="155.0" prefHeight="15.0" prefWidth="336.0" AnchorPane.rightAnchor="15.0" />
+                  <AnchorPane layoutX="5.0" layoutY="176.0" prefHeight="434.0" prefWidth="759.0" style="-fx-background-color: RED;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="175.0">
                      <children>
                         <ScrollPane layoutY="1.0" prefHeight="434.0" prefWidth="385.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
                               <AnchorPane prefHeight="436.0" prefWidth="750.0">
                                  <children>
-                                    <FlowPane id="item-grid" fx:id="generalItemsFlowPane" layoutX="3.0" layoutY="2.0" prefHeight="420.0" prefWidth="374.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="2.0" />
+                                    <FlowPane id="item-grid" fx:id="generalItemsFlowPane" layoutX="3.0" layoutY="2.0" prefHeight="420.0" prefWidth="374.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
                                  </children>
                               </AnchorPane>
                            </content>
@@ -738,7 +738,7 @@
                         </TextArea>
                      </children>
                   </AnchorPane>
-                  <AnchorPane id="how-to" prefHeight="611.0" prefWidth="324.0">
+                  <AnchorPane id="how-to" prefHeight="611.0" prefWidth="324.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <Label id="help-button" layoutX="31.0" layoutY="14.0" styleClass="text-header" text="   Hur Fungerar iMat?" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="30.5">
                            <font>
