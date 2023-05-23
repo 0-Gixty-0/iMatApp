@@ -108,6 +108,10 @@
     -fx-text-fill: #000000;
 }
 
+#help-button:hover {
+    -fx-background-color: derive(#F67952, 10%);
+}
+
 #detail-text {
     -fx-background-color: #EFEFF2;
     -fx-control-inner-background: #EFEFF2

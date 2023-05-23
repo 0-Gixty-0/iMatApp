@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -23,20 +24,26 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="numItemsLabel" layoutX="231.0" layoutY="54.0" text="1 st">
+      <Label fx:id="numItemsLabel" layoutX="234.0" layoutY="46.0" text="1 st">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="203.0" layoutY="47.0" onMouseClicked="#onRemove" styleClass="minus-button" text="-">
+      <Label layoutX="202.0" layoutY="26.0" onMouseClicked="#onRemove" styleClass="minus-button" text="-">
          <font>
-            <Font size="30.0" />
+            <Font size="48.0" />
          </font>
+         <tooltip>
+            <Tooltip text="Ta Bort Vara" />
+         </tooltip>
       </Label>
-      <Label layoutX="279.0" layoutY="47.0" onMouseClicked="#onAdd" styleClass="plus-button" text="+">
+      <Label layoutX="277.0" layoutY="34.0" onMouseClicked="#onAdd" styleClass="plus-button" text="+">
          <font>
-            <Font size="30.0" />
+            <Font size="36.0" />
          </font>
+         <tooltip>
+            <Tooltip text="Lägg Till Vara" />
+         </tooltip>
       </Label>
    </children>
 </fx:root>
