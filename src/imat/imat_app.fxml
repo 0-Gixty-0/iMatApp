@@ -18,7 +18,7 @@
 
 <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1100.0" prefHeight="700.0" prefWidth="1100.0" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
-      <AnchorPane fx:id="previousPurchasesOverlay" onMouseClicked="#closePreviousPurchasesOverlay" prefHeight="702.0" prefWidth="1102.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+      <AnchorPane fx:id="previousPurchasesOverlay" onMouseClicked="#closePreviousPurchasesOverlay" prefHeight="702.0" prefWidth="1102.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane layoutX="260.0" layoutY="69.0" onMouseClicked="#mouseTrap" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
                <children>
@@ -73,9 +73,9 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="shoppingCartOverlay" onMouseClicked="#closeShoppingCartOverlay" prefHeight="702.0" prefWidth="1099.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+      <AnchorPane fx:id="shoppingCartOverlay" onMouseClicked="#closeShoppingCartOverlay" prefHeight="702.0" prefWidth="1099.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="766.0" onMouseClicked="#mouseTrap" prefHeight="702.0" prefWidth="332.0" style="-fx-background-color: WHITE;">
+            <AnchorPane layoutX="766.0" onMouseClicked="#mouseTrap" prefHeight="702.0" prefWidth="332.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Label layoutX="109.0" layoutY="54.0" text="Varukorgen">
                      <font>
@@ -135,7 +135,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="profileOverlay" layoutX="2.0" layoutY="2.0" onMouseClicked="#closeProfileOverlay" prefHeight="702.0" prefWidth="1096.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+      <AnchorPane fx:id="profileOverlay" layoutX="2.0" layoutY="2.0" onMouseClicked="#closeProfileOverlay" prefHeight="702.0" prefWidth="1096.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane layoutX="257.0" layoutY="69.0" onMouseClicked="#mouseTrap" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
                <children>
@@ -248,7 +248,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="checkOutStepOneAnchorPane" layoutX="3.0" layoutY="2.0" onMouseClicked="#closeCheckoutStep1" prefHeight="702.0" prefWidth="1098.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+      <AnchorPane fx:id="checkOutStepOneAnchorPane" layoutX="3.0" layoutY="2.0" onMouseClicked="#closeCheckoutStep1" prefHeight="702.0" prefWidth="1098.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane layoutX="258.0" layoutY="69.0" onMouseClicked="#mouseTrap" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
                <children>
@@ -399,7 +399,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="previousPurchaseSummaryAnchorPane" layoutX="2.0" layoutY="1.0" onMouseClicked="#closePreviousPurchaseSummaryOverlay" prefHeight="702.0" prefWidth="1098.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+      <AnchorPane fx:id="previousPurchaseSummaryAnchorPane" layoutX="2.0" layoutY="1.0" onMouseClicked="#closePreviousPurchaseSummaryOverlay" prefHeight="702.0" prefWidth="1098.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane layoutX="258.0" layoutY="69.0" onMouseClicked="#mouseTrap" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
                <children>
@@ -454,7 +454,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="checkOutThankYouAnchorPane" layoutX="3.0" layoutY="3.0" onMouseClicked="#closeCheckoutThankYou" prefHeight="702.0" prefWidth="1096.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+      <AnchorPane fx:id="checkOutThankYouAnchorPane" layoutX="3.0" layoutY="3.0" onMouseClicked="#closeCheckoutThankYou" prefHeight="702.0" prefWidth="1096.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane layoutX="257.0" layoutY="69.0" onMouseClicked="#mouseTrap" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
                <children>
@@ -490,7 +490,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="checkOutStepTwoAnchorPane" layoutX="5.0" layoutY="4.0" onMouseClicked="#closeCheckoutStep2" prefHeight="702.0" prefWidth="1095.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+      <AnchorPane fx:id="checkOutStepTwoAnchorPane" layoutX="5.0" layoutY="4.0" onMouseClicked="#closeCheckoutStep2" prefHeight="702.0" prefWidth="1095.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane layoutX="257.0" layoutY="69.0" onMouseClicked="#mouseTrap" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
                <children>
