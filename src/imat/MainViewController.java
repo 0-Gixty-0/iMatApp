@@ -145,9 +145,9 @@ public class MainViewController implements Initializable {
     @FXML
     Button pastaButton;
     @FXML
-    Button teaButton;
+    Button allItemsButton;
     @FXML
-    Button sodaButton;
+    Button drinksButton;
     @FXML
     Button nutsButton;
 
@@ -413,7 +413,8 @@ public class MainViewController implements Initializable {
 
     }
 
-    private void updateProductListAll(){
+    public void updateProductListAll(){
+        resetButtons();
         generalItemsFlowPane.getChildren().clear();
         for (Product item : dataHandler.getProducts())
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
@@ -423,6 +424,15 @@ public class MainViewController implements Initializable {
         resetButtons();
         generalItemsFlowPane.getChildren().clear();
         for (Product item : dataHandler.getProducts(category))
+            generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
+    }
+
+    private void updateProductListCategoryMultiple(ProductCategory category1, ProductCategory category2){
+        resetButtons();
+        generalItemsFlowPane.getChildren().clear();
+        for (Product item : dataHandler.getProducts(category1))
+            generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
+        for (Product item : dataHandler.getProducts(category2))
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
     }
 
@@ -525,8 +535,8 @@ public class MainViewController implements Initializable {
         meatButton.setStyle("category-color: #FFDBD1");
         fishButton.setStyle("category-color: #FFDBD1");
         herbsButton.setStyle("category-color: #FFDBD1");
-        teaButton.setStyle("category-color: #FFDBD1");
-        sodaButton.setStyle("category-color: #FFDBD1");
+        drinksButton.setStyle("category-color: #FFDBD1");
+        allItemsButton.setStyle("category-color: #FFDBD1");
         favoritesButton.setStyle("category-color: #FFDBD1");
         vegetablesButton.setStyle("category-color: #FFDBD1");
         fruitButton.setStyle("category-color: #FFDBD1");
@@ -574,14 +584,9 @@ public class MainViewController implements Initializable {
         nutsButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
-    public void showColdDrinksItems(){
-        updateProductListCategory(ProductCategory.COLD_DRINKS);
-        sodaButton.setStyle("-fx-background-color: #FCB8A6");
-    }
-
-    public void showHotDrinksItems(){
-        updateProductListCategory(ProductCategory.HOT_DRINKS);
-        teaButton.setStyle("-fx-background-color: #FCB8A6");
+    public void showDrinksItems(){
+        updateProductListCategoryMultiple(ProductCategory.HOT_DRINKS, ProductCategory.COLD_DRINKS);
+        drinksButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
     public void showBakingItems(){
