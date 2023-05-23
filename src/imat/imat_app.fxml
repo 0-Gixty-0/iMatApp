@@ -18,6 +18,61 @@
 
 <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1100.0" prefHeight="700.0" prefWidth="1100.0" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
+      <AnchorPane fx:id="previousPurchasesOverlay" onMouseClicked="#closePreviousPurchasesOverlay" prefHeight="702.0" prefWidth="1102.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+         <children>
+            <AnchorPane layoutX="260.0" layoutY="69.0" onMouseClicked="#mouseTrap" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closePreviousPurchasesOverlay" prefHeight="31.0" prefWidth="123.0" styleClass="button-back" text="Tillbaka">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@resources/left_arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="234.0" layoutY="52.0" text="Tidigare Köp">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="355.0" layoutY="65.0" prefHeight="9.0" prefWidth="214.0" />
+                  <Separator layoutX="13.0" layoutY="66.0" prefHeight="9.0" prefWidth="214.0" />
+                  <Label layoutX="89.0" layoutY="85.0" text="Datum">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="268.0" layoutY="86.0" text="Varor">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="413.0" layoutY="85.0" text="Antal Varor">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="45.0" layoutY="113.0" prefHeight="14.0" prefWidth="155.0" />
+                  <Separator layoutX="387.0" layoutY="110.0" prefHeight="20.0" prefWidth="155.0" />
+                  <Separator layoutX="231.0" layoutY="113.0" prefHeight="14.0" prefWidth="127.0" />
+                  <Label layoutX="105.0" layoutY="145.0" />
+                  <ScrollPane layoutY="127.0" prefHeight="436.0" prefWidth="580.0" AnchorPane.bottomAnchor="0.20000000000004547" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.6000000000000227" AnchorPane.topAnchor="127.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="434.0" prefWidth="580.0">
+                           <children>
+                              <FlowPane fx:id="previousPurchasesFlowPane" layoutX="-2.0" prefHeight="436.0" prefWidth="582.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
       <AnchorPane fx:id="shoppingCartOverlay" onMouseClicked="#closeShoppingCartOverlay" prefHeight="702.0" prefWidth="1099.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
          <children>
             <AnchorPane layoutX="766.0" onMouseClicked="#mouseTrap" prefHeight="702.0" prefWidth="332.0" style="-fx-background-color: WHITE;">
@@ -189,61 +244,6 @@
                         <Font size="14.0" />
                      </font>
                   </Button>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="previousPurchasesOverlay" onMouseClicked="#closePreviousPurchasesOverlay" prefHeight="702.0" prefWidth="1102.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
-         <children>
-            <AnchorPane layoutX="260.0" layoutY="69.0" onMouseClicked="#mouseTrap" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
-               <children>
-                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closePreviousPurchasesOverlay" prefHeight="31.0" prefWidth="123.0" styleClass="button-back" text="Tillbaka">
-                     <graphic>
-                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@resources/left_arrow.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Button>
-                  <Label layoutX="234.0" layoutY="52.0" text="Tidigare Köp">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="355.0" layoutY="65.0" prefHeight="9.0" prefWidth="214.0" />
-                  <Separator layoutX="13.0" layoutY="66.0" prefHeight="9.0" prefWidth="214.0" />
-                  <Label layoutX="89.0" layoutY="85.0" text="Datum">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="268.0" layoutY="86.0" text="Varor">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="413.0" layoutY="85.0" text="Antal Varor">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="45.0" layoutY="113.0" prefHeight="14.0" prefWidth="155.0" />
-                  <Separator layoutX="387.0" layoutY="110.0" prefHeight="20.0" prefWidth="155.0" />
-                  <Separator layoutX="231.0" layoutY="113.0" prefHeight="14.0" prefWidth="127.0" />
-                  <Label layoutX="105.0" layoutY="145.0" />
-                  <ScrollPane layoutY="127.0" prefHeight="436.0" prefWidth="580.0">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="434.0" prefWidth="580.0">
-                           <children>
-                              <FlowPane fx:id="previousPurchasesFlowPane" layoutX="-2.0" prefHeight="436.0" prefWidth="582.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                           </children>
-                        </AnchorPane>
-                    </content>
-                  </ScrollPane>
                </children>
             </AnchorPane>
          </children>

@@ -406,8 +406,6 @@ public class MainViewController implements Initializable {
             shoppingCartNumItemsMap.put(item.getProduct().getProductId(), (int) item.getAmount());
         }
 
-
-
         updateShoppingCartLabels();
         updateNumItemsLabels();
 
