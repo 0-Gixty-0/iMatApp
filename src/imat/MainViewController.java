@@ -400,8 +400,16 @@ public class MainViewController implements Initializable {
             updateProductListSearch();
         });
 
+        // Initialize Shopping cart
+        for (ShoppingItem item : shoppingCart.getItems()){
+            shoppingCartListItems.add(new ShoppingCartListItem(item.getProduct(), this));
+            shoppingCartNumItemsMap.put(item.getProduct().getProductId(), (int) item.getAmount());
+        }
+
+
 
         updateShoppingCartLabels();
+        updateNumItemsLabels();
 
         updateProductListAll();
 
@@ -728,6 +736,7 @@ public class MainViewController implements Initializable {
         }
         updateNumItemsLabels();
         updateShoppingCartLabels();
+        updateShoppingCart();
     }
 
     protected void addFavorite(Product product){
