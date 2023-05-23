@@ -781,5 +781,10 @@ public class MainViewController implements Initializable {
         return stringBuilder.length() != chars.length;
     }
 
+    @FXML
+    public void mouseTrap(Event event){
+        event.consume();
+    }
+
 
 }
