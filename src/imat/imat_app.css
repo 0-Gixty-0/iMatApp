@@ -17,6 +17,11 @@
     -fx-font-weight: bold;
 }
 
+.text-item {
+    -fx-font-size: 22px;
+    -fx-font-family: "Times New Roman";
+}
+
 .text-header {
     -fx-font-size: 22px;
     -fx-font-family: "Times New Roman";
@@ -254,4 +259,13 @@
 
 .date-image:hover{
     -fx-background-color: darkgrey;
+}
+
+.text-field.error{
+    -fx-text-box-border: red ;
+    -fx-focus-color: red
+}
+
+#error-text{
+    -fx-text-fill: red;
 }
