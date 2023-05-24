@@ -205,7 +205,7 @@ public class MainViewController implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 customerFirstNameTextField.getStyleClass().remove("error");
                 infoNextButton.setDisable(false);
-                if (!containsInt(customerFirstNameTextField.getText())) {
+                if (!containsInt(customerFirstNameTextField.getText())){
                     customer.setFirstName(t1);
                     infoErrorLabel.setVisible(false);
                 } else {
@@ -222,7 +222,7 @@ public class MainViewController implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 customerLastNameTextField.getStyleClass().remove("error");
                 infoNextButton.setDisable(false);
-                if (!containsInt(customerLastNameTextField.getText())) {
+                if (!containsInt(customerLastNameTextField.getText())){
                     customer.setLastName(t1);
                     infoErrorLabel.setVisible(false);
                 } else {
@@ -246,7 +246,7 @@ public class MainViewController implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 customerPostCodeTextField.getStyleClass().remove("error");
                 infoNextButton.setDisable(false);
-                if (!containsChar(customerPostCodeTextField.getText())) {
+                if (!containsChar(customerPostCodeTextField.getText())){
                     customer.setPostCode(t1);
                     infoErrorLabel.setVisible(false);
                 } else {
@@ -263,7 +263,7 @@ public class MainViewController implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 customerPhoneNumberTextField.getStyleClass().remove("error");
                 infoNextButton.setDisable(false);
-                if (!containsChar(customerPhoneNumberTextField.getText())) {
+                if (!containsChar(customerPhoneNumberTextField.getText())){
                     customer.setPhoneNumber(t1);
                     infoErrorLabel.setVisible(false);
                 } else {
@@ -297,7 +297,7 @@ public class MainViewController implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 payButton.setDisable(false);
                 cardHolderNameTextField.getStyleClass().remove("error");
-                if (!containsInt(cardHolderNameTextField.getText())) {
+                if (!containsInt(cardHolderNameTextField.getText())){
                     creditCard.setHoldersName(cardHolderNameTextField.getText());
                     paymentErrorLabel.setVisible(false);
                 } else {
@@ -314,7 +314,7 @@ public class MainViewController implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 cardNumberTextField.getStyleClass().remove("error");
                 payButton.setDisable(false);
-                if (!containsChar(cardNumberTextField.getText())) {
+                if (!containsChar(cardNumberTextField.getText())){
                     creditCard.setCardNumber(cardNumberTextField.getText());
                     paymentErrorLabel.setVisible(false);
                 } else {
@@ -349,7 +349,7 @@ public class MainViewController implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 cardVerificationCodeTextField.getStyleClass().remove("error");
                 payButton.setDisable(false);
-                if (!containsChar(cardVerificationCodeTextField.getText())) {
+                if (!containsChar(cardVerificationCodeTextField.getText())){
                     creditCard.setVerificationCode(Integer.parseInt(cardVerificationCodeTextField.getText()));
                     paymentErrorLabel.setVisible(false);
                 } else {
@@ -376,7 +376,7 @@ public class MainViewController implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profileFirstNameTextField.getStyleClass().remove("error");
                 saveProfileButton.setDisable(false);
-                if (!containsInt(profileFirstNameTextField.getText())) {
+                if (!containsInt(profileFirstNameTextField.getText())){
                     customer.setFirstName(t1);
                     profileErrorLabel.setVisible(false);
                 } else {
@@ -393,7 +393,7 @@ public class MainViewController implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profileLastNameTextField.getStyleClass().remove("error");
                 saveProfileButton.setDisable(false);
-                if (!containsInt(profileLastNameTextField.getText())) {
+                if (!containsInt(profileLastNameTextField.getText())){
                     customer.setLastName(t1);
                     profileErrorLabel.setVisible(false);
                 } else {
@@ -417,7 +417,7 @@ public class MainViewController implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profilePostCodeTextField.getStyleClass().remove("error");
                 saveProfileButton.setDisable(false);
-                if (!containsChar(profilePostCodeTextField.getText())) {
+                if (!containsChar(profilePostCodeTextField.getText())){
                     customer.setPostCode(t1);
                     profileErrorLabel.setVisible(false);
                 } else {
@@ -434,7 +434,7 @@ public class MainViewController implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profilePhoneNumberTextField.getStyleClass().remove("error");
                 saveProfileButton.setDisable(false);
-                if (!containsChar(profilePhoneNumberTextField.getText())) {
+                if (!containsChar(profilePhoneNumberTextField.getText())){
                     customer.setPhoneNumber(t1);
                     profileErrorLabel.setVisible(false);
                 } else {
@@ -468,7 +468,7 @@ public class MainViewController implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profileCardNameTextField.getStyleClass().remove("error");
                 saveProfileButton.setDisable(false);
-                if (!containsInt(profileCardNameTextField.getText())) {
+                if (!containsInt(profileCardNameTextField.getText())){
                     creditCard.setHoldersName(profileCardNameTextField.getText());
                     profileErrorLabel.setVisible(false);
                 } else {
@@ -485,7 +485,7 @@ public class MainViewController implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profileCardNumberTextField.getStyleClass().remove("error");
                 saveProfileButton.setDisable(false);
-                if (!containsChar(profileCardNumberTextField.getText())) {
+                if (!containsChar(profileCardNumberTextField.getText())){
                     creditCard.setCardNumber(profileCardNumberTextField.getText());
                     profileErrorLabel.setVisible(false);
                 } else {
@@ -518,7 +518,7 @@ public class MainViewController implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 profileCardVerificationCodeTextField.getStyleClass().remove("error");
                 saveProfileButton.setDisable(false);
-                if (!containsChar(profileCardVerificationCodeTextField.getText())) {
+                if (!containsChar(profileCardVerificationCodeTextField.getText())){
                     creditCard.setVerificationCode(Integer.parseInt(profileCardVerificationCodeTextField.getText()));
                     profileErrorLabel.setVisible(false);
                 } else {
@@ -557,19 +557,19 @@ public class MainViewController implements Initializable {
         });
 
         // Initialize Shopping cart
-        for (ShoppingItem item : shoppingCart.getItems()) {
+        for (ShoppingItem item : shoppingCart.getItems()){
             shoppingCartListItems.add(new ShoppingCartListItem(item.getProduct(), this));
             shoppingCartNumItemsMap.put(item.getProduct().getProductId(), (int) item.getAmount());
         }
 
         // Setup Checkoutbutton
         List<ShoppingItem> shoppingItemsToRemove = new ArrayList<ShoppingItem>();
-        for (ShoppingItem item : shoppingCart.getItems()) {
-            if (item.getAmount() == 0) {
+        for (ShoppingItem item : shoppingCart.getItems()){
+            if (item.getAmount() == 0){
                 shoppingItemsToRemove.add(item);
             }
         }
-        for (ShoppingItem item : shoppingItemsToRemove) {
+        for (ShoppingItem item : shoppingItemsToRemove){
             shoppingCart.removeProduct(item.getProduct());
         }
         if (shoppingCart.getItems().isEmpty())
@@ -582,22 +582,21 @@ public class MainViewController implements Initializable {
 
     }
 
-    public void updateProductListAll() {
+    public void updateProductListAll(){
         resetButtons();
         generalItemsFlowPane.getChildren().clear();
         for (Product item : dataHandler.getProducts())
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
     }
-
     // Update productlist with category
-    private void updateProductListCategory(ProductCategory category) {
+    private void updateProductListCategory(ProductCategory category){
         resetButtons();
         generalItemsFlowPane.getChildren().clear();
         for (Product item : dataHandler.getProducts(category))
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
     }
 
-    private void updateProductListCategoryMultiple(ProductCategory category1, ProductCategory category2) {
+    private void updateProductListCategoryMultiple(ProductCategory category1, ProductCategory category2){
         resetButtons();
         generalItemsFlowPane.getChildren().clear();
         for (Product item : dataHandler.getProducts(category1))
@@ -606,44 +605,44 @@ public class MainViewController implements Initializable {
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
     }
 
-    private void updateProductListFavorites() {
+    private void updateProductListFavorites(){
         resetButtons();
         generalItemsFlowPane.getChildren().clear();
-        for (Product item : dataHandler.favorites()) {
+        for (Product item : dataHandler.favorites()){
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
         }
     }
 
-    private void updateProductListSearch() {
+    private void updateProductListSearch(){
         resetButtons();
         generalItemsFlowPane.getChildren().clear();
-        for (Product item : flProduct) {
+        for (Product item : flProduct){
             generalItemsFlowPane.getChildren().add(productListItemMap.get(item.getName()));
         }
     }
 
-    private void updateShoppingCart() {
+    private void updateShoppingCart(){
         shoppingCartFlowPane.getChildren().clear();
         for (ShoppingCartListItem item : shoppingCartListItems) {
             shoppingCartFlowPane.getChildren().add(item);
         }
     }
 
-    private void updatePreviousPurchases() {
+    private void updatePreviousPurchases(){
         previousPurchasesFlowPane.getChildren().clear();
-        for (Order order : dataHandler.getOrders()) {
+        for (Order order : dataHandler.getOrders()){
             previousPurchasesFlowPane.getChildren().add(new PreviousPurchaseItem(order, this));
         }
     }
 
-    private void updatePreviousPurchaseSummary(Order order) {
+    private void updatePreviousPurchaseSummary(Order order){
         previousPurchaseSummaryFlowPane.getChildren().clear();
-        for (ShoppingItem item : order.getItems()) {
+        for (ShoppingItem item : order.getItems()){
             previousPurchaseSummaryFlowPane.getChildren().add(new PreviousPurchaseSummaryItem(item, this));
         }
     }
 
-    public void placeOrder() {
+    public void placeOrder(){
         Collections.reverse(dataHandler.getOrders());
         dataHandler.placeOrder();
         Collections.reverse(dataHandler.getOrders());
@@ -653,12 +652,12 @@ public class MainViewController implements Initializable {
     }
 
     //Populators
-    private void populateItemDetailView(Product product) {
+    private void populateItemDetailView(Product product){
         String image_path = "file:" + "\\" + dataHandler.imatDirectory() + "\\" + "images" + "\\" + product.getImageName();
         detailItemImageView.setImage(new Image(image_path));
         detailItemNameLabel.setText(product.getName());
         DecimalFormat df = new DecimalFormat("#.##");
-        detailItemPriceLabel.setText(String.format("%s %s", df.format(product.getPrice()), product.getUnit()));
+        detailItemPriceLabel.setText(String.format("%s %s",df.format(product.getPrice()),product.getUnit()));
 
         if (shoppingCartNumItemsMap.containsKey(product.getProductId())) {
             detailNumItemsLabel.setText(String.format("%d st", shoppingCartNumItemsMap.get(product.getProductId())));
@@ -668,7 +667,7 @@ public class MainViewController implements Initializable {
 
     }
 
-    private void populateCheckoutStepOne() {
+    private void populateCheckoutStepOne(){
         customerFirstNameTextField.setText(customer.getFirstName());
         customerLastNameTextField.setText(customer.getLastName());
         customerPostCodeTextField.setText(customer.getPostCode());
@@ -677,7 +676,7 @@ public class MainViewController implements Initializable {
         customerAddressTextField.setText(customer.getAddress());
     }
 
-    private void populateCheckoutStepThree() {
+    private void populateCheckoutStepThree(){
         cardHolderNameTextField.setText(creditCard.getHoldersName());
         cardNumberTextField.setText(creditCard.getCardNumber());
         cardExpirationMonthSpinner.getValueFactory().setValue(creditCard.getValidMonth());
@@ -686,7 +685,7 @@ public class MainViewController implements Initializable {
         cardTypeComboBox.setValue(creditCard.getCardType());
     }
 
-    private void populateProfile() {
+    private void populateProfile(){
         profileFirstNameTextField.setText(customer.getFirstName());
         profileLastNameTextField.setText(customer.getLastName());
         profilePostCodeTextField.setText(customer.getPostCode());
@@ -702,7 +701,7 @@ public class MainViewController implements Initializable {
     }
 
     // Category Button Methods
-    private void resetButtons() {
+    private void resetButtons(){
         dairyButton.setStyle("category-color: #FFDBD1");
         meatButton.setStyle("category-color: #FFDBD1");
         fishButton.setStyle("category-color: #FFDBD1");
@@ -716,150 +715,148 @@ public class MainViewController implements Initializable {
         pastaButton.setStyle("category-color: #FFDBD1");
         nutsButton.setStyle("category-color: #FFDBD1");
     }
-
-    public void showDairyItems() {
+    public void showDairyItems(){
         updateProductListCategory(ProductCategory.DAIRIES);
         dairyButton.setStyle("category-color: #FCB8A6");
     }
 
-    public void showMeatItems() {
+    public void showMeatItems(){
         updateProductListCategory(ProductCategory.MEAT);
         meatButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
-    public void showFishItems() {
+    public void showFishItems(){
         updateProductListCategory(ProductCategory.FISH);
         fishButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
-    public void showVegetableItems() {
+    public void showVegetableItems(){
         updateProductListCategory(ProductCategory.VEGETABLE_FRUIT);
         vegetablesButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
-    public void showFruitItems() {
+    public void showFruitItems(){
         updateProductListCategory(ProductCategory.FRUIT);
         fruitButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
-    public void showHerbItems() {
+    public void showHerbItems(){
         updateProductListCategory(ProductCategory.HERB);
         herbsButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
-    public void showPastaItems() {
+    public void showPastaItems(){
         updateProductListCategory(ProductCategory.PASTA);
         pastaButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
-    public void showNutsItems() {
+    public void showNutsItems(){
         updateProductListCategory(ProductCategory.NUTS_AND_SEEDS);
         nutsButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
-    public void showDrinksItems() {
+    public void showDrinksItems(){
         updateProductListCategoryMultiple(ProductCategory.HOT_DRINKS, ProductCategory.COLD_DRINKS);
         drinksButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
-    public void showBakingItems() {
+    public void showBakingItems(){
         updateProductListCategory(ProductCategory.FLOUR_SUGAR_SALT);
         bakedButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
-    public void showFavorites() {
+    public void showFavorites(){
         updateProductListFavorites();
         favoritesButton.setStyle("-fx-background-color: #FCB8A6");
     }
 
     // Open / Close Overlays
-    public void openPreviousPurchasesOverlay() {
+    public void openPreviousPurchasesOverlay(){
         updatePreviousPurchases();
         previousPurchasesOverlay.toFront();
     }
 
-    public void closePreviousPurchasesOverlay() {
+    public void closePreviousPurchasesOverlay(){
         previousPurchasesOverlay.toBack();
     }
 
-    public void openProfileOverlay() {
+    public void openProfileOverlay(){
         populateProfile();
         profileOverlay.toFront();
     }
 
-    public void closeProfileOverlay() {
+    public void closeProfileOverlay(){
         profileOverlay.toBack();
     }
 
-    public void openShoppingCartOverlay() {
+    public void openShoppingCartOverlay(){
         updateShoppingCart();
         shoppingCartOverlay.toFront();
     }
 
-    public void closeShoppingCartOverlay() {
+    public void closeShoppingCartOverlay(){
         shoppingCartOverlay.toBack();
     }
 
-    public void closeDetailView() {
+    public void closeDetailView(){
         detailViewAnchorPane.toBack();
     }
-
-    public void openDetailView(Product product) {
+    public void openDetailView(Product product){
         this.currentProduct = product;
         populateItemDetailView(product);
         detailViewAnchorPane.toFront();
     }
 
-    public void openCheckoutStep1() {
+    public void openCheckoutStep1(){
         populateCheckoutStepOne();
         checkOutStepOneAnchorPane.toFront();
     }
 
-    public void closeCheckoutStep1() {
+    public void closeCheckoutStep1(){
         checkOutStepOneAnchorPane.toBack();
     }
 
-    public void openCheckoutStep2() {
+    public void openCheckoutStep2(){
         checkOutStepTwoAnchorPane.toFront();
     }
 
-    public void closeCheckoutStep2() {
+    public void closeCheckoutStep2(){
         checkOutStepTwoAnchorPane.toBack();
     }
 
-    public void openCheckoutStep3() {
+    public void openCheckoutStep3(){
         populateCheckoutStepThree();
         checkOutStepThreeAnchorPane.toFront();
     }
 
-    public void closeCheckoutStep3() {
+    public void closeCheckoutStep3(){
         checkOutStepThreeAnchorPane.toBack();
     }
 
-    public void openCheckoutThankYou() {
+    public void openCheckoutThankYou(){
         set_checkout_email.setText(dataHandler.getCustomer().getEmail());
         checkOutStepThreeAnchorPane.toBack();
         checkOutThankYouAnchorPane.toFront();
     }
 
-    public void closeCheckoutThankYou() {
+    public void closeCheckoutThankYou(){
         checkOutThankYouAnchorPane.toBack();
     }
 
-    public void openPreviousPurchaseSummaryOverlay(Order order) {
+    public void openPreviousPurchaseSummaryOverlay(Order order){
         updatePreviousPurchaseSummary(order);
         previousPurchaseSummaryAnchorPane.toFront();
     }
 
-    public void closePreviousPurchaseSummaryOverlay() {
+    public void closePreviousPurchaseSummaryOverlay(){
         previousPurchaseSummaryAnchorPane.toBack();
     }
 
-    private void updateNumItemsLabels() {
-        for (ProductListItem listItem : productListItemMap.values()) {
+    private void updateNumItemsLabels(){
+        for (ProductListItem listItem : productListItemMap.values()){
             listItem.updateNumItemsLabel(shoppingCartNumItemsMap.getOrDefault(listItem.getProductId(), 0));
         }
-        for (ShoppingCartListItem listItem : shoppingCartListItems) {
+        for (ShoppingCartListItem listItem : shoppingCartListItems){
             listItem.updateNumItemsLabel(shoppingCartNumItemsMap.getOrDefault(listItem.getProductId(), 0));
         }
         if (shoppingCartNumItemsMap.containsKey(this.currentProduct.getProductId())) {
@@ -872,7 +869,7 @@ public class MainViewController implements Initializable {
 
     private void updateShoppingCartLabels() {
         double numItemsDouble = (double) 0;
-        for (ShoppingItem item : shoppingCart.getItems()) {
+        for (ShoppingItem item : shoppingCart.getItems()){
             numItemsDouble += item.getAmount();
         }
         int numItemsInt = (int) numItemsDouble;
@@ -881,8 +878,8 @@ public class MainViewController implements Initializable {
         totalPriceLabel.setText(String.format("Total Pris: %s kr", df.format(shoppingCart.getTotal())));
     }
 
-    public void addItemToCart(Product product) {
-        if (shoppingCartNumItemsMap.containsKey(product.getProductId())) {
+    public void addItemToCart(Product product){
+        if (shoppingCartNumItemsMap.containsKey(product.getProductId())){
             shoppingCartNumItemsMap.replace(product.getProductId(), shoppingCartNumItemsMap.get(product.getProductId()) + 1);
         } else {
             ShoppingCartListItem listItem = new ShoppingCartListItem(product, this);
@@ -895,11 +892,12 @@ public class MainViewController implements Initializable {
         updateShoppingCartLabels();
     }
 
-    public void removeItemFromCart(Product product) {
-        if (shoppingCartNumItemsMap.containsKey(product.getProductId())) {
+    public void removeItemFromCart(Product product){
+        if (shoppingCartNumItemsMap.containsKey(product.getProductId())){
             if (shoppingCartNumItemsMap.get(product.getProductId()) > 1) {
                 shoppingCartNumItemsMap.replace(product.getProductId(), shoppingCartNumItemsMap.get(product.getProductId()) - 1);
-            } else {
+            }
+            else {
                 shoppingCartNumItemsMap.remove(product.getProductId());
                 shoppingCartListItems.removeIf(item -> item.getProductId() == product.getProductId());
             }
@@ -909,7 +907,7 @@ public class MainViewController implements Initializable {
                 Double numInCart = currentItem.getAmount();
                 shoppingCart.removeProduct(product);
                 shoppingCart.addProduct(product, numInCart - 1);
-                if (numInCart < 2) {
+                if (numInCart < 2){
                     toCheckOutButton.setDisable(true);
                 }
             } else {
@@ -921,16 +919,16 @@ public class MainViewController implements Initializable {
         updateShoppingCart();
     }
 
-    protected void addFavorite(Product product) {
+    protected void addFavorite(Product product){
         dataHandler.addFavorite(product);
     }
 
-    protected void removeFavorite(Product product) {
+    protected void removeFavorite(Product product){
         dataHandler.removeFavorite(product);
     }
 
     @FXML
-    public void emptyCart() {
+    public void emptyCart(){
         shoppingCartListItems.clear();
         shoppingCartNumItemsMap.clear();
         shoppingCart.clear();
@@ -941,21 +939,21 @@ public class MainViewController implements Initializable {
     }
 
     @FXML
-    public void removeDetailView(Event event) {
+    public void removeDetailView(Event event){
         removeItemFromCart(this.currentProduct);
     }
 
     @FXML
-    public void addDetailView(Event event) {
+    public void addDetailView(Event event){
         addItemToCart(this.currentProduct);
     }
 
     //Customer Code
 
-    private boolean containsInt(String text) {
+    private boolean containsInt(String text){
         char[] chars = text.toCharArray();
-        for (char c : chars) {
-            if (Character.isDigit(c)) {
+        for (char c : chars){
+            if (Character.isDigit(c)){
                 return true;
             }
         }
@@ -974,7 +972,7 @@ public class MainViewController implements Initializable {
     }
 
     @FXML
-    public void mouseTrap(Event event) {
+    public void mouseTrap(Event event){
         event.consume();
     }
 
