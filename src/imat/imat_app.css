@@ -17,6 +17,11 @@
     -fx-font-weight: bold;
 }
 
+.text-item {
+    -fx-font-size: 22px;
+    -fx-font-family: "Times New Roman";
+}
+
 .text-header {
     -fx-font-size: 22px;
     -fx-font-family: "Times New Roman";
