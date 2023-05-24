@@ -17,7 +17,8 @@ public class ProductListItem extends AnchorPane {
     private Product product;
     private MainViewController mainViewController;
     private Integer numItems;
-
+    @FXML
+    AnchorPane productListItemPane;
     @FXML
     ImageView productImageImageView;
     @FXML
@@ -72,13 +73,17 @@ public class ProductListItem extends AnchorPane {
     @FXML
     public void onAdd(Event event) {
         this.numItems += 1;
-        mainViewController.addItemToCart(this.product);}
+        mainViewController.addItemToCart(this.product);
+        productListItemPane.getStyleClass().add("add-item");
+    }
 
     @FXML
     public void onRemove(Event event){
         if (this.numItems > 0)
             this.numItems -= 1;
+            productListItemPane.getStyleClass().remove("add-item");
         mainViewController.removeItemFromCart(this.product);
+
     }
 
     @FXML

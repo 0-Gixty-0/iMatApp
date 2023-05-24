@@ -269,3 +269,8 @@
 #error-text{
     -fx-text-fill: red;
 }
+
+.add-item{
+    -fx-border-color: green;
+    -fx-border-width: 5;
+}
