@@ -280,3 +280,11 @@
 .overlay {
     -fx-effect: dropshadow(three-pass-box, #222222, 25, 0, 0, 0);
 }
+
+.shopping-cart-button{
+    -fx-background-color: #F67952;
+    -fx-background-radius: 30px;
+    -fx-effect: dropshadow(three-pass-box, #929292, 15, 0, 5, 5);
+    -fx-font-weight: 400;
+    -fx-text-fill: #000000;
+}

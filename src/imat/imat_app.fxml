@@ -648,7 +648,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label id="text-bold" fx:id="shoppingCartLabel" layoutY="23.0" onMouseClicked="#openShoppingCartOverlay" styleClass="text-header" text="Varukorg" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+            <Label id="text-bold" fx:id="shoppingCartLabel" layoutY="23.0" onMouseClicked="#openShoppingCartOverlay" prefHeight="50.0" prefWidth="158.0" text="Varukorg" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="20.0">
                <font>
                   <Font size="20.0" />
                </font>
@@ -659,6 +659,10 @@
                      </image>
                   </ImageView>
                </graphic>
+               <styleClass>
+                  <String fx:value="text-header" />
+                  <String fx:value="shopping-cart-button" />
+               </styleClass>
             </Label>
             <Label contentDisplay="CENTER" layoutX="29.0" layoutY="15.0" onMouseClicked="#updateProductListAll" prefHeight="65.0" prefWidth="132.0" styleClass="imat-label" text="iMat" textFill="#f67952" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="15.0">
                <font>
