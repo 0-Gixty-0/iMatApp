@@ -678,7 +678,7 @@
                   </Label>
                   <Separator layoutX="9.0" layoutY="13.0" prefHeight="17.0" prefWidth="321.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="442.0" AnchorPane.topAnchor="13.0" />
                   <Separator layoutX="439.0" layoutY="18.0" prefHeight="8.0" prefWidth="322.0" />
-                  <GridPane alignment="CENTER" prefHeight="103.0" prefWidth="769.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0">
+                  <GridPane alignment="CENTER" hgap="4.0" prefHeight="103.0" prefWidth="769.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -692,43 +692,43 @@
                       <RowConstraints maxHeight="62.26921081542969" minHeight="10.0" prefHeight="60.01536560058594" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="fruitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showFruitItems" prefHeight="45.0" prefWidth="110.0" text="Frukt" GridPane.columnIndex="1">
+                        <Button fx:id="fruitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showFruitItems" prefHeight="200.0" prefWidth="200.0" text="Frukt" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="vegetablesButton" mnemonicParsing="false" onAction="#showVegetableItems" prefHeight="45.0" prefWidth="110.0" text="Grönt" GridPane.columnIndex="2">
+                        <Button fx:id="vegetablesButton" mnemonicParsing="false" onAction="#showVegetableItems" prefHeight="200.0" prefWidth="200.0" text="Grönt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="dairyButton" mnemonicParsing="false" onAction="#showDairyItems" prefHeight="45.0" prefWidth="110.0" stylesheets="@imat_app.css" text="Mejeri" GridPane.columnIndex="5">
+                        <Button fx:id="dairyButton" mnemonicParsing="false" onAction="#showDairyItems" prefHeight="200.0" prefWidth="200.0" stylesheets="@imat_app.css" text="Mejeri" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="fishButton" mnemonicParsing="false" onAction="#showFishItems" prefHeight="45.0" prefWidth="110.0" text="Fisk" GridPane.columnIndex="4">
+                        <Button fx:id="fishButton" mnemonicParsing="false" onAction="#showFishItems" prefHeight="200.0" prefWidth="200.0" text="Fisk" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="meatButton" mnemonicParsing="false" onAction="#showMeatItems" prefHeight="45.0" prefWidth="110.0" text="Kött" GridPane.columnIndex="3">
+                        <Button fx:id="meatButton" mnemonicParsing="false" onAction="#showMeatItems" prefHeight="200.0" prefWidth="200.0" text="Kött" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="nutsButton" mnemonicParsing="false" onAction="#showNutsItems" prefHeight="45.0" prefWidth="110.0" text="Nötter" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                        <Button fx:id="nutsButton" mnemonicParsing="false" onAction="#showNutsItems" prefHeight="200.0" prefWidth="200.0" text="Nötter" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="favoritesButton" mnemonicParsing="false" onAction="#showFavorites" prefHeight="45.0" prefWidth="110.0" text="Favoriter" GridPane.rowIndex="1">
+                        <Button fx:id="favoritesButton" mnemonicParsing="false" onAction="#showFavorites" prefHeight="200.0" prefWidth="200.0" text="Favoriter" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
@@ -741,31 +741,31 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="drinksButton" mnemonicParsing="false" onAction="#showDrinksItems" prefHeight="45.0" prefWidth="110.0" text="Dryck" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <Button fx:id="drinksButton" mnemonicParsing="false" onAction="#showDrinksItems" prefHeight="200.0" prefWidth="200.0" text="Dryck" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="herbsButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showHerbItems" prefHeight="45.0" prefWidth="110.0" text="Örter" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                        <Button fx:id="herbsButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showHerbItems" prefHeight="200.0" prefWidth="200.0" text="Örter" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="bakedButton" mnemonicParsing="false" onAction="#showBakingItems" prefHeight="45.0" prefWidth="110.0" text="Bakat" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Button fx:id="bakedButton" mnemonicParsing="false" onAction="#showBakingItems" prefHeight="200.0" prefWidth="200.0" text="Bakat" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="pastaButton" alignment="CENTER" mnemonicParsing="false" onAction="#showPastaItems" prefHeight="45.0" prefWidth="110.0" text="Pasta" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <Button fx:id="pastaButton" alignment="CENTER" mnemonicParsing="false" onAction="#showPastaItems" prefHeight="200.0" prefWidth="200.0" text="Pasta" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="allItemsButton" mnemonicParsing="false" onAction="#updateProductListAll" prefHeight="45.0" prefWidth="110.0" text="Alla Varor">
+                        <Button fx:id="allItemsButton" mnemonicParsing="false" onAction="#updateProductListAll" prefHeight="200.0" prefWidth="200.0" text="Alla Varor" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
