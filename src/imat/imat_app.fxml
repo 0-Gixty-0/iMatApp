@@ -21,6 +21,47 @@
 
 <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1100.0" prefHeight="700.0" prefWidth="1100.0" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
+      <AnchorPane fx:id="checkOutThankYouAnchorPane" layoutX="3.0" layoutY="3.0" onMouseClicked="#closeCheckoutThankYou" prefHeight="702.0" prefWidth="1096.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="257.0" layoutY="69.0" onMouseClicked="#mouseTrap" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Button layoutX="183.0" layoutY="430.0" mnemonicParsing="false" onMousePressed="#closeCheckoutThankYou" onMouseReleased="#closeShoppingCartOverlay" prefHeight="62.0" prefWidth="214.0" styleClass="button-green" text="Fortsätt Handla">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/grocery_bag.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="105.0" layoutY="145.0" />
+                  <Label layoutX="195.0" layoutY="118.0" text="Tack För Ditt Köp!">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="104.0" fitWidth="112.0" layoutX="238.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/checkmark.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="129.0" layoutY="252.0" prefHeight="92.0" prefWidth="322.0" text="Ditt kvitto har skickats till " textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="set_checkout_email" alignment="CENTER" layoutX="69.0" layoutY="326.0" prefHeight="35.0" prefWidth="442.0" text="Okänd@Okänd.com">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
       <AnchorPane fx:id="profileOverlay" layoutX="2.0" layoutY="2.0" onMouseClicked="#closeProfileOverlay" prefHeight="702.0" prefWidth="1096.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane layoutX="257.0" layoutY="69.0" onMouseClicked="#mouseTrap" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
@@ -506,42 +547,6 @@
                      </content>
                   </ScrollPane>
                   <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="198.0" />
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="checkOutThankYouAnchorPane" layoutX="3.0" layoutY="3.0" onMouseClicked="#closeCheckoutThankYou" prefHeight="702.0" prefWidth="1096.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <AnchorPane layoutX="257.0" layoutY="69.0" onMouseClicked="#mouseTrap" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
-               <children>
-                  <Button layoutX="183.0" layoutY="430.0" mnemonicParsing="false" onMousePressed="#closeCheckoutThankYou" onMouseReleased="#closeShoppingCartOverlay" prefHeight="62.0" prefWidth="214.0" styleClass="button-green" text="Fortsätt Handla">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="45.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/grocery_bag.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Label layoutX="105.0" layoutY="145.0" />
-                  <Label layoutX="195.0" layoutY="118.0" text="Tack För Ditt Köp!">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="104.0" fitWidth="112.0" layoutX="238.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@resources/checkmark.png" />
-                     </image>
-                  </ImageView>
-                  <Label alignment="CENTER" layoutX="129.0" layoutY="267.0" prefHeight="92.0" prefWidth="322.0" text="Ditt kvitto har skickats till Hjördis@gmail.com " textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
                </children>
             </AnchorPane>
          </children>
