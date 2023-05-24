@@ -633,7 +633,7 @@
                       <RowConstraints maxHeight="62.26921081542969" minHeight="10.0" prefHeight="60.01536560058594" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="fruitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showFruitItems" prefHeight="45.0" prefWidth="110.0" text="Frukt">
+                        <Button fx:id="fruitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showFruitItems" prefHeight="45.0" prefWidth="110.0" text="Frukt" GridPane.columnIndex="1">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
@@ -669,7 +669,7 @@
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="favoritesButton" mnemonicParsing="false" onAction="#showFavorites" prefHeight="45.0" prefWidth="110.0" text="Favoriter" GridPane.columnIndex="3">
+                        <Button fx:id="favoritesButton" mnemonicParsing="false" onAction="#showFavorites" prefHeight="45.0" prefWidth="110.0" text="Favoriter" GridPane.columnIndex="5">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
@@ -693,13 +693,13 @@
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="pastaButton" alignment="CENTER" mnemonicParsing="false" onAction="#showPastaItems" prefHeight="45.0" prefWidth="110.0" text="Pasta" GridPane.columnIndex="5">
+                        <Button fx:id="pastaButton" alignment="CENTER" mnemonicParsing="false" onAction="#showPastaItems" prefHeight="45.0" prefWidth="110.0" text="Pasta" GridPane.columnIndex="3">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="allItemsButton" mnemonicParsing="false" onAction="#updateProductListAll" prefHeight="45.0" prefWidth="110.0" text="Alla Varor" GridPane.columnIndex="1">
+                        <Button fx:id="allItemsButton" mnemonicParsing="false" onAction="#updateProductListAll" prefHeight="45.0" prefWidth="110.0" text="Alla Varor">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
