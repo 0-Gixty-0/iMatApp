@@ -6,9 +6,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Order;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 
 public class PreviousPurchaseItem extends AnchorPane {
@@ -36,7 +38,12 @@ public class PreviousPurchaseItem extends AnchorPane {
         DateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
         System.out.println(order.getDate());
         this.dateLabel.setText(dateFormat.format(order.getDate()));
-        this.numItemsLabel.setText(String.format("%d st",order.getItems().size()));
+        double numProductsDouble = 0;
+        for (ShoppingItem item : order.getItems()){
+            numProductsDouble += item.getAmount();
+        }
+        int numProductsInt = (int) numProductsDouble;
+        this.numItemsLabel.setText(String.format("%d st",numProductsInt));
 
     }
     @FXML
