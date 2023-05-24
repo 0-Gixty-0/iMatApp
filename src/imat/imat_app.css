@@ -212,9 +212,9 @@
 
 .scroll-bar:horizontal .track,
 .scroll-bar:vertical .track{
-    -fx-background-color :transparent;
-    -fx-border-color :transparent;
-    -fx-background-radius : 0.0em;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius : 5px;
     -fx-border-radius :0;
 }
 
@@ -237,20 +237,21 @@
 
 .scroll-bar .increment-arrow,
 .scroll-bar .decrement-arrow{
-    -fx-shape : " ";
+    -fx-shape : "";
     -fx-padding :0 0 ;
 }
 
 .scroll-bar:vertical .increment-arrow,
 .scroll-bar:vertical .decrement-arrow{
-    -fx-shape : " ";
+    -fx-shape : "";
     -fx-padding :0.0 0;
 }
 
 .scroll-bar:horizontal .thumb,
 .scroll-bar:vertical .thumb {
     -fx-background-insets : 0;
-    -fx-background-radius : 0;
+    -fx-background-radius : 15;
+    -fx-background-color: #B8B8B8;
 }
 
 .imat-label:hover{
@@ -276,4 +277,8 @@
 .add-item{
     -fx-border-color: green;
     -fx-border-width: 5;
+}
+
+.overlay {
+    -fx-effect: dropshadow(three-pass-box, #222222, 25, 0, 0, 0);
 }
