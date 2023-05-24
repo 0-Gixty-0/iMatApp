@@ -21,6 +21,107 @@
 
 <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1100.0" prefHeight="700.0" prefWidth="1100.0" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
+      <AnchorPane fx:id="checkOutStepTwoAnchorPane" layoutX="5.0" layoutY="4.0" onMouseClicked="#closeCheckoutStep2" prefHeight="702.0" prefWidth="1095.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="257.0" layoutY="69.0" onMouseClicked="#mouseTrap" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Button layoutX="417.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closeCheckoutStep2" prefHeight="37.0" prefWidth="150.0" styleClass="button-green" text="Fortsätt Handla">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/grocery_bag.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="214.0" layoutY="36.0" prefHeight="67.0" prefWidth="149.0" text="Välj Leveransdatum" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="357.0" layoutY="63.0" prefHeight="14.0" prefWidth="214.0" />
+                  <Label layoutX="105.0" layoutY="145.0" />
+                  <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="222.0" />
+                  <Button layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onMousePressed="#closeCheckoutStep2" onMouseReleased="#openCheckoutStep1" prefHeight="37.0" prefWidth="187.0" styleClass="button-back" text="Tillbaka till uppgifter">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/left_arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="261.0" layoutY="139.0" text="Datum">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="220.0" layoutY="177.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: LIGHTGRAY;">
+                     <children>
+                        <Label layoutX="40.0" layoutY="11.0" text="10 Maj">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="67.0" fitWidth="67.0" layoutX="146.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" styleClass="date-image">
+                     <image>
+                        <Image url="@resources/datumpil.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="67.0" fitWidth="67.0" layoutX="367.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" styleClass="date-image">
+                     <image>
+                        <Image url="@resources/datumpil.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="274.0" layoutY="241.0" text="Tid">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="220.0" layoutY="286.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: LIGHTGRAY;">
+                     <children>
+                        <Label layoutX="47.0" layoutY="9.0" text="9-11">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="220.0" layoutY="344.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: LIGHTGRAY;">
+                     <children>
+                        <Label layoutX="43.0" layoutY="10.0" text="13-15">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="221.0" layoutY="403.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: LIGHTGRAY;">
+                     <children>
+                        <Label layoutX="42.0" layoutY="10.0" text="16-18">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="252.0" layoutY="499.0" mnemonicParsing="false" onMousePressed="#closeCheckoutStep2" onMouseReleased="#openCheckoutStep3" styleClass="button-green" text="Nästa">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
       <AnchorPane fx:id="checkOutThankYouAnchorPane" layoutX="3.0" layoutY="3.0" onMouseClicked="#closeCheckoutThankYou" prefHeight="702.0" prefWidth="1096.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane layoutX="257.0" layoutY="69.0" onMouseClicked="#mouseTrap" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
@@ -230,107 +331,6 @@
                         </AnchorPane>
                     </content>
                   </ScrollPane>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="checkOutStepTwoAnchorPane" layoutX="5.0" layoutY="4.0" onMouseClicked="#closeCheckoutStep2" prefHeight="702.0" prefWidth="1095.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <AnchorPane layoutX="257.0" layoutY="69.0" onMouseClicked="#mouseTrap" prefHeight="563.0" prefWidth="581.0" style="-fx-background-color: WHITE;">
-               <children>
-                  <Button layoutX="417.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closeCheckoutStep2" prefHeight="37.0" prefWidth="150.0" styleClass="button-green" text="Fortsätt Handla">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="32.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/grocery_bag.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Label layoutX="214.0" layoutY="36.0" prefHeight="67.0" prefWidth="149.0" text="Välj Leveransdatum" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="357.0" layoutY="63.0" prefHeight="14.0" prefWidth="214.0" />
-                  <Label layoutX="105.0" layoutY="145.0" />
-                  <Separator layoutX="10.0" layoutY="63.0" prefHeight="14.0" prefWidth="222.0" />
-                  <Button layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onMousePressed="#closeCheckoutStep2" onMouseReleased="#openCheckoutStep1" prefHeight="37.0" prefWidth="187.0" styleClass="button-back" text="Tillbaka till uppgifter">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="32.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/left_arrow.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Label layoutX="261.0" layoutY="139.0" text="Datum">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <AnchorPane layoutX="220.0" layoutY="177.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: LIGHTGRAY;">
-                     <children>
-                        <Label layoutX="40.0" layoutY="11.0" text="10 Maj">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <ImageView fitHeight="67.0" fitWidth="67.0" layoutX="146.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
-                     <image>
-                        <Image url="@resources/datumpil.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="67.0" fitWidth="67.0" layoutX="367.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@resources/datumpil.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="274.0" layoutY="241.0" text="Tid">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <AnchorPane layoutX="220.0" layoutY="286.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: LIGHTGRAY;">
-                     <children>
-                        <Label layoutX="47.0" layoutY="9.0" text="9-11">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="220.0" layoutY="344.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: LIGHTGRAY;">
-                     <children>
-                        <Label layoutX="43.0" layoutY="10.0" text="13-15">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="221.0" layoutY="403.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: LIGHTGRAY;">
-                     <children>
-                        <Label layoutX="42.0" layoutY="10.0" text="16-18">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <Button layoutX="252.0" layoutY="499.0" mnemonicParsing="false" onMousePressed="#closeCheckoutStep2" onMouseReleased="#openCheckoutStep3" styleClass="button-green" text="Nästa">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Button>
                </children>
             </AnchorPane>
          </children>

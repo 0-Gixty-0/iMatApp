@@ -257,9 +257,12 @@
     -fx-text-fill: #8B4000;
 }
 
+
+
 .date-image:hover{
-    -fx-background-color: darkgrey;
+    -fx-text-fill: black;
 }
+
 
 .text-field.error{
     -fx-text-box-border: red ;
