@@ -151,6 +151,10 @@ public class MainViewController implements Initializable {
     @FXML
     Button nutsButton;
 
+    @FXML
+    Label set_checkout_email;
+
+
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     public void initialize(URL url, ResourceBundle rb) {
@@ -480,8 +484,8 @@ public class MainViewController implements Initializable {
         dataHandler.placeOrder();
         Collections.reverse(dataHandler.getOrders());
         emptyCart();
-        checkOutStepThreeAnchorPane.toBack();
-        checkOutThankYouAnchorPane.toFront();
+        openCheckoutThankYou();
+
     }
 
     //Populators
@@ -667,6 +671,8 @@ public class MainViewController implements Initializable {
     }
 
     public void openCheckoutThankYou(){
+        set_checkout_email.setText(dataHandler.getCustomer().getEmail());
+        checkOutStepThreeAnchorPane.toBack();
         checkOutThankYouAnchorPane.toFront();
     }
 
