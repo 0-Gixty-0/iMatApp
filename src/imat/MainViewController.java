@@ -446,7 +446,7 @@ public class MainViewController implements Initializable {
                 profileEmailTextField.getStyleClass().remove("error");
                 saveProfileButton.setDisable(false);
                 if (profileEmailTextField.getText().contains("@")) {
-                    customer.setEmail(profileAddressTextField.getText());
+                    customer.setEmail(profileEmailTextField.getText());
                     profileErrorLabel.setVisible(false);
                 } else {
                     profileEmailTextField.getStyleClass().add("error");
