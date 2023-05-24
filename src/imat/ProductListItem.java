@@ -97,4 +97,15 @@ public class ProductListItem extends AnchorPane {
         }
 
     }
+
+    public void onFavoriteHover(Event event){
+        this.favoriteImageView.setImage(new Image("imat/resources/pink_heart.png"));
+    }
+    public void removeFavoriteHover(Event event){
+        if (this.mainViewController.dataHandler.isFavorite(this.product)){
+            this.favoriteImageView.setImage(new Image("imat/resources/red_heart.png"));
+        } else {
+            this.favoriteImageView.setImage(new Image("imat/resources/empty_heart.png"));
+        }
+    }
 }

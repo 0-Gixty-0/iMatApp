@@ -42,7 +42,7 @@
          <font>
             <Font size="22.0" />
          </font></Label>
-      <ImageView fx:id="favoriteImageView" fitHeight="44.0" fitWidth="46.0" layoutX="176.0" layoutY="208.0" onMouseClicked="#onFavorite" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="favoriteImageView" fitHeight="44.0" fitWidth="46.0" layoutX="176.0" layoutY="208.0" onMouseClicked="#onFavorite" onMouseEntered="#onFavoriteHover" onMouseExited="#removeFavoriteHover" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@resources/empty_heart.png" />
          </image>
