@@ -639,13 +639,13 @@
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="vegetablesButton" mnemonicParsing="false" onAction="#showVegetableItems" prefHeight="45.0" prefWidth="110.0" text="Grönt" GridPane.rowIndex="1">
+                        <Button fx:id="vegetablesButton" mnemonicParsing="false" onAction="#showVegetableItems" prefHeight="45.0" prefWidth="110.0" text="Grönt" GridPane.columnIndex="2">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="dairyButton" mnemonicParsing="false" onAction="#showDairyItems" prefHeight="45.0" prefWidth="110.0" stylesheets="@imat_app.css" text="Mejeri" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                        <Button fx:id="dairyButton" mnemonicParsing="false" onAction="#showDairyItems" prefHeight="45.0" prefWidth="110.0" stylesheets="@imat_app.css" text="Mejeri" GridPane.columnIndex="5">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
@@ -657,31 +657,38 @@
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="meatButton" mnemonicParsing="false" onAction="#showMeatItems" prefHeight="45.0" prefWidth="110.0" text="Kött" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                        <Button fx:id="meatButton" mnemonicParsing="false" onAction="#showMeatItems" prefHeight="45.0" prefWidth="110.0" text="Kött" GridPane.columnIndex="3">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="nutsButton" mnemonicParsing="false" onAction="#showNutsItems" prefHeight="45.0" prefWidth="110.0" text="Nötter" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <Button fx:id="nutsButton" mnemonicParsing="false" onAction="#showNutsItems" prefHeight="45.0" prefWidth="110.0" text="Nötter" GridPane.columnIndex="4" GridPane.rowIndex="1">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="favoritesButton" mnemonicParsing="false" onAction="#showFavorites" prefHeight="45.0" prefWidth="110.0" text="Favoriter" GridPane.columnIndex="5">
+                        <Button fx:id="favoritesButton" mnemonicParsing="false" onAction="#showFavorites" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: F65266;" text="Favoriter" GridPane.rowIndex="1">
+                           <styleClass>
+                              <String fx:value="text-categories" />
+                              <String fx:value="text-buttons" />
+                           </styleClass>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/favouritescategoryicon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="drinksButton" mnemonicParsing="false" onAction="#showDrinksItems" prefHeight="45.0" prefWidth="110.0" text="Dryck" GridPane.columnIndex="3" GridPane.rowIndex="1">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="drinksButton" mnemonicParsing="false" onAction="#showDrinksItems" prefHeight="45.0" prefWidth="110.0" text="Dryck" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                           <styleClass>
-                              <String fx:value="text-categories" />
-                              <String fx:value="text-buttons" />
-                           </styleClass>
-                        </Button>
-                        <Button fx:id="herbsButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showHerbItems" prefHeight="45.0" prefWidth="110.0" text="Örter" GridPane.columnIndex="2">
+                        <Button fx:id="herbsButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showHerbItems" prefHeight="45.0" prefWidth="110.0" text="Örter" GridPane.columnIndex="5" GridPane.rowIndex="1">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
@@ -693,7 +700,7 @@
                               <String fx:value="text-buttons" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="pastaButton" alignment="CENTER" mnemonicParsing="false" onAction="#showPastaItems" prefHeight="45.0" prefWidth="110.0" text="Pasta" GridPane.columnIndex="3">
+                        <Button fx:id="pastaButton" alignment="CENTER" mnemonicParsing="false" onAction="#showPastaItems" prefHeight="45.0" prefWidth="110.0" text="Pasta" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <styleClass>
                               <String fx:value="text-categories" />
                               <String fx:value="text-buttons" />
