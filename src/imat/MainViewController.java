@@ -171,7 +171,8 @@ public class MainViewController implements Initializable {
     Label set_checkout_email;
     @FXML
     Label totalPriceLabelButton;
-
+    @FXML
+    Label totalItemsLabelButton;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -878,7 +879,9 @@ public class MainViewController implements Initializable {
         numItemsLabel.setText(String.format("Antal Varor: %d", numItemsInt));
         DecimalFormat df = new DecimalFormat("#.##");
         totalPriceLabel.setText(String.format("Total Pris: %s kr", df.format(shoppingCart.getTotal())));
+        //______shopping-cart-button________
         totalPriceLabelButton.setText(String.format("%s kr", df.format(shoppingCart.getTotal())));
+        totalItemsLabelButton.setText(String.format(" %d", numItemsInt));
     }
 
     public void addItemToCart(Product product){

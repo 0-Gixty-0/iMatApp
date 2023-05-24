@@ -674,6 +674,11 @@
                   <Font size="18.0" />
                </font>
             </Label>
+            <Label id="shopping-cart-number" fx:id="totalItemsLabelButton" layoutX="1052.0" layoutY="1.0" prefHeight="15.0" prefWidth="32.0" styleClass="shopping-cart-button" text=" 1" textAlignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <SplitPane dividerPositions="0.705753823743627" layoutX="-1.0" layoutY="85.0" prefHeight="616.0" prefWidth="999.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
@@ -745,7 +750,7 @@
                            <graphic>
                               <ImageView fitHeight="25.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@resources/favourites2.png" />
+                                    <Image url="@resources/empty_heart.png" />
                                  </image>
                               </ImageView>
                            </graphic>
