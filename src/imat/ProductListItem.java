@@ -65,6 +65,10 @@ public class ProductListItem extends AnchorPane {
         this.numItemsLabel.setText(String.format("%d st", numItems));
     }
 
+    public void removeCSS(){
+        productListItemPane.getStyleClass().remove("add-item");
+    }
+
     @FXML
     public void onClick(Event event){
         mainViewController.openDetailView(this.product);
@@ -74,7 +78,8 @@ public class ProductListItem extends AnchorPane {
     public void onAdd(Event event) {
         this.numItems += 1;
         mainViewController.addItemToCart(this.product);
-        productListItemPane.getStyleClass().add("add-item");
+        if (!productListItemPane.getStyleClass().contains("add-item"))
+            productListItemPane.getStyleClass().add("add-item");
     }
 
     @FXML

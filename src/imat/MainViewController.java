@@ -173,6 +173,8 @@ public class MainViewController implements Initializable {
     Label totalPriceLabelButton;
     @FXML
     Label totalItemsLabelButton;
+    @FXML
+    AnchorPane confirmEmptyCartAnchorPane;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -855,6 +857,14 @@ public class MainViewController implements Initializable {
         previousPurchaseSummaryAnchorPane.toBack();
     }
 
+    public void openConfirmEmptyCartOverlay(){
+        confirmEmptyCartAnchorPane.toFront();
+    }
+
+    public void closeConfirmEmptyCartOverlay(){
+        confirmEmptyCartAnchorPane.toBack();
+    }
+
     public void escapeHatchPreviousPurchaseSummary(){
         previousPurchaseSummaryAnchorPane.toBack();
         previousPurchasesOverlay.toBack();
@@ -872,7 +882,12 @@ public class MainViewController implements Initializable {
         } else {
             detailNumItemsLabel.setText("0 st");
         }
+    }
 
+    private void removeAddedEffectListItems(){
+        for (ProductListItem listItem : productListItemMap.values()){
+            listItem.removeCSS();
+        }
     }
 
     private void updateShoppingCartLabels() {
@@ -947,6 +962,8 @@ public class MainViewController implements Initializable {
         updateShoppingCart();
         updateShoppingCartLabels();
         toCheckOutButton.setDisable(true);
+        closeConfirmEmptyCartOverlay();
+        removeAddedEffectListItems();
     }
 
     @FXML
