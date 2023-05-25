@@ -61,6 +61,10 @@ public class ShoppingCartListItem extends AnchorPane{
         this.numItemsLabel.setText(String.format("%d st", numItems));
     }
 
+    public void setNumItems(int numItems){
+        this.numItems = numItems;
+    }
+
     @FXML
     public void onClick(Event event){
         mainViewController.openDetailView(this.product);

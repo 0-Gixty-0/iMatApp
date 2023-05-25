@@ -128,8 +128,6 @@ public class MainViewController implements Initializable {
     @FXML
     TextField searchBarTextField;
     @FXML
-    ComboBox searchCategoryComboBox;
-    @FXML
     Button dairyButton;
     @FXML
     Button meatButton;
@@ -203,6 +201,13 @@ public class MainViewController implements Initializable {
             ProductListItem productListItem = new ProductListItem(item, this);
             productListItemMap.put(item.getName(), productListItem);
             productObservableList.add(item);
+        }
+
+        //Initialize CSS effects
+        for (ShoppingItem item : shoppingCart.getItems()){
+            if (productListItemMap.containsKey(item.getProduct().getName())){
+                productListItemMap.get(item.getProduct().getName()).addCSS();
+            }
         }
 
         // Initialize change listeners
@@ -885,10 +890,24 @@ public class MainViewController implements Initializable {
         }
     }
 
+    private void updateNumItems(){
+        for (ProductListItem listItem : productListItemMap.values()){
+            listItem.setNumItems(shoppingCartNumItemsMap.getOrDefault(listItem.getProductId(), 0));
+        }
+
+        for (ShoppingCartListItem listItem : shoppingCartListItems){
+            listItem.setNumItems(shoppingCartNumItemsMap.getOrDefault(listItem.getProductId(), 0));
+        }
+    }
+
     private void removeAddedEffectListItems(){
         for (ProductListItem listItem : productListItemMap.values()){
             listItem.removeCSS();
         }
+    }
+
+    public void removeAddedEffect(AnchorPane pane){
+        pane.getStyleClass().remove("add-item");
     }
 
     private void updateShoppingCartLabels() {
@@ -912,9 +931,11 @@ public class MainViewController implements Initializable {
             ShoppingCartListItem listItem = new ShoppingCartListItem(product, this);
             shoppingCartNumItemsMap.put(product.getProductId(), 1);
             shoppingCartListItems.add(listItem);
+            productListItemMap.get(product.getName()).addCSS();
         }
         shoppingCart.addProduct(product);
         toCheckOutButton.setDisable(false);
+        updateNumItems();
         updateNumItemsLabels();
         updateShoppingCartLabels();
     }
@@ -941,9 +962,11 @@ public class MainViewController implements Initializable {
                 shoppingCart.removeProduct(product);
             }
         }
+        updateNumItems();
         updateNumItemsLabels();
         updateShoppingCartLabels();
         updateShoppingCart();
+        removeAddedEffectListItems();
     }
 
     protected void addFavorite(Product product){
@@ -959,6 +982,7 @@ public class MainViewController implements Initializable {
         shoppingCartListItems.clear();
         shoppingCartNumItemsMap.clear();
         shoppingCart.clear();
+        updateNumItems();
         updateNumItemsLabels();
         updateShoppingCart();
         updateShoppingCartLabels();

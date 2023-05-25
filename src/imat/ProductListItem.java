@@ -66,7 +66,17 @@ public class ProductListItem extends AnchorPane {
     }
 
     public void removeCSS(){
-        productListItemPane.getStyleClass().remove("add-item");
+        if (this.numItems < 1) {
+            productListItemPane.getStyleClass().remove("add-item");
+        }
+    }
+
+    public void addCSS(){
+        productListItemPane.getStyleClass().add("add-item");
+    }
+
+    public void setNumItems(int numItems){
+        this.numItems = numItems;
     }
 
     @FXML
@@ -84,9 +94,12 @@ public class ProductListItem extends AnchorPane {
 
     @FXML
     public void onRemove(Event event){
-        if (this.numItems > 0)
+        if (this.numItems > 1) {
             this.numItems -= 1;
+        } else if (this.numItems == 1){
             productListItemPane.getStyleClass().remove("add-item");
+            this.numItems = 0;
+        }
         mainViewController.removeItemFromCart(this.product);
 
     }
