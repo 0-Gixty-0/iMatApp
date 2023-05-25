@@ -648,7 +648,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label id="text-bold" fx:id="shoppingCartLabel" layoutX="918.0" layoutY="11.0" onMouseClicked="#openShoppingCartOverlay" prefHeight="65.0" prefWidth="158.0" text="Varukorg" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="11.0">
+            <Label id="text-bold" fx:id="shoppingCartLabel" alignment="CENTER" layoutX="918.0" layoutY="11.0" onMouseClicked="#openShoppingCartOverlay" prefHeight="65.0" prefWidth="170.0" text="Varukorg" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="11.0">
                <font>
                   <Font size="20.0" />
                </font>
