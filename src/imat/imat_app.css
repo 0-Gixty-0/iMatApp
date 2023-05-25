@@ -259,7 +259,7 @@
 }
 
 .date-image:hover{
-    -fx-text-fill: black;
+    -fx-background-color: #F67952 ;
 }
 
 
@@ -294,4 +294,8 @@
     -fx-border-color: black;
     -fx-border-radius: 40;
     -fx-effect: dropshadow(three-pass-box, #929292, 0, 0, 0, 0);
+}
+
+.time-image:hover{
+    -fx-text-fill: darkgrey;
 }

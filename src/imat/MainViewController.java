@@ -34,6 +34,7 @@ public class MainViewController implements Initializable {
     private FilteredList<Product> flProduct;
     private ObservableList<Product> productObservableList = FXCollections.observableArrayList();
 
+    private List<Integer> dateList;
 
 
     @FXML
