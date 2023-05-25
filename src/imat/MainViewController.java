@@ -855,6 +855,11 @@ public class MainViewController implements Initializable {
         previousPurchaseSummaryAnchorPane.toBack();
     }
 
+    public void escapeHatchPreviousPurchaseSummary(){
+        previousPurchaseSummaryAnchorPane.toBack();
+        previousPurchasesOverlay.toBack();
+    }
+
     private void updateNumItemsLabels(){
         for (ProductListItem listItem : productListItemMap.values()){
             listItem.updateNumItemsLabel(shoppingCartNumItemsMap.getOrDefault(listItem.getProductId(), 0));
