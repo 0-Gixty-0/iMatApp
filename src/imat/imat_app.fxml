@@ -64,7 +64,12 @@
                   </Label>
                   <AnchorPane layoutX="220.0" layoutY="177.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: LIGHTGRAY;">
                      <children>
-                        <Label layoutX="40.0" layoutY="11.0" text="10 Maj">
+                        <Label layoutX="63.0" layoutY="10.0" text="Juni">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dateLabel" alignment="CENTER" layoutX="34.0" layoutY="10.0" prefHeight="18.0" prefWidth="35.0" text="3">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -108,12 +113,12 @@
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <Label layoutX="384.0" layoutY="192.0" prefHeight="26.0" prefWidth="38.0" styleClass="date-image" text="Nästa">
+                  <Label layoutX="384.0" layoutY="192.0" onMouseClicked="#datechangerPlus" prefHeight="26.0" prefWidth="38.0" styleClass="date-image" text="Nästa">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="121.0" layoutY="192.0" prefHeight="27.0" prefWidth="78.0" styleClass="date-image" text="Föregående">
+                  <Label layoutX="121.0" layoutY="192.0" onMouseClicked="#datechangerMinus" prefHeight="27.0" prefWidth="78.0" styleClass="date-image" text="Föregående">
                      <font>
                         <Font size="14.0" />
                      </font>

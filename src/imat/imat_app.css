@@ -299,3 +299,7 @@
 .time-image:hover{
     -fx-text-fill: darkgrey;
 }
+
+.date-image{
+    -fx-border-color: black;
+}

@@ -34,7 +34,8 @@ public class MainViewController implements Initializable {
     private FilteredList<Product> flProduct;
     private ObservableList<Product> productObservableList = FXCollections.observableArrayList();
 
-    private List<Integer> dateList;
+    private int[] dates ={1, 2, 3, 4, 5, 6, 7, 8,9 ,10,11,12,13,14,15,16,17,18};
+    private int dateindex = 2;
 
 
     @FXML
@@ -174,6 +175,9 @@ public class MainViewController implements Initializable {
     Label totalItemsLabelButton;
     @FXML
     AnchorPane confirmEmptyCartAnchorPane;
+
+    @FXML
+    Label dateLabel;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -821,6 +825,8 @@ public class MainViewController implements Initializable {
     public void openCheckoutStep1(){
         populateCheckoutStepOne();
         checkOutStepOneAnchorPane.toFront();
+        dateindex=3;
+        dateLabel.setText(String.format(" %d", dates[dateindex]));
     }
 
     public void closeCheckoutStep1(){
@@ -829,6 +835,7 @@ public class MainViewController implements Initializable {
 
     public void openCheckoutStep2(){
         checkOutStepTwoAnchorPane.toFront();
+
     }
 
     public void closeCheckoutStep2(){
@@ -1029,5 +1036,12 @@ public class MainViewController implements Initializable {
         event.consume();
     }
 
-
+    public void datechangerPlus(){
+        dateindex+=1;
+        dateLabel.setText(String.format(" %d", dates[dateindex]));
+    }
+    public void datechangerMinus(){
+        dateindex-=1;
+        dateLabel.setText(String.format(" %d", dates[dateindex]));
+    }
 }
