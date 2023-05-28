@@ -296,10 +296,22 @@
     -fx-effect: dropshadow(three-pass-box, #929292, 0, 0, 0, 0);
 }
 
+.time-image{
+    -fx-effect: dropshadow(gaussian, #000000, 2, 0.2, 2, 2);
+    -fx-background-color: lightgrey;
+}
+
 .time-image:hover{
-    -fx-text-fill: darkgrey;
+    -fx-text-fill: darkgray;
+    -fx-background-color: derive(lightgrey, 20%);
 }
 
 .date-image{
-    -fx-border-color: black;
+    -fx-background-color: #F67952;
+    -fx-background-radius: 10%;
+    -fx-effect: dropshadow(gaussian, #000000, 2, 0.2, 2, 2);
+}
+
+.date-image:hover{
+    -fx-background-color: derive(#F67952, 20%);
 }

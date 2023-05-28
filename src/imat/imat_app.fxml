@@ -81,27 +81,27 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <AnchorPane layoutX="220.0" layoutY="286.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: LIGHTGRAY;" styleClass="time-image">
+                  <AnchorPane layoutX="220.0" layoutY="286.0" prefHeight="50.0" prefWidth="140.0" styleClass="time-image">
                      <children>
-                        <Label alignment="CENTER" layoutX="2.0" layoutY="-2.0" prefHeight="50.0" prefWidth="137.0" styleClass="time-image" text="9-11">
+                        <Label alignment="CENTER" layoutX="2.0" layoutY="-2.0" prefHeight="50.0" prefWidth="137.0" text="9-11">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="220.0" layoutY="344.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: LIGHTGRAY;" styleClass="time-image">
+                  <AnchorPane layoutX="220.0" layoutY="344.0" prefHeight="50.0" prefWidth="140.0" styleClass="time-image">
                      <children>
-                        <Label alignment="CENTER" layoutX="4.0" layoutY="-1.0" prefHeight="50.0" prefWidth="132.0" styleClass="time-image" text="13-15">
+                        <Label alignment="CENTER" layoutX="4.0" layoutY="-1.0" prefHeight="50.0" prefWidth="132.0" text="13-15">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="221.0" layoutY="403.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: LIGHTGRAY;">
+                  <AnchorPane layoutX="221.0" layoutY="403.0" prefHeight="50.0" prefWidth="140.0" styleClass="time-image">
                      <children>
-                        <Label alignment="CENTER" layoutX="-3.0" prefHeight="50.0" prefWidth="140.0" styleClass="time-image" text="16-18">
+                        <Label alignment="CENTER" layoutX="-3.0" prefHeight="50.0" prefWidth="140.0" text="16-18">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -113,12 +113,12 @@
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <Label layoutX="384.0" layoutY="192.0" onMouseClicked="#datechangerPlus" prefHeight="26.0" prefWidth="38.0" styleClass="date-image" text="Nästa">
+                  <Label alignment="CENTER" layoutX="384.0" layoutY="192.0" onMouseClicked="#datechangerPlus" prefHeight="26.0" prefWidth="50.0" styleClass="date-image" text="Nästa">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="121.0" layoutY="192.0" onMouseClicked="#datechangerMinus" prefHeight="27.0" prefWidth="78.0" styleClass="date-image" text="Föregående">
+                  <Label alignment="CENTER" layoutX="106.0" layoutY="192.0" onMouseClicked="#datechangerMinus" prefHeight="27.0" prefWidth="93.0" styleClass="date-image" text="Föregående">
                      <font>
                         <Font size="14.0" />
                      </font>
